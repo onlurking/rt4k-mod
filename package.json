@@ -1,0 +1,18 @@
+{
+  "name": "rt4k-mod",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "rt4k-mod": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "bun test"
+  },
+  "dependencies": {
+    "rt4k-profile": "^1.0.1",
+    "commander": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
