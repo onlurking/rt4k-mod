@@ -47,13 +47,12 @@ describe("modify subcommand - single file", () => {
     expect(Buffer.compare(before, after)).toBe(0);
   });
 
-  test("multiple flags all apply correctly", () => {
+  test("vrr flag applies correctly", () => {
     const tmpDir = path.join(OUT_DIR, "multi");
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", tmpDir, "--vrr", "Off", "--input", "HDMI"]);
+    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", tmpDir, "--vrr", "Off"]);
     const { stdout } = run(["inspect", "--file", path.join(tmpDir, "SNES.rt4")]);
     const parsed = JSON.parse(stdout);
     expect(parsed.output.transmitter.vrr).toBe("Off");
-    expect(parsed.input).toBe("HDMI");
   });
 
   test("output directory created automatically if not exists", () => {

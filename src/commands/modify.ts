@@ -6,17 +6,7 @@ import fs from "fs";
 
 export const modifyCommand = new Command("modify")
   .description("Batch modify .rt4 profile settings")
-  .option("--input <value>", "Input source (e.g. HDMI, SCART, ...)")
-  .option("--resolution <value>", "Output resolution (e.g. 4K60, 1080p60)")
-  .option("--hdr <value>", 'HDR mode (Off, "HDR10 [8-bit]", "HLG [8-bit]")')
-  .option("--colorimetry <value>", "Colorimetry setting (Auto-Rec.709, Rec.709, Rec.2020, ...)")
-  .option("--rgb-range <value>", "RGB range (Full, Limited)")
-  .option("--sync-lock <value>", 'Sync lock mode ("Triple Buffer", "Gen Lock", "Frame Lock")')
   .option("--vrr <value>", "VRR mode (Off, FreeSync, VESA)")
-  .option("--deep-color <value>", 'Deep color bit ("true", "false")')
-  .option("--mask-enabled <value>", 'Mask enabled ("true", "false")')
-  .option("--mask-strength <value>", "Mask strength (integer as string)")
-  .option("--mask-path <value>", "Mask file path (string)")
   .option("--input-dir <path>", "Input directory (recursive .rt4 search)")
   .option("--output-dir <path>", "Output directory (required)")
   .option("--file <path>", "Single input file")
@@ -33,17 +23,7 @@ export const modifyCommand = new Command("modify")
     }
 
     const rawFlags: Record<string, string | undefined> = {
-      "input": options.input,
-      "resolution": options.resolution,
-      "hdr": options.hdr,
-      "colorimetry": options.colorimetry,
-      "rgb-range": options.rgbRange,
-      "sync-lock": options.syncLock,
       "vrr": options.vrr,
-      "deep-color": options.deepColor,
-      "mask-enabled": options.maskEnabled,
-      "mask-strength": options.maskStrength,
-      "mask-path": options.maskPath,
     };
 
     const settingOverrides = getSettingsFromFlags(rawFlags);

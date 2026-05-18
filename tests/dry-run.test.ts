@@ -54,9 +54,8 @@ describe("--dry-run mode", () => {
     expect(fs.existsSync(DRY_OUT)).toBe(false);
   });
 
-  test("dry-run with multiple flags shows all setting changes", () => {
-    const { stdout } = run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", DRY_OUT, "--vrr", "Off", "--input", "HDMI", "--dry-run"]);
+  test("dry-run shows vrr setting change", () => {
+    const { stdout } = run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", DRY_OUT, "--vrr", "Off", "--dry-run"]);
     expect(stdout).toMatch(/vrr|output\.transmitter\.vrr/i);
-    expect(stdout).toMatch(/input/i);
   });
 });

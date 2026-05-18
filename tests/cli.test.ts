@@ -18,19 +18,9 @@ describe("CLI skeleton", () => {
     expect(stdout).toContain("inspect");
   });
 
-  test("modify --help shows all 11 setting flags", () => {
+  test("modify --help shows vrr flag", () => {
     const { stdout } = run(["modify", "--help"]);
     expect(stdout).toContain("--vrr");
-    expect(stdout).toContain("--input");
-    expect(stdout).toContain("--resolution");
-    expect(stdout).toContain("--hdr");
-    expect(stdout).toContain("--colorimetry");
-    expect(stdout).toContain("--rgb-range");
-    expect(stdout).toContain("--sync-lock");
-    expect(stdout).toContain("--deep-color");
-    expect(stdout).toContain("--mask-enabled");
-    expect(stdout).toContain("--mask-strength");
-    expect(stdout).toContain("--mask-path");
     expect(stdout).toContain("--dry-run");
     expect(stdout).toContain("--output-dir");
   });

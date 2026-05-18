@@ -44,94 +44,6 @@ describe("individual flag: --vrr", () => {
   });
 });
 
-describe("individual flag: --input", () => {
-  test("sets input to HDMI", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--input", "HDMI"]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    expect(settings.input).toBe("HDMI");
-  });
-});
-
-describe("individual flag: --resolution", () => {
-  test("sets resolution to 1080p60", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--resolution", "1080p60"]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    expect(settings.output.resolution).toBe("1080p60");
-  });
-});
-
-describe("individual flag: --hdr", () => {
-  test("sets hdr to Off", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--hdr", "Off"]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    expect(settings.output.transmitter.hdr).toBe("Off");
-  });
-});
-
-describe("individual flag: --colorimetry", () => {
-  test("sets colorimetry to Rec.709", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--colorimetry", "Rec.709"]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    expect(settings.output.transmitter.colorimetry).toBe("Rec.709");
-  });
-});
-
-describe("individual flag: --rgb-range", () => {
-  test("sets rgb_range to Limited", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--rgb-range", "Limited"]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    expect(settings.output.transmitter.rgb_range).toBe("Limited");
-  });
-  test("sets rgb_range to Full", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--rgb-range", "Full"]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    expect(settings.output.transmitter.rgb_range).toBe("Full");
-  });
-});
-
-describe("individual flag: --sync-lock", () => {
-  test("sets sync_lock to Triple Buffer", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--sync-lock", "Triple Buffer"]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    expect(settings.output.transmitter.sync_lock).toBe("Triple Buffer");
-  });
-});
-
-describe("individual flag: --deep-color", () => {
-  test("sets deep_color to false", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--deep-color", "false"]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    // deep_color is a BIT type: serializes as boolean
-    expect(settings.output.transmitter.deep_color).toBe(false);
-  });
-});
-
-describe("individual flag: --mask-enabled", () => {
-  test("sets mask enabled to false", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--mask-enabled", "false"]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    // mask.enabled is a BIT type: serializes as boolean
-    expect(settings.advanced.effects.mask.enabled).toBe(false);
-  });
-});
-
-describe("individual flag: --mask-strength", () => {
-  test("sets mask strength to -5", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--mask-strength", "-5"]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    // mask.strength is SIGNED_INT: serializes as number
-    expect(settings.advanced.effects.mask.strength).toBe(-5);
-  });
-});
-
-describe("individual flag: --mask-path", () => {
-  test("sets mask path", () => {
-    const newPath = "RGB Masks/Slot Mask Medium RGB.bmp.bmp";
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--mask-path", newPath]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    expect(settings.advanced.effects.mask.path).toBe(newPath);
-  });
-});
 
 describe("end-to-end workflow", () => {
   test("primary use case: disable VRR for all fixtures", () => {
@@ -148,25 +60,10 @@ describe("end-to-end workflow", () => {
   });
 
   test("modify then inspect round-trip verifies correctness", () => {
-    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--vrr", "Off", "--input", "HDMI"]);
+    run(["modify", "--file", path.join(FIXTURES, "SNES.rt4"), "--output-dir", INT_OUT, "--vrr", "Off"]);
 
     const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
     expect(settings.output.transmitter.vrr).toBe("Off");
-    expect(settings.input).toBe("HDMI");
-  });
-
-  test("multiple flags applied in single call", () => {
-    run([
-      "modify", "--file", path.join(FIXTURES, "SNES.rt4"),
-      "--output-dir", INT_OUT,
-      "--vrr", "Off",
-      "--hdr", "Off",
-      "--rgb-range", "Full",
-    ]);
-    const settings = inspectFile(path.join(INT_OUT, "SNES.rt4"));
-    expect(settings.output.transmitter.vrr).toBe("Off");
-    expect(settings.output.transmitter.hdr).toBe("Off");
-    expect(settings.output.transmitter.rgb_range).toBe("Full");
   });
 
   test("NDJSON from inspect is parseable for each file", () => {
@@ -204,7 +101,7 @@ describe("end-to-end workflow", () => {
     const origGenesis = fs.readFileSync(path.join(FIXTURES, "Genesis.rt4"));
     const origNES = fs.readFileSync(path.join(FIXTURES, "NES.rt4"));
 
-    run(["modify", "--input-dir", FIXTURES, "--output-dir", INT_OUT, "--vrr", "Off", "--input", "HDMI"]);
+    run(["modify", "--input-dir", FIXTURES, "--output-dir", INT_OUT, "--vrr", "Off"]);
 
     expect(Buffer.compare(fs.readFileSync(path.join(FIXTURES, "SNES.rt4")), origSNES)).toBe(0);
     expect(Buffer.compare(fs.readFileSync(path.join(FIXTURES, "Genesis.rt4")), origGenesis)).toBe(0);
