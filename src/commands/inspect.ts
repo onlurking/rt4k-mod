@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { RetroTinkProfile } from "rt4k-profile";
+import { RetroTinkProfile } from "../lib/rt4k/index.js";
 import path from "path";
 import fs from "fs";
 

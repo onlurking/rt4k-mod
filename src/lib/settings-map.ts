@@ -1,6 +1,6 @@
 export interface SettingEntry {
   flagName: string;          // CLI flag name (e.g. "vrr")
-  settingPath: string;       // rt4k-profile path (e.g. "output.transmitter.vrr")
+  settingPath: string;       // rt4k setting path (e.g. "output.transmitter.vrr")
   description: string;       // Human-readable description
   validValues?: string[];    // Valid enum values (optional, for ENUM types)
 }

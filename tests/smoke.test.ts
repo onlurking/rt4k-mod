@@ -1,5 +1,5 @@
 import { describe, test, expect } from "bun:test";
-import { RetroTinkProfile } from "rt4k-profile";
+import { RetroTinkProfile } from "../src/lib/rt4k/index.js";
 import path from "path";
 
 describe("rt4k-profile smoke test", () => {

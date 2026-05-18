@@ -9,7 +9,6 @@
     "test": "bun test"
   },
   "dependencies": {
-    "rt4k-profile": "^1.0.1",
     "commander": "^14.0.0"
   },
   "devDependencies": {

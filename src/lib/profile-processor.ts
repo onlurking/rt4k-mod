@@ -1,4 +1,4 @@
-import { RetroTinkProfile } from "rt4k-profile";
+import { RetroTinkProfile } from "./rt4k/index.js";
 import { SETTINGS_MAP } from "./settings-map.js";
 import path from "path";
 import fs from "fs";
