@@ -6,7 +6,8 @@
     "rt4k-mod": "./src/index.ts"
   },
   "scripts": {
-    "test": "bun test"
+    "test": "bun test",
+    "diff": "bun run src/diff.ts"
   },
   "dependencies": {
     "commander": "^14.0.0"

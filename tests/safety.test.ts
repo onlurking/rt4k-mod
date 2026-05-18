@@ -61,7 +61,7 @@ describe("safety guards", () => {
     ]);
     expect(exitCode).toBe(1);
     const files = fs.readdirSync(FIXTURES).filter(f => f.endsWith(".rt4"));
-    expect(files.length).toBe(3);
+    expect(files.length).toBe(6);
   });
 
   // [2026-05-17] Added single-file safety guard test

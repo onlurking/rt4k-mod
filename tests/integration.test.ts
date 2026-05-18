@@ -51,7 +51,7 @@ describe("end-to-end workflow", () => {
     expect(exitCode).toBe(0);
 
     const outFiles = fs.readdirSync(INT_OUT).filter(f => f.endsWith(".rt4"));
-    expect(outFiles.length).toBe(3);
+    expect(outFiles.length).toBe(6);
 
     for (const filename of outFiles) {
       const settings = inspectFile(path.join(INT_OUT, filename));
@@ -70,7 +70,7 @@ describe("end-to-end workflow", () => {
     run(["modify", "--input-dir", FIXTURES, "--output-dir", INT_OUT, "--vrr", "Off"]);
     const { stdout } = run(["inspect", "--input-dir", INT_OUT]);
     const lines = stdout.trim().split("\n").filter(l => l.trim());
-    expect(lines.length).toBe(3);
+    expect(lines.length).toBe(6);
     for (const line of lines) {
       const parsed = JSON.parse(line);
       expect(parsed).toHaveProperty("file");

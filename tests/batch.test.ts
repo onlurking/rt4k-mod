@@ -31,7 +31,7 @@ describe("batch processing - input-dir mode", () => {
     const { exitCode, stdout } = run(["modify", "--input-dir", FIXTURES, "--output-dir", BATCH_OUT, "--vrr", "Off"]);
     expect(exitCode).toBe(0);
     const files = fs.readdirSync(BATCH_OUT).filter(f => f.endsWith(".rt4"));
-    expect(files.length).toBe(3);
+    expect(files.length).toBe(6);
   });
 
   test("output files have the correct setting applied", () => {
@@ -47,7 +47,7 @@ describe("batch processing - input-dir mode", () => {
   test("prints summary of processed files", () => {
     const { stdout, exitCode } = run(["modify", "--input-dir", FIXTURES, "--output-dir", BATCH_OUT, "--vrr", "Off"]);
     expect(exitCode).toBe(0);
-    expect(stdout).toMatch(/3.*3|Modified.*3/i); // "Modified 3/3" or similar
+    expect(stdout).toMatch(/6.*6|Modified.*6/i); // "Modified 6/6" or similar
   });
 
   test("mirrors subdirectory structure in output", () => {

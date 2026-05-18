@@ -53,7 +53,7 @@ describe("inspect subcommand", () => {
       const { stdout, exitCode } = run(["inspect", "--input-dir", FIXTURES]);
       expect(exitCode).toBe(0);
       const lines = stdout.trim().split("\n").filter(l => l.trim());
-      expect(lines.length).toBe(3); // SNES.rt4, Genesis.rt4, NES.rt4
+      expect(lines.length).toBe(6); // SNES.rt4, Genesis.rt4, NES.rt4, SNES-2.rt4, SNES-3.rt4
     });
 
     test("each NDJSON line is valid JSON with file and settings fields", () => {
