@@ -15,7 +15,7 @@ afterAll(async () => {
   await Promise.all(tempFiles.map(path => Bun.file(path).delete().catch(() => undefined)));
 });
 
-describe('Parity tests — SNES.rt4 known values', () => {
+describe('Parity tests - SNES.rt4 known values', () => {
   let profile: RetroTinkProfile;
 
   beforeAll(async () => {
@@ -47,7 +47,7 @@ describe('Parity tests — SNES.rt4 known values', () => {
     expect(profile.getValue('advanced.effects.mask.strength').asInt()).toBe(-2);
   });
 
-  test('multi-range write round-trip — input set to Front|Composite', async () => {
+  test('multi-range write round-trip - input set to Front|Composite', async () => {
     const altInput = 'Front|Composite';
     const p = await RetroTinkProfile.build(SNES_FIXTURE);
     p.setValue('input', altInput);
@@ -56,7 +56,7 @@ describe('Parity tests — SNES.rt4 known values', () => {
     expect(reloaded.getValue('input').asString()).toBe(altInput);
   });
 
-  test('VRR Off round-trip — other parity values unchanged', async () => {
+  test('VRR Off round-trip - other parity values unchanged', async () => {
     const p = await RetroTinkProfile.build(SNES_FIXTURE);
     p.setValue('output.transmitter.vrr', 'Off');
     await p.save('/tmp/parity-vrr-test.rt4');
@@ -76,14 +76,14 @@ describe('Parity tests — SNES.rt4 known values', () => {
     expect(reloaded.getValue('advanced.effects.mask.path').asString().includes('RGB Masks')).toBe(true);
   });
 
-  test('CRC validity — saved file has non-zero CRC bytes at [32] and [33]', async () => {
+  test('CRC validity - saved file has non-zero CRC bytes at [32] and [33]', async () => {
     const p = await RetroTinkProfile.build(SNES_FIXTURE);
     await p.save('/tmp/parity-crc-test.rt4');
     const bytes = new Uint8Array(await Bun.file('/tmp/parity-crc-test.rt4').arrayBuffer());
     expect(bytes[32] !== 0 || bytes[33] !== 0).toBe(true);
   });
 
-  test('VRR diff — only output.transmitter.vrr changes when set to Off', async () => {
+  test('VRR diff - only output.transmitter.vrr changes when set to Off', async () => {
     const original = await RetroTinkProfile.build(SNES_FIXTURE);
     const modified = await RetroTinkProfile.build(SNES_FIXTURE);
     modified.setValue('output.transmitter.vrr', 'Off');
