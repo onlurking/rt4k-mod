@@ -14,9 +14,9 @@ describe("rt4k-profile smoke test", () => {
   test("can read input setting", async () => {
     const fixturePath = path.join(import.meta.dir, "fixtures/SNES.rt4");
     const profile = await RetroTinkProfile.build(fixturePath);
-    const inputVal = profile.getValue("input").asString();
-    expect(typeof inputVal).toBe("string");
-    expect(inputVal.length).toBeGreaterThan(0);
+    const input = profile.getValue("input").asString();
+    expect(typeof input).toBe("string");
+    expect(input.length).toBeGreaterThan(0);
   });
 
   test("serializeValues returns valid JSON", async () => {

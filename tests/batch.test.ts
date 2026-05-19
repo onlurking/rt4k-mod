@@ -28,14 +28,30 @@ afterAll(() => {
 
 describe("batch processing - input-dir mode", () => {
   test("processes all .rt4 files in directory", () => {
-    const { exitCode, stdout } = run(["modify", "--input-dir", FIXTURES, "--output-dir", BATCH_OUT, "--vrr", "Off"]);
+    const { exitCode, stdout } = run([
+      "modify",
+      "--input-dir",
+      FIXTURES,
+      "--output-dir",
+      BATCH_OUT,
+      "--vrr",
+      "Off",
+    ]);
     expect(exitCode).toBe(0);
-    const files = fs.readdirSync(BATCH_OUT).filter(f => f.endsWith(".rt4"));
+    const files = fs.readdirSync(BATCH_OUT).filter((f) => f.endsWith(".rt4"));
     expect(files.length).toBe(6);
   });
 
   test("output files have the correct setting applied", () => {
-    run(["modify", "--input-dir", FIXTURES, "--output-dir", BATCH_OUT, "--vrr", "Off"]);
+    run([
+      "modify",
+      "--input-dir",
+      FIXTURES,
+      "--output-dir",
+      BATCH_OUT,
+      "--vrr",
+      "Off",
+    ]);
     // Verify one output file
     const outFile = path.join(BATCH_OUT, "SNES.rt4");
     expect(fs.existsSync(outFile)).toBe(true);
@@ -45,7 +61,15 @@ describe("batch processing - input-dir mode", () => {
   });
 
   test("prints summary of processed files", () => {
-    const { stdout, exitCode } = run(["modify", "--input-dir", FIXTURES, "--output-dir", BATCH_OUT, "--vrr", "Off"]);
+    const { stdout, exitCode } = run([
+      "modify",
+      "--input-dir",
+      FIXTURES,
+      "--output-dir",
+      BATCH_OUT,
+      "--vrr",
+      "Off",
+    ]);
     expect(exitCode).toBe(0);
     expect(stdout).toMatch(/6.*6|Modified.*6/i); // "Modified 6/6" or similar
   });
@@ -54,10 +78,21 @@ describe("batch processing - input-dir mode", () => {
     // Create a subdirectory with a copy of a fixture
     const subDir = path.join(FIXTURES, "sub");
     fs.mkdirSync(subDir, { recursive: true });
-    fs.copyFileSync(path.join(FIXTURES, "SNES.rt4"), path.join(subDir, "SNES.rt4"));
-    
+    fs.copyFileSync(
+      path.join(FIXTURES, "SNES.rt4"),
+      path.join(subDir, "SNES.rt4"),
+    );
+
     try {
-      const { exitCode } = run(["modify", "--input-dir", FIXTURES, "--output-dir", BATCH_OUT, "--vrr", "Off"]);
+      const { exitCode } = run([
+        "modify",
+        "--input-dir",
+        FIXTURES,
+        "--output-dir",
+        BATCH_OUT,
+        "--vrr",
+        "Off",
+      ]);
       expect(exitCode).toBe(0);
       // Should have the file at sub/SNES.rt4 in output
       expect(fs.existsSync(path.join(BATCH_OUT, "sub", "SNES.rt4"))).toBe(true);
@@ -71,17 +106,36 @@ describe("batch processing - input-dir mode", () => {
     // Create a temp input dir with 3 good files + 1 corrupt
     const tempInput = "/tmp/rt4k-batch-corrupt-test";
     fs.mkdirSync(tempInput, { recursive: true });
-    fs.copyFileSync(path.join(FIXTURES, "SNES.rt4"), path.join(tempInput, "SNES.rt4"));
-    fs.copyFileSync(path.join(FIXTURES, "Genesis.rt4"), path.join(tempInput, "Genesis.rt4"));
-    fs.copyFileSync(path.join(FIXTURES, "NES.rt4"), path.join(tempInput, "NES.rt4"));
+    fs.copyFileSync(
+      path.join(FIXTURES, "SNES.rt4"),
+      path.join(tempInput, "SNES.rt4"),
+    );
+    fs.copyFileSync(
+      path.join(FIXTURES, "Genesis.rt4"),
+      path.join(tempInput, "Genesis.rt4"),
+    );
+    fs.copyFileSync(
+      path.join(FIXTURES, "NES.rt4"),
+      path.join(tempInput, "NES.rt4"),
+    );
     // Create empty/corrupt file
     fs.writeFileSync(path.join(tempInput, "corrupt.rt4"), "");
-    
+
     try {
-      const { exitCode, stdout, stderr } = run(["modify", "--input-dir", tempInput, "--output-dir", BATCH_OUT, "--vrr", "Off"]);
+      const { exitCode, stdout, stderr } = run([
+        "modify",
+        "--input-dir",
+        tempInput,
+        "--output-dir",
+        BATCH_OUT,
+        "--vrr",
+        "Off",
+      ]);
       expect(exitCode).toBe(2); // partial failure
       // 3 good files should still be processed
-      const goodFiles = fs.readdirSync(BATCH_OUT).filter(f => f.endsWith(".rt4") && f !== "corrupt.rt4");
+      const goodFiles = fs
+        .readdirSync(BATCH_OUT)
+        .filter((f) => f.endsWith(".rt4") && f !== "corrupt.rt4");
       expect(goodFiles.length).toBe(3);
       // Summary should show failure info
       const combined = stdout + stderr;
@@ -92,7 +146,15 @@ describe("batch processing - input-dir mode", () => {
   });
 
   test("exits with 0 when all files succeed", () => {
-    const { exitCode } = run(["modify", "--input-dir", FIXTURES, "--output-dir", BATCH_OUT, "--vrr", "Off"]);
+    const { exitCode } = run([
+      "modify",
+      "--input-dir",
+      FIXTURES,
+      "--output-dir",
+      BATCH_OUT,
+      "--vrr",
+      "Off",
+    ]);
     expect(exitCode).toBe(0);
   });
 
@@ -100,7 +162,15 @@ describe("batch processing - input-dir mode", () => {
     const emptyDir = "/tmp/rt4k-empty-dir-test";
     fs.mkdirSync(emptyDir, { recursive: true });
     try {
-      const { exitCode, stderr } = run(["modify", "--input-dir", emptyDir, "--output-dir", BATCH_OUT, "--vrr", "Off"]);
+      const { exitCode, stderr } = run([
+        "modify",
+        "--input-dir",
+        emptyDir,
+        "--output-dir",
+        BATCH_OUT,
+        "--vrr",
+        "Off",
+      ]);
       expect(exitCode).toBe(1);
       expect(stderr).toMatch(/No .rt4 files found/i);
     } finally {
@@ -111,16 +181,29 @@ describe("batch processing - input-dir mode", () => {
   test("non-.rt4 files are silently ignored", () => {
     const tempInput = "/tmp/rt4k-mixed-test";
     fs.mkdirSync(tempInput, { recursive: true });
-    fs.copyFileSync(path.join(FIXTURES, "SNES.rt4"), path.join(tempInput, "SNES.rt4"));
+    fs.copyFileSync(
+      path.join(FIXTURES, "SNES.rt4"),
+      path.join(tempInput, "SNES.rt4"),
+    );
     // Create non-.rt4 files
     fs.writeFileSync(path.join(tempInput, "auto.dv1"), "not an rt4");
     fs.writeFileSync(path.join(tempInput, "prof.map"), "not an rt4");
-    
+
     try {
-      const { exitCode } = run(["modify", "--input-dir", tempInput, "--output-dir", BATCH_OUT, "--vrr", "Off"]);
+      const { exitCode } = run([
+        "modify",
+        "--input-dir",
+        tempInput,
+        "--output-dir",
+        BATCH_OUT,
+        "--vrr",
+        "Off",
+      ]);
       expect(exitCode).toBe(0);
       // Only SNES.rt4 processed
-      const rtFiles = fs.readdirSync(BATCH_OUT).filter(f => f.endsWith(".rt4"));
+      const rtFiles = fs
+        .readdirSync(BATCH_OUT)
+        .filter((f) => f.endsWith(".rt4"));
       expect(rtFiles.length).toBe(1);
       // Non-rt4 files should NOT be in output
       expect(fs.existsSync(path.join(BATCH_OUT, "auto.dv1"))).toBe(false);
@@ -131,7 +214,15 @@ describe("batch processing - input-dir mode", () => {
   });
 
   test("exits with 1 when input-dir does not exist", () => {
-    const { exitCode, stderr } = run(["modify", "--input-dir", "/nonexistent-xyz", "--output-dir", BATCH_OUT, "--vrr", "Off"]);
+    const { exitCode, stderr } = run([
+      "modify",
+      "--input-dir",
+      "/nonexistent-xyz",
+      "--output-dir",
+      BATCH_OUT,
+      "--vrr",
+      "Off",
+    ]);
     expect(exitCode).toBe(1);
     expect(stderr.toLowerCase()).toMatch(/not found|does not exist|no such/i);
   });

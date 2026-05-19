@@ -19,19 +19,35 @@ const run = (args: string[]) => {
 describe("safety guards", () => {
   test("output-dir same as input-dir → error, exit 1", () => {
     const { stderr, exitCode } = run([
-      "modify", "--input-dir", FIXTURES, "--output-dir", FIXTURES, "--vrr", "Off"
+      "modify",
+      "--input-dir",
+      FIXTURES,
+      "--output-dir",
+      FIXTURES,
+      "--vrr",
+      "Off",
     ]);
     expect(exitCode).toBe(1);
-    expect(stderr.toLowerCase()).toMatch(/must differ|same as input|cannot.*same|output.*input/i);
+    expect(stderr.toLowerCase()).toMatch(
+      /must differ|same as input|cannot.*same|output.*input/i,
+    );
   });
 
   test("output-dir is subdirectory of input-dir → error, exit 1", () => {
     const subDir = path.join(FIXTURES, "output-subdir");
     const { stderr, exitCode } = run([
-      "modify", "--input-dir", FIXTURES, "--output-dir", subDir, "--vrr", "Off"
+      "modify",
+      "--input-dir",
+      FIXTURES,
+      "--output-dir",
+      subDir,
+      "--vrr",
+      "Off",
     ]);
     expect(exitCode).toBe(1);
-    expect(stderr.toLowerCase()).toMatch(/must differ|same as input|cannot.*same|output.*input|subdirectory/i);
+    expect(stderr.toLowerCase()).toMatch(
+      /must differ|same as input|cannot.*same|output.*input|subdirectory/i,
+    );
   });
 
   test("output-dir is PARENT of input-dir → allowed (not a safety violation)", () => {
@@ -39,7 +55,13 @@ describe("safety guards", () => {
     fs.mkdirSync(tmpOut, { recursive: true });
     try {
       const { exitCode } = run([
-        "modify", "--input-dir", FIXTURES, "--output-dir", tmpOut, "--vrr", "Off"
+        "modify",
+        "--input-dir",
+        FIXTURES,
+        "--output-dir",
+        tmpOut,
+        "--vrr",
+        "Off",
       ]);
       expect(exitCode).toBe(0);
     } finally {
@@ -49,7 +71,11 @@ describe("safety guards", () => {
 
   test("no setting flags → error 'No settings specified', exit 1", () => {
     const { stderr, exitCode } = run([
-      "modify", "--input-dir", FIXTURES, "--output-dir", "/tmp/rt4k-safety-out"
+      "modify",
+      "--input-dir",
+      FIXTURES,
+      "--output-dir",
+      "/tmp/rt4k-safety-out",
     ]);
     expect(exitCode).toBe(1);
     expect(stderr).toContain("No settings specified");
@@ -57,10 +83,16 @@ describe("safety guards", () => {
 
   test("safety guard checked before file processing begins", () => {
     const { exitCode } = run([
-      "modify", "--input-dir", FIXTURES, "--output-dir", FIXTURES, "--vrr", "Off"
+      "modify",
+      "--input-dir",
+      FIXTURES,
+      "--output-dir",
+      FIXTURES,
+      "--vrr",
+      "Off",
     ]);
     expect(exitCode).toBe(1);
-    const files = fs.readdirSync(FIXTURES).filter(f => f.endsWith(".rt4"));
+    const files = fs.readdirSync(FIXTURES).filter((f) => f.endsWith(".rt4"));
     expect(files.length).toBe(6);
   });
 
@@ -74,7 +106,13 @@ describe("safety guards", () => {
       fs.copyFileSync(fixtureFile, tmpFile);
 
       const { stderr, exitCode } = run([
-        "modify", "--file", tmpFile, "--output-dir", tmpDir, "--vrr", "Off"
+        "modify",
+        "--file",
+        tmpFile,
+        "--output-dir",
+        tmpDir,
+        "--vrr",
+        "Off",
       ]);
       expect(exitCode).toBe(1);
       expect(stderr.toLowerCase()).toMatch(/overwrite/i);

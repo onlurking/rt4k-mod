@@ -18,7 +18,9 @@ export interface ProcessResult {
   changes?: Array<{ settingPath: string; oldValue: string; newValue: string }>;
 }
 
-export async function processSingleFile(options: ProcessSingleFileOptions): Promise<ProcessResult> {
+export async function processSingleFile(
+  options: ProcessSingleFileOptions,
+): Promise<ProcessResult> {
   const { inputPath, outputDir, settings, dryRun = false } = options;
   const filename = path.basename(inputPath);
   const outputPath = path.join(outputDir, filename);
@@ -35,7 +37,11 @@ export async function processSingleFile(options: ProcessSingleFileOptions): Prom
     };
   }
 
-  const changes: Array<{ settingPath: string; oldValue: string; newValue: string }> = [];
+  const changes: Array<{
+    settingPath: string;
+    oldValue: string;
+    newValue: string;
+  }> = [];
 
   for (const { path: settingPath, value } of settings) {
     try {
@@ -45,8 +51,9 @@ export async function processSingleFile(options: ProcessSingleFileOptions): Prom
     } catch (err: unknown) {
       const errMsg = err instanceof Error ? err.message : String(err);
       const entry = SETTINGS_MAP.find((e) => e.settingPath === settingPath);
-      const validValuesMsg =
-        entry?.validValues ? ` Valid values: ${entry.validValues.join(", ")}` : "";
+      const validValuesMsg = entry?.validValues
+        ? ` Valid values: ${entry.validValues.join(", ")}`
+        : "";
       return {
         success: false,
         inputPath,
@@ -84,7 +91,9 @@ export interface BatchResult {
 export async function findRt4FilesInDir(dir: string): Promise<string[]> {
   const result: string[] = [];
   async function recurse(currentDir: string) {
-    const entries = await fs.promises.readdir(currentDir, { withFileTypes: true });
+    const entries = await fs.promises.readdir(currentDir, {
+      withFileTypes: true,
+    });
     for (const entry of entries) {
       const fullPath = path.join(currentDir, entry.name);
       if (entry.isDirectory()) {
@@ -102,7 +111,7 @@ export async function processDirectory(
   inputDir: string,
   outputDir: string,
   settings: Array<{ path: string; value: string }>,
-  dryRun: boolean = false
+  dryRun: boolean = false,
 ): Promise<BatchResult> {
   const files = await findRt4FilesInDir(inputDir);
   const results: ProcessResult[] = [];

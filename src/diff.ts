@@ -1,6 +1,5 @@
-import { parseArgs } from 'node:util';
-import fs from 'node:fs';
-import path from 'node:path';
+import { parseArgs } from "node:util";
+import fs from "node:fs";
 
 interface ByteDiff {
   offset: number;
@@ -15,10 +14,10 @@ interface RegionDef {
 }
 
 const REGIONS: RegionDef[] = [
-  { name: 'header', start: 0x0000, end: 0x000b },
-  { name: 'crc', start: 0x0020, end: 0x0021 },
-  { name: 'meta-pre-crc', start: 0x000c, end: 0x001f },
-  { name: 'meta-post-crc', start: 0x0022, end: 0x007f },
+  { name: "header", start: 0x0000, end: 0x000b },
+  { name: "crc", start: 0x0020, end: 0x0021 },
+  { name: "meta-pre-crc", start: 0x000c, end: 0x001f },
+  { name: "meta-post-crc", start: 0x0022, end: 0x007f },
 ];
 
 function getRegionLabel(offset: number): string {
@@ -27,16 +26,16 @@ function getRegionLabel(offset: number): string {
       return region.name;
     }
   }
-  return 'data';
+  return "data";
 }
 
 function formatHex(value: number, width: number): string {
-  return '0x' + value.toString(16).toUpperCase().padStart(width, '0');
+  return "0x" + value.toString(16).toUpperCase().padStart(width, "0");
 }
 
 function formatOffset(offset: number): string {
   const hex = formatHex(offset, 4);
-  const decimal = offset.toString().padStart(5, ' ');
+  const decimal = offset.toString().padStart(5, " ");
   return `${hex} (${decimal})`;
 }
 
@@ -48,23 +47,23 @@ async function main(): Promise<void> {
   const { values } = parseArgs({
     args: process.argv.slice(2),
     options: {
-      original: { type: 'string' },
-      modified: { type: 'string' },
-      'original-option': { type: 'string' },
-      'modified-option': { type: 'string' },
+      original: { type: "string" },
+      modified: { type: "string" },
+      "original-option": { type: "string" },
+      "modified-option": { type: "string" },
     },
     strict: true,
   });
 
   const originalPath = values.original as string | undefined;
   const modifiedPath = values.modified as string | undefined;
-  const originalOption = values['original-option'] as string | undefined;
-  const modifiedOption = values['modified-option'] as string | undefined;
+  const originalOption = values["original-option"] as string | undefined;
+  const modifiedOption = values["modified-option"] as string | undefined;
 
   // Validate required arguments
   if (!originalPath || !modifiedPath || !originalOption || !modifiedOption) {
     console.error(
-      'Error: Missing required arguments. Usage: bun run diff -- --original <path> --modified <path> --original-option <label> --modified-option <label>'
+      "Error: Missing required arguments. Usage: bun run diff -- --original <path> --modified <path> --original-option <label> --modified-option <label>",
     );
     process.exit(1);
   }
@@ -101,20 +100,20 @@ async function main(): Promise<void> {
   if (originalBuffer.length !== modifiedBuffer.length) {
     const sizeDiff = Math.abs(originalBuffer.length - modifiedBuffer.length);
     console.warn(
-      `Warning: File sizes differ by ${sizeDiff} bytes (${originalBuffer.length} vs ${modifiedBuffer.length})`
+      `Warning: File sizes differ by ${sizeDiff} bytes (${originalBuffer.length} vs ${modifiedBuffer.length})`,
     );
   }
 
   // Output report
-  console.log('Binary Diff Report');
-  console.log('==================');
+  console.log("Binary Diff Report");
+  console.log("==================");
   console.log(`Original : ${originalPath}   (${originalOption})`);
   console.log(`Modified : ${modifiedPath} (${modifiedOption})`);
   console.log(`File size: ${fileSize} bytes`);
-  console.log('');
+  console.log("");
 
   if (diffs.length === 0) {
-    console.log('No differences found.');
+    console.log("No differences found.");
   } else {
     console.log(`Changed bytes (${diffs.length} total):`);
     for (const diff of diffs) {
@@ -122,21 +121,21 @@ async function main(): Promise<void> {
       const origHex = formatByte(diff.original);
       const modHex = formatByte(diff.modified);
       console.log(
-        `  ${formatOffset(diff.offset)}:  ${origHex} → ${modHex}  [${region}]`
+        `  ${formatOffset(diff.offset)}:  ${origHex} → ${modHex}  [${region}]`,
       );
     }
-    console.log('');
+    console.log("");
 
     // Region breakdown
-    console.log('Region Breakdown:');
+    console.log("Region Breakdown:");
     for (const region of REGIONS) {
       const count = diffs.filter(
-        (d) => d.offset >= region.start && d.offset <= region.end
+        (d) => d.offset >= region.start && d.offset <= region.end,
       ).length;
       const startHex = formatHex(region.start, 4);
       const endHex = formatHex(region.end, 4);
       console.log(
-        `  ${region.name.padEnd(15)} (${startHex}–${endHex}):  ${count} changes`
+        `  ${region.name.padEnd(15)} (${startHex}–${endHex}):  ${count} changes`,
       );
     }
 
@@ -145,13 +144,13 @@ async function main(): Promise<void> {
     const dataCount = diffs.filter((d) => d.offset >= dataStart).length;
     const dataStartHex = formatHex(dataStart, 4);
     console.log(
-      `  ${'data'.padEnd(15)} (${dataStartHex}–end   ):  ${dataCount} changes`
+      `  ${"data".padEnd(15)} (${dataStartHex}–end   ):  ${dataCount} changes`,
     );
 
-    console.log('');
+    console.log("");
 
     // Summary
-    console.log('Summary:');
+    console.log("Summary:");
     console.log(`  Total bytes : ${fileSize}`);
     console.log(`  Changed     : ${diffs.length}`);
     console.log(`  Unchanged   : ${fileSize - diffs.length}`);
@@ -159,6 +158,6 @@ async function main(): Promise<void> {
 }
 
 main().catch((err) => {
-  console.error('Error:', err.message);
+  console.error("Error:", err.message);
   process.exit(1);
 });

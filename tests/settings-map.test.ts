@@ -1,7 +1,15 @@
 import { describe, test, expect } from "bun:test";
-import { SETTINGS_MAP, getSettingsFromFlags, getSettingByFlag } from "../src/lib/settings-map.js";
+import {
+  SETTINGS_MAP,
+  getSettingsFromFlags,
+  getSettingByFlag,
+} from "../src/lib/settings-map.js";
 
 describe("SETTINGS_MAP", () => {
+  test("has exactly 5 entries", () => {
+    expect(SETTINGS_MAP.length).toBe(5);
+  });
+
   test("all entries have flagName, settingPath, description", () => {
     for (const entry of SETTINGS_MAP) {
       expect(entry.flagName).toBeTruthy();
@@ -20,6 +28,51 @@ describe("SETTINGS_MAP", () => {
     expect(entry?.validValues).toContain("Off");
     expect(entry?.validValues).toContain("FreeSync");
     expect(entry?.validValues).toContain("VESA");
+  });
+
+  test("resolution maps to output.resolution", () => {
+    const entry = SETTINGS_MAP.find((e) => e.flagName === "resolution");
+    expect(entry?.settingPath).toBe("output.resolution");
+  });
+
+  test("resolution valid values include 4K60 and 1080p60", () => {
+    const entry = SETTINGS_MAP.find((e) => e.flagName === "resolution");
+    expect(entry?.validValues).toContain("4K60");
+    expect(entry?.validValues).toContain("1080p60");
+  });
+
+  test("hdr maps to output.transmitter.hdr", () => {
+    const entry = SETTINGS_MAP.find((e) => e.flagName === "hdr");
+    expect(entry?.settingPath).toBe("output.transmitter.hdr");
+  });
+
+  test("hdr valid values include Off, HDR10 [8-bit], HLG [8-bit]", () => {
+    const entry = SETTINGS_MAP.find((e) => e.flagName === "hdr");
+    expect(entry?.validValues).toContain("Off");
+    expect(entry?.validValues).toContain("HDR10 [8-bit]");
+    expect(entry?.validValues).toContain("HLG [8-bit]");
+  });
+
+  test("deep-color maps to output.transmitter.deep_color", () => {
+    const entry = SETTINGS_MAP.find((e) => e.flagName === "deep-color");
+    expect(entry?.settingPath).toBe("output.transmitter.deep_color");
+  });
+
+  test("deep-color valid values include true and false", () => {
+    const entry = SETTINGS_MAP.find((e) => e.flagName === "deep-color");
+    expect(entry?.validValues).toContain("true");
+    expect(entry?.validValues).toContain("false");
+  });
+
+  test("input maps to input", () => {
+    const entry = SETTINGS_MAP.find((e) => e.flagName === "input");
+    expect(entry?.settingPath).toBe("input");
+  });
+
+  test("input valid values include HDMI and SCART|RGBS (75 Ohm)", () => {
+    const entry = SETTINGS_MAP.find((e) => e.flagName === "input");
+    expect(entry?.validValues).toContain("HDMI");
+    expect(entry?.validValues).toContain("SCART|RGBS (75 Ohm)");
   });
 });
 
@@ -63,5 +116,4 @@ describe("getSettingByFlag", () => {
     const entry = getSettingByFlag("nonexistent");
     expect(entry).toBeUndefined();
   });
-
 });

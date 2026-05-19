@@ -6,7 +6,9 @@ import fs from "fs";
 async function findRt4Files(dir: string): Promise<string[]> {
   const result: string[] = [];
   async function recurse(currentDir: string) {
-    const entries = await fs.promises.readdir(currentDir, { withFileTypes: true });
+    const entries = await fs.promises.readdir(currentDir, {
+      withFileTypes: true,
+    });
     for (const entry of entries) {
       const fullPath = path.join(currentDir, entry.name);
       if (entry.isDirectory()) {
@@ -42,7 +44,9 @@ export const inspectCommand = new Command("inspect")
         const json = profile.serializeValues(options.pretty === true);
         console.log(json);
       } catch (err: unknown) {
-        console.error(`Error reading file: ${err instanceof Error ? err.message : String(err)}`);
+        console.error(
+          `Error reading file: ${err instanceof Error ? err.message : String(err)}`,
+        );
         process.exit(1);
       }
     } else {
@@ -60,7 +64,9 @@ export const inspectCommand = new Command("inspect")
           const line = JSON.stringify({ file: relativePath, settings });
           console.log(line);
         } catch (err: unknown) {
-          console.error(`Error reading ${filePath}: ${err instanceof Error ? err.message : String(err)}`);
+          console.error(
+            `Error reading ${filePath}: ${err instanceof Error ? err.message : String(err)}`,
+          );
         }
       }
     }

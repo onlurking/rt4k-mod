@@ -2,7 +2,7 @@
 
 Batch-modify RetroTINK-4K `.rt4` profile settings from the command line.
 
-## Install Dependencies
+## Install
 
 ```bash
 bun install
@@ -10,7 +10,7 @@ bun install
 
 ## Usage
 
-Apply setting overrides to one or many `.rt4` profiles.
+Apply setting overrides to one or many `.rt4` profiles. Outputs are written to a separate directory — originals are never touched.
 
 ```bash
 # Single file
@@ -21,6 +21,15 @@ bun run src/index.ts modify \
   --input-dir "./profiles/God's Chosen/" \
   --output-dir "./modified/God's Chosen/" \
   --vrr Off
+
+# Multiple flags at once
+bun run src/index.ts modify \
+  --input-dir ./profiles \
+  --output-dir ./out \
+  --vrr Off \
+  --resolution 4K60 \
+  --hdr 'HDR10 [8-bit]' \
+  --deep-color true
 
 # Preview changes without writing
 bun run src/index.ts modify --file ./PSX.rt4 --output-dir ./out --vrr Off --dry-run
@@ -46,6 +55,10 @@ bun run src/index.ts inspect --input-dir ./profiles
 | Flag | Values | Description |
 |------|--------|-------------|
 | `--vrr` | `Off`, `FreeSync`, `VESA` | Variable refresh rate mode |
+| `--resolution` | `4K60`, `4K50`, `1080p60`, `1080p50`, `1440p60`, `1440p50`, `1080p100`, `1440p100`, `1080p120`, `1440p120`, `480p60` | Output resolution |
+| `--hdr` | `Off`, `HDR10 [8-bit]`, `HLG [8-bit]` | HDR mode |
+| `--deep-color` | `true`, `false` | Deep color (10-bit output) |
+| `--input` | `HDMI`, `Front\|Composite`, `Front\|S-Video`, `RCA\|YPbPr`, `RCA\|RGsB`, `RCA\|CVBS on Green`, `SCART\|RGBS (75 Ohm)`, `SCART\|RGsB`, `SCART\|YPbPr`, `SCART\|CVBS on Pin 20`, `SCART\|CVBS on Green`, `SCART\|Y/C on Pin 20/Red`, `HD-15\|RGBHV`, `HD-15\|RGBS`, `HD-15\|RGsB`, `HD-15\|YPbPr`, `HD-15\|CVBS on Hsync`, `HD-15\|CVBS on Green`, `HD-15\|Y/C on Green/Red`, `HD-15\|Y/C on G/R (Enh.)` | Input source |
 
 ### Infrastructure flags
 

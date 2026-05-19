@@ -21,6 +21,10 @@ describe("CLI skeleton", () => {
   test("modify --help shows vrr flag", () => {
     const { stdout } = run(["modify", "--help"]);
     expect(stdout).toContain("--vrr");
+    expect(stdout).toContain("--resolution");
+    expect(stdout).toContain("--hdr");
+    expect(stdout).toContain("--deep-color");
+    expect(stdout).toContain("--input");
     expect(stdout).toContain("--dry-run");
     expect(stdout).toContain("--output-dir");
   });
