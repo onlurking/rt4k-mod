@@ -1,5 +1,5 @@
 import { describe, it, expect } from "bun:test";
-import { SCHEMA, getSettingDef } from "../../../src/lib/rt4k/schema";
+import { SCHEMA, getSettingDef, getSettingsFromFlags, getValidValuesHint } from "../../../src/lib/rt4k/schema";
 
 describe("SCHEMA", () => {
   it("has exactly 6 entries", () => {
@@ -54,5 +54,77 @@ describe("getSettingDef", () => {
     for (const e of getSettingDef("input").enums!) {
       expect(e.value.length).toBe(2);
     }
+  });
+});
+
+describe("CLI-exposed settings", () => {
+  it("SCHEMA has 5 CLI-exposed entries (filter by flagName)", () => {
+    const cliEntries = SCHEMA.filter((s) => s.flagName);
+    expect(cliEntries.length).toBe(5);
+  });
+
+  it("all CLI entries have flagName, name, cliDesc", () => {
+    const cliEntries = SCHEMA.filter((s) => s.flagName);
+    for (const entry of cliEntries) {
+      expect(entry.flagName).toBeTruthy();
+      expect(entry.name).toBeTruthy();
+      expect(entry.cliDesc).toBeTruthy();
+    }
+  });
+
+  it("vrr flagName is vrr", () => {
+    const vrr = SCHEMA.find((s) => s.name === "output.transmitter.vrr");
+    expect(vrr?.flagName).toBe("vrr");
+  });
+
+  it("resolution flagName is resolution", () => {
+    const res = SCHEMA.find((s) => s.name === "output.resolution");
+    expect(res?.flagName).toBe("resolution");
+  });
+});
+
+describe("getSettingsFromFlags", () => {
+  it("returns empty for empty flags", () => {
+    const result = getSettingsFromFlags({});
+    expect(result).toHaveLength(0);
+  });
+
+  it("maps vrr flag correctly", () => {
+    const result = getSettingsFromFlags({ vrr: "Off" });
+    expect(result).toHaveLength(1);
+    expect(result[0].path).toBe("output.transmitter.vrr");
+    expect(result[0].value).toBe("Off");
+    expect(result[0].def.flagName).toBe("vrr");
+  });
+
+  it("filters undefined values", () => {
+    const result = getSettingsFromFlags({ vrr: "Off", input: undefined });
+    expect(result).toHaveLength(1);
+  });
+
+  it("ignores unknown flags", () => {
+    const result = getSettingsFromFlags({ unknownFlag: "value" });
+    expect(result).toHaveLength(0);
+  });
+});
+
+describe("getValidValuesHint", () => {
+  it("returns enum names for ENUM", () => {
+    const vrr = getSettingDef("output.transmitter.vrr");
+    const hint = getValidValuesHint(vrr);
+    expect(hint).toBe("Off, FreeSync, VESA");
+  });
+
+  it("returns true, false for BIT", () => {
+    const dc = getSettingDef("output.transmitter.deep_color");
+    const hint = getValidValuesHint(dc);
+    expect(hint).toBe("true, false");
+  });
+
+  it("returns undefined for INT", () => {
+    // header is STR type, but we can test the default case with any non-ENUM/BIT
+    const header = getSettingDef("header");
+    const hint = getValidValuesHint(header);
+    expect(hint).toBeUndefined();
   });
 });

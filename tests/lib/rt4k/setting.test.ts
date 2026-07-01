@@ -1,10 +1,7 @@
 import { describe, expect, it } from "bun:test";
 import { SettingValidationError } from "../../../src/lib/rt4k/exceptions";
 import { getSettingDef, type SettingDef } from "../../../src/lib/rt4k/schema";
-import {
-  RetroTinkSetting,
-  RetroTinkSettingValue,
-} from "../../../src/lib/rt4k/setting";
+import { RetroTinkSettingValue } from "../../../src/lib/rt4k/setting";
 import { DataType } from "../../../src/lib/rt4k/types";
 
 const vrrDef = getSettingDef("output.transmitter.vrr");
@@ -70,7 +67,7 @@ function intDef(
 
 describe("RetroTinkSetting", () => {
   it("exposes SettingDef fields and computed length", () => {
-    const setting = new RetroTinkSetting(inputDef);
+    const setting = new RetroTinkSettingValue(inputDef);
 
     expect(setting.name).toBe("input");
     expect(setting.desc).toBe("Input");
@@ -86,17 +83,17 @@ describe("RetroTinkSetting", () => {
   });
 
   it("defaults readOnly to false and returns human-readable valid values", () => {
-    expect(new RetroTinkSetting(getSettingDef("header")).readOnly).toBe(true);
-    expect(new RetroTinkSetting(intDef(DataType.INT)).validValues()).toBe(
+    expect(new RetroTinkSettingValue(getSettingDef("header")).readOnly).toBe(true);
+    expect(new RetroTinkSettingValue(intDef(DataType.INT)).validValues()).toBe(
       "number between 0 and 255",
     );
     expect(
-      new RetroTinkSetting(intDef(DataType.SIGNED_INT)).validValues(),
+      new RetroTinkSettingValue(intDef(DataType.SIGNED_INT)).validValues(),
     ).toBe("number between -128 and 127");
-    expect(new RetroTinkSetting(intDef(DataType.BIT)).validValues()).toBe(
+    expect(new RetroTinkSettingValue(intDef(DataType.BIT)).validValues()).toBe(
       "boolean or number between 0 and 1",
     );
-    expect(new RetroTinkSetting(strDef()).validValues()).toBe("string");
+    expect(new RetroTinkSettingValue(strDef()).validValues()).toBe("string");
   });
 });
 

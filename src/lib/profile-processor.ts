@@ -1,5 +1,6 @@
+import { findRt4FilesInDir } from "./file-utils.js";
 import { RetroTinkProfile } from "./rt4k/index.js";
-import { SETTINGS_MAP } from "./settings-map.js";
+import { getSettingDef, getValidValuesHint } from "./rt4k/schema.js";
 import path from "path";
 import fs from "fs";
 
@@ -50,10 +51,9 @@ export async function processSingleFile(
       changes.push({ settingPath, oldValue, newValue: value });
     } catch (err: unknown) {
       const errMsg = err instanceof Error ? err.message : String(err);
-      const entry = SETTINGS_MAP.find((e) => e.settingPath === settingPath);
-      const validValuesMsg = entry?.validValues
-        ? ` Valid values: ${entry.validValues.join(", ")}`
-        : "";
+      const def = getSettingDef(settingPath);
+      const hint = getValidValuesHint(def);
+      const validValuesMsg = hint ? ` Valid values: ${hint}` : "";
       return {
         success: false,
         inputPath,
@@ -88,37 +88,20 @@ export interface BatchResult {
   results: ProcessResult[];
 }
 
-export async function findRt4FilesInDir(dir: string): Promise<string[]> {
-  const result: string[] = [];
-  async function recurse(currentDir: string) {
-    const entries = await fs.promises.readdir(currentDir, {
-      withFileTypes: true,
-    });
-    for (const entry of entries) {
-      const fullPath = path.join(currentDir, entry.name);
-      if (entry.isDirectory()) {
-        await recurse(fullPath);
-      } else if (entry.isFile() && entry.name.endsWith(".rt4")) {
-        result.push(fullPath);
-      }
-    }
-  }
-  await recurse(dir);
-  return result.sort();
-}
 
 export async function processDirectory(
   inputDir: string,
   outputDir: string,
   settings: Array<{ path: string; value: string }>,
   dryRun: boolean = false,
+  files?: string[],
 ): Promise<BatchResult> {
-  const files = await findRt4FilesInDir(inputDir);
+  const resolvedFiles = files ?? (await findRt4FilesInDir(inputDir));
   const results: ProcessResult[] = [];
   let succeeded = 0;
   let failed = 0;
 
-  for (const filePath of files) {
+  for (const filePath of resolvedFiles) {
     const relativePath = path.relative(inputDir, filePath);
     const fileOutputDir = path.join(outputDir, path.dirname(relativePath));
     const result = await processSingleFile({
@@ -135,5 +118,5 @@ export async function processDirectory(
     }
   }
 
-  return { total: files.length, succeeded, failed, results };
+  return { total: resolvedFiles.length, succeeded, failed, results };
 }

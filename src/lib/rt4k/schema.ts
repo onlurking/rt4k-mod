@@ -7,6 +7,8 @@ export interface SettingDef {
   type: DataType;
   readOnly?: boolean;
   enums?: { name: string; value: Uint8Array }[];
+  flagName?: string;
+  cliDesc?: string;
 }
 
 export const SCHEMA: SettingDef[] = [
@@ -27,6 +29,8 @@ export const SCHEMA: SettingDef[] = [
       { name: "FreeSync", value: new Uint8Array([1]) },
       { name: "VESA", value: new Uint8Array([2]) },
     ],
+    flagName: "vrr",
+    cliDesc: "VRR mode",
   },
   {
     name: "output.resolution",
@@ -46,6 +50,8 @@ export const SCHEMA: SettingDef[] = [
       { name: "1440p120", value: new Uint8Array([9]) },
       { name: "480p60", value: new Uint8Array([13]) },
     ],
+    flagName: "resolution",
+    cliDesc: "Output resolution",
   },
   {
     name: "output.transmitter.hdr",
@@ -57,12 +63,16 @@ export const SCHEMA: SettingDef[] = [
       { name: "HDR10 [8-bit]", value: new Uint8Array([1]) },
       { name: "HLG [8-bit]", value: new Uint8Array([2]) },
     ],
+    flagName: "hdr",
+    cliDesc: "HDR mode",
   },
   {
     name: "output.transmitter.deep_color",
     desc: "HDMI Output -> Transmitter -> Deep Color",
     byteRanges: [{ address: 0x02d4, length: 1 }],
     type: DataType.BIT,
+    flagName: "deep-color",
+    cliDesc: "Deep color (10-bit output)",
   },
   {
     name: "input",
@@ -94,6 +104,8 @@ export const SCHEMA: SettingDef[] = [
       { name: "HD-15|Y/C on Green/Red", value: new Uint8Array([1, 26]) },
       { name: "HD-15|Y/C on G/R (Enh.)", value: new Uint8Array([1, 27]) },
     ],
+    flagName: "input",
+    cliDesc: "Input source",
   },
 ];
 
@@ -101,5 +113,30 @@ export function getSettingDef(name: string): SettingDef {
   const def = SCHEMA.find((s) => s.name === name);
   if (!def) throw new Error(`Setting not found: ${name}`);
   return def;
+}
+
+export function getSettingsFromFlags(
+  flags: Record<string, string | undefined>,
+): Array<{ path: string; value: string; def: SettingDef }> {
+  const results: Array<{ path: string; value: string; def: SettingDef }> = [];
+  for (const def of SCHEMA) {
+    if (!def.flagName) continue;
+    const value = flags[def.flagName];
+    if (value !== undefined) {
+      results.push({ path: def.name, value, def });
+    }
+  }
+  return results;
+}
+
+export function getValidValuesHint(def: SettingDef): string | undefined {
+  switch (def.type) {
+    case DataType.ENUM:
+      return def.enums?.map(e => e.name).join(", ");
+    case DataType.BIT:
+      return "true, false";
+    default:
+      return undefined;
+  }
 }
 

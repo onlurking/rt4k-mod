@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it } from "bun:test";
+import { memFileIO } from "../../helpers/mem-file-io";
 import {
   InvalidProfileFormatError,
   ProfileNotFoundError,
@@ -162,6 +163,30 @@ describe("RetroTinkProfile", () => {
       )) {
         expect(names).not.toContain(readOnlySetting.name);
       }
+    });
+  });
+
+  describe("save with memFileIO", () => {
+    it("round-trips through in-memory FileIO", async () => {
+      const io = memFileIO();
+      const fixtureBytes = new Uint8Array(
+        await Bun.file(fixturePath).arrayBuffer(),
+      );
+
+      // Seed the mem store with the fixture
+      await io.write("fixture.rt4", fixtureBytes);
+
+      // Build from mem, mutate, save to mem
+      const profile = await RetroTinkProfile.build("fixture.rt4", io);
+      profile.setValue("output.transmitter.vrr", "Off");
+      await profile.save("saved.rt4", io);
+
+      // Reload from mem and verify
+      const reloaded = await RetroTinkProfile.build("saved.rt4", io);
+      expect(reloaded.getValue("output.transmitter.vrr").asString()).toBe("Off");
+      expect(reloaded.getValue("input").asString()).toBe(
+        profile.getValue("input").asString(),
+      );
     });
   });
 });

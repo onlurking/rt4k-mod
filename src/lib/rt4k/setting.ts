@@ -5,8 +5,17 @@ import { DataType } from './types';
 
 type SettingPlainObjectValue = string | number | boolean;
 
-export class RetroTinkSetting {
-  constructor(protected readonly def: SettingDef) {}
+export class RetroTinkSettingValue {
+  public value: Uint8Array;
+  private readonly def: SettingDef;
+
+  constructor(def: SettingDef, bytes?: Uint8Array) {
+    this.def = def;
+    this.value = bytes ?? new Uint8Array(this.length());
+    if (bytes && this.def.type === DataType.ENUM) {
+      this.validate();
+    }
+  }
 
   get name(): string {
     return this.def.name;
@@ -48,18 +57,6 @@ export class RetroTinkSetting {
         return 'boolean or number between 0 and 1';
       case DataType.STR:
         return 'string';
-    }
-  }
-}
-
-export class RetroTinkSettingValue extends RetroTinkSetting {
-  public value: Uint8Array;
-
-  constructor(def: SettingDef, bytes?: Uint8Array) {
-    super(def);
-    this.value = bytes ?? new Uint8Array(this.length());
-    if (bytes && this.def.type === DataType.ENUM) {
-      this.validate();
     }
   }
 

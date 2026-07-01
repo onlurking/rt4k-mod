@@ -1,6 +1,6 @@
 import { CRC16CCITT } from './crc';
 import { InvalidProfileFormatError } from './exceptions';
-import { readFileBinary, writeFileBinary } from './file-utils';
+import { defaultFileIO, type FileIO } from './file-io';
 import { deepMerge } from './object-utils';
 import { SCHEMA, getSettingDef, type SettingDef } from './schema';
 import { RetroTinkSettingValue } from './setting';
@@ -12,8 +12,8 @@ const DATA_START_INDEX = 128;
 export class RetroTinkProfile {
   private constructor(private _bytes: Uint8Array) {}
 
-  static async build(filename: string): Promise<RetroTinkProfile> {
-    const bytes = await readFileBinary(filename);
+  static async build(filename: string, io: FileIO = defaultFileIO): Promise<RetroTinkProfile> {
+    const bytes = await io.read(filename);
     return RetroTinkProfile.fromBytes(bytes);
   }
 
@@ -70,9 +70,9 @@ export class RetroTinkProfile {
     this._bytes = new Uint8Array(bytes);
   }
 
-  async save(filePath: string): Promise<void> {
+  async save(filePath: string, io: FileIO = defaultFileIO): Promise<void> {
     this._writeCrc();
-    await writeFileBinary(filePath, this._bytes);
+    await io.write(filePath, this._bytes);
   }
 
   serializeValues(pretty: boolean = false): string {

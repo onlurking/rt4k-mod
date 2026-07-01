@@ -1,26 +1,8 @@
 import { Command } from "commander";
 import { RetroTinkProfile } from "../lib/rt4k/index.js";
+import { findRt4FilesInDir } from "../lib/file-utils.js";
 import path from "path";
 import fs from "fs";
-
-async function findRt4Files(dir: string): Promise<string[]> {
-  const result: string[] = [];
-  async function recurse(currentDir: string) {
-    const entries = await fs.promises.readdir(currentDir, {
-      withFileTypes: true,
-    });
-    for (const entry of entries) {
-      const fullPath = path.join(currentDir, entry.name);
-      if (entry.isDirectory()) {
-        await recurse(fullPath);
-      } else if (entry.isFile() && entry.name.endsWith(".rt4")) {
-        result.push(fullPath);
-      }
-    }
-  }
-  await recurse(dir);
-  return result.sort();
-}
 
 export const inspectCommand = new Command("inspect")
   .description("Inspect .rt4 profile settings")
@@ -55,7 +37,7 @@ export const inspectCommand = new Command("inspect")
         console.error(`Error: Directory not found: ${dirPath}`);
         process.exit(1);
       }
-      const files = await findRt4Files(dirPath);
+      const files = await findRt4FilesInDir(dirPath);
       for (const filePath of files) {
         try {
           const profile = await RetroTinkProfile.build(filePath);
