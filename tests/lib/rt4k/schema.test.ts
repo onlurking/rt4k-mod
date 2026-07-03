@@ -2,8 +2,8 @@ import { describe, it, expect } from "bun:test";
 import { SCHEMA, getSettingDef, getSettingsFromFlags, getValidValuesHint } from "../../../src/lib/rt4k/schema";
 
 describe("SCHEMA", () => {
-  it("has exactly 6 entries", () => {
-    expect(SCHEMA.length).toBe(6);
+  it("has exactly 22 entries", () => {
+    expect(SCHEMA.length).toBe(22);
   });
 
   it("all settings have byteRanges with at least 1 entry", () => {
@@ -58,9 +58,9 @@ describe("getSettingDef", () => {
 });
 
 describe("CLI-exposed settings", () => {
-  it("SCHEMA has 5 CLI-exposed entries (filter by flagName)", () => {
+  it("SCHEMA has 21 CLI-exposed entries (filter by flagName)", () => {
     const cliEntries = SCHEMA.filter((s) => s.flagName);
-    expect(cliEntries.length).toBe(5);
+    expect(cliEntries.length).toBe(21);
   });
 
   it("all CLI entries have flagName, name, cliDesc", () => {
