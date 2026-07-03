@@ -33,6 +33,15 @@ bun run src/index.ts modify \
   --hdr 'HDR10 [8-bit]' \
   --deep-color true
 
+# Crop settings for specific resolutions
+bun run src/index.ts modify \
+  --file ./PSX.rt4 \
+  --output-dir ./out \
+  --crop-240p-top 10 \
+  --crop-240p-bottom -5 \
+  --crop-480i-top 8 \
+  --crop-480i-bottom -4
+
 # Preview changes without writing
 bun run src/index.ts modify --file ./PSX.rt4 --output-dir ./out --vrr Off --dry-run
 ```
@@ -87,13 +96,13 @@ bun run src/index.ts generate --config profiles.json --force
   },
   "cores": {
     "NES": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "zerowing": {
-      "scaling.crop.top": 1,
-      "scaling.crop.bottom": -1,
-      "scaling.crop.right": -1
+      "output.crop_240p.top": 1,
+      "output.crop_240p.bottom": -1,
+      "output.crop_240p.right": -1
     },
     "SNES": null
   }
@@ -186,10 +195,18 @@ Output includes:
 
 | Flag | Values | Description |
 |------|--------|-------------|
-| `--crop-top` | signed integer | Top crop (pixels) |
-| `--crop-bottom` | signed integer | Bottom crop (pixels) |
-| `--crop-left` | signed integer | Left crop (pixels) |
-| `--crop-right` | signed integer | Right crop (pixels) |
+| `--scaling-mode` | `Auto Fill`, `Proportional`, `Free Form`, `Auto Fill Integer` | Scaling mode |
+| `--rotation` | `None`, `Right 90`, `Left 90` | Output rotation |
+| `--auto-rotate` | `On`, `Off` | Auto rotate |
+| `--auto-crop` | `Off`, `On` | Auto crop |
+| `--crop-240p-top` | `-32768` to `32767` | 240p manual crop top |
+| `--crop-240p-bottom` | `-32768` to `32767` | 240p manual crop bottom |
+| `--crop-240p-left` | `-32768` to `32767` | 240p manual crop left |
+| `--crop-240p-right` | `-32768` to `32767` | 240p manual crop right |
+| `--crop-480i-top` | `-32768` to `32767` | 480i manual crop top |
+| `--crop-480i-bottom` | `-32768` to `32767` | 480i manual crop bottom |
+| `--crop-480i-left` | `-32768` to `32767` | 480i manual crop left |
+| `--crop-480i-right` | `-32768` to `32767` | 480i manual crop right |
 
 ### Infrastructure flags
 

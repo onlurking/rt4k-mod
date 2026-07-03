@@ -22,10 +22,11 @@ describe("DataType enum", () => {
     expect(DataType.ENUM as string).toBe("ENUM");
   });
 
-  it("should have all 5 enum values", () => {
+  it("should have all 6 enum values", () => {
     const values = Object.keys(DataType);
-    expect(values.length).toBe(5);
+    expect(values.length).toBe(6);
     expect(values).toContain("SIGNED_INT");
+    expect(values).toContain("SIGNED_SHORT");
     expect(values).toContain("INT");
     expect(values).toContain("STR");
     expect(values).toContain("BIT");

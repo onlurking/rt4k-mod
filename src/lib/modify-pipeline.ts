@@ -18,6 +18,18 @@ export interface ModifyPipelineInput {
   hdr?: string;
   deepColor?: string;
   input?: string;
+  scalingMode?: string;
+  rotation?: string;
+  autoRotate?: string;
+  autoCrop?: string;
+  crop240pTop?: string;
+  crop240pBottom?: string;
+  crop240pLeft?: string;
+  crop240pRight?: string;
+  crop480iTop?: string;
+  crop480iBottom?: string;
+  crop480iLeft?: string;
+  crop480iRight?: string;
 }
 
 export interface ValidatedConfig {
@@ -77,6 +89,18 @@ function validate(input: ModifyPipelineInput): ValidatedConfig {
     hdr: input.hdr,
     "deep-color": input.deepColor,
     input: input.input,
+    "scaling-mode": input.scalingMode,
+    rotation: input.rotation,
+    "auto-rotate": input.autoRotate,
+    "auto-crop": input.autoCrop,
+    "crop-240p-top": input.crop240pTop,
+    "crop-240p-bottom": input.crop240pBottom,
+    "crop-240p-left": input.crop240pLeft,
+    "crop-240p-right": input.crop240pRight,
+    "crop-480i-top": input.crop480iTop,
+    "crop-480i-bottom": input.crop480iBottom,
+    "crop-480i-left": input.crop480iLeft,
+    "crop-480i-right": input.crop480iRight,
   };
 
   const settingOverrides = getSettingsFromFlags(rawFlags);

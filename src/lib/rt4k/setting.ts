@@ -53,6 +53,8 @@ export class RetroTinkSettingValue {
         return 'number between 0 and 255';
       case DataType.SIGNED_INT:
         return 'number between -128 and 127';
+      case DataType.SIGNED_SHORT:
+        return 'number between -32768 and 32767';
       case DataType.BIT:
         return 'boolean or number between 0 and 1';
       case DataType.STR:
@@ -102,20 +104,29 @@ export class RetroTinkSettingValue {
 
   asInt(): number {
     const length = this.length();
-    if (length === 1) {
-      if (this.def.type === DataType.SIGNED_INT) {
-        return this.value[0] > 127 ? this.value[0] - 256 : this.value[0];
+
+    if (this.def.type === DataType.SIGNED_INT) {
+      if (length !== 1) {
+        throw new SettingTypeError(this.name, this.type, this.value, 'Not Implemented');
       }
-      return this.value[0];
+      return this.value[0] > 127 ? this.value[0] - 256 : this.value[0];
     }
-    if (length === 2) {
-      const val = this.value[0] | (this.value[1] << 8);
-      if (this.def.type === DataType.SIGNED_INT) {
-        return val > 32767 ? val - 65536 : val;
+
+    if (this.def.type === DataType.SIGNED_SHORT) {
+      if (length !== 2) {
+        throw new SettingTypeError(this.name, this.type, this.value, 'Not Implemented');
       }
-      return val;
+      return new DataView(this.value.buffer, this.value.byteOffset, this.value.byteLength).getInt16(
+        0,
+        true,
+      );
     }
-    throw new SettingTypeError(this.name, this.type, this.value, 'Not Implemented');
+
+    if (length !== 1) {
+      throw new SettingTypeError(this.name, this.type, this.value, 'Not Implemented');
+    }
+
+    return this.value[0];
   }
 
   set(val: string | number | boolean): void {
@@ -181,25 +192,34 @@ export class RetroTinkSettingValue {
       return;
     }
 
-    const length = this.length();
-    if (length === 2 && this.def.type === DataType.SIGNED_INT) {
-      if (num < -32768 || num > 32767) {
-        throw new SettingValidationError(this.name, num, 'Value out of range for signed 16-bit integer');
-      }
-      const val = num < 0 ? 65536 + num : num;
-      this.value[0] = val & 0xff;
-      this.value[1] = (val >> 8) & 0xff;
-      return;
-    }
-    if (length !== 1) {
-      throw new SettingTypeError(this.name, this.type, num, 'Not Implemented');
-    }
     if (this.def.type === DataType.SIGNED_INT) {
+      const length = this.length();
+      if (length !== 1) {
+        throw new SettingTypeError(this.name, this.type, num, 'Not Implemented');
+      }
       if (num < -128 || num > 127) {
         throw new SettingValidationError(this.name, num, 'Value out of range for signed 8-bit integer');
       }
       this.value[0] = num < 0 ? 256 + num : num;
       return;
+    }
+
+    if (this.def.type === DataType.SIGNED_SHORT) {
+      const length = this.length();
+      if (length !== 2) {
+        throw new SettingTypeError(this.name, this.type, num, 'Not Implemented');
+      }
+      if (num < -32768 || num > 32767) {
+        throw new SettingValidationError(this.name, num, 'Value out of range for signed 16-bit integer');
+      }
+      this.value = new Uint8Array(2);
+      new DataView(this.value.buffer).setInt16(0, num, true);
+      return;
+    }
+
+    const length = this.length();
+    if (length !== 1) {
+      throw new SettingTypeError(this.name, this.type, num, 'Not Implemented');
     }
 
     if (this.def.type === DataType.BIT) {
@@ -237,6 +257,7 @@ export class RetroTinkSettingValue {
         break;
       case DataType.INT:
       case DataType.SIGNED_INT:
+      case DataType.SIGNED_SHORT:
         value = this.asInt();
         break;
     }
