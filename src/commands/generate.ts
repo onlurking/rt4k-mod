@@ -3,11 +3,23 @@ import path from "path";
 import fs from "fs";
 import { RetroTinkProfile } from "../lib/rt4k/index.js";
 
+interface CoreSettings {
+  [settingPath: string]: string | number | boolean;
+}
+
+interface GenerateConfig {
+  base_profile: string;
+  output_dir?: string;
+  defaults?: CoreSettings;
+  cores: Record<string, CoreSettings | null>;
+}
+
 interface GenerateOptions {
-  baseProfile: string;
-  outputDir: string;
+  baseProfile?: string;
+  outputDir?: string;
   cores?: string;
   misterPath?: string;
+  config?: string;
   force?: boolean;
 }
 
@@ -43,7 +55,6 @@ async function scanMisterCores(misterPath: string): Promise<string[]> {
     }
   }
 
-  // Scan _Arcade for .mra files (extract <setname>)
   const arcadePath = path.join(misterPath, "_Arcade");
   if (fs.existsSync(arcadePath)) {
     const entries = await fs.promises.readdir(arcadePath, { withFileTypes: true });
@@ -61,40 +72,72 @@ async function scanMisterCores(misterPath: string): Promise<string[]> {
   return cores.sort();
 }
 
+function applySettings(profile: RetroTinkProfile, settings: CoreSettings): void {
+  for (const [key, value] of Object.entries(settings)) {
+    profile.setValue(key, value);
+  }
+}
+
 export async function runGenerate(options: GenerateOptions): Promise<{
   created: number;
   skipped: number;
   errors: string[];
 }> {
-  const { baseProfile, outputDir, cores: coresArg, misterPath, force = false } = options;
+  const { config: configPath, force = false } = options;
 
-  const baseProfilePath = path.resolve(baseProfile);
-  const outputDirPath = path.resolve(outputDir);
+  let config: GenerateConfig | null = null;
+  if (configPath) {
+    const resolved = path.resolve(configPath);
+    if (!fs.existsSync(resolved)) {
+      throw new Error(`Config file not found: ${resolved}`);
+    }
+    config = JSON.parse(await fs.promises.readFile(resolved, "utf-8"));
+  }
 
-  if (!fs.existsSync(baseProfilePath)) {
+  const baseProfilePath = path.resolve(
+    options.baseProfile ?? config?.base_profile ?? "",
+  );
+  if (!baseProfilePath || !fs.existsSync(baseProfilePath)) {
     throw new Error(`Base profile not found: ${baseProfilePath}`);
   }
 
+  const outputDirPath = path.resolve(
+    options.outputDir ?? config?.output_dir ?? "",
+  );
+
   await fs.promises.mkdir(outputDirPath, { recursive: true });
 
-  // Get core list
-  let coreNames: string[] = [];
-  if (coresArg) {
-    coreNames = coresArg
+  const coreEntries: Array<{ name: string; settings: CoreSettings }> = [];
+
+  if (config) {
+    for (const [coreName, coreSettings] of Object.entries(config.cores)) {
+      coreEntries.push({
+        name: coreName,
+        settings: { ...config.defaults, ...coreSettings ?? {} },
+      });
+    }
+  } else if (options.cores) {
+    const names = options.cores
       .split(",")
       .map((c) => c.trim())
       .filter(Boolean);
-  } else if (misterPath) {
-    const misterPathResolved = path.resolve(misterPath);
+    for (const name of names) {
+      coreEntries.push({ name, settings: {} });
+    }
+  } else if (options.misterPath) {
+    const misterPathResolved = path.resolve(options.misterPath);
     if (!fs.existsSync(misterPathResolved)) {
       throw new Error(`MiSTer path not found: ${misterPathResolved}`);
     }
-    coreNames = await scanMisterCores(misterPathResolved);
+    const names = await scanMisterCores(misterPathResolved);
+    for (const name of names) {
+      coreEntries.push({ name, settings: {} });
+    }
   } else {
-    throw new Error("Must provide --cores or --mister-path");
+    throw new Error("Must provide --config, --cores, or --mister-path");
   }
 
-  if (coreNames.length === 0) {
+  if (coreEntries.length === 0) {
     throw new Error("No cores found");
   }
 
@@ -102,7 +145,7 @@ export async function runGenerate(options: GenerateOptions): Promise<{
   let skipped = 0;
   const errors: string[] = [];
 
-  for (const coreName of coreNames) {
+  for (const { name: coreName, settings } of coreEntries) {
     const outputName = RENAMING_RULES[coreName] ?? coreName;
     const outputPath = path.join(outputDirPath, `${outputName}.rt4`);
 
@@ -114,6 +157,7 @@ export async function runGenerate(options: GenerateOptions): Promise<{
     try {
       const profile = await RetroTinkProfile.build(baseProfilePath);
       profile.setValue("input", "HDMI");
+      applySettings(profile, settings);
       await profile.save(outputPath);
       created++;
     } catch (err) {
@@ -126,10 +170,11 @@ export async function runGenerate(options: GenerateOptions): Promise<{
 
 export const generateCommand = new Command("generate")
   .description("Generate DV1 profiles for MiSTer cores")
-  .requiredOption("--base-profile <path>", "Base .rt4 profile to copy")
-  .requiredOption("--output-dir <path>", "Output directory for generated profiles")
+  .option("--base-profile <path>", "Base .rt4 profile to copy")
+  .option("--output-dir <path>", "Output directory for generated profiles")
   .option("--cores <list>", "Comma-separated list of core names")
   .option("--mister-path <path>", "Path to MiSTer SD card (scan for cores)")
+  .option("--config <path>", "JSON config file with core settings")
   .option("--force", "Overwrite existing profiles")
   .action(async (options) => {
     try {
@@ -138,6 +183,7 @@ export const generateCommand = new Command("generate")
         outputDir: options.outputDir,
         cores: options.cores,
         misterPath: options.misterPath,
+        config: options.config,
         force: options.force,
       });
 

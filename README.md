@@ -70,12 +70,41 @@ bun run src/index.ts generate \
   --output-dir ./profiles/DV1 \
   --mister-path /media/fat
 
-# Force overwrite existing profiles
-bun run src/index.ts generate \
-  --base-profile ./profiles/JVC-D200.rt4 \
-  --output-dir ./profiles/DV1 \
-  --cores "NES" --force
+# From JSON config file (recommended)
+bun run src/index.ts generate --config profiles.json --force
 ```
+
+#### JSON Config
+
+```json
+{
+  "base_profile": "./profiles/JVC-D200.rt4",
+  "output_dir": "./profiles/DV1",
+  "defaults": {
+    "output.resolution": "1440p60",
+    "dv1.auto_crop": true,
+    "dv1.auto_decimate": true
+  },
+  "cores": {
+    "NES": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "zerowing": {
+      "scaling.crop.top": 1,
+      "scaling.crop.bottom": -1,
+      "scaling.crop.right": -1
+    },
+    "SNES": null
+  }
+}
+```
+
+- `base_profile`: Base `.rt4` file to copy (required)
+- `output_dir`: Output directory (optional, overrides CLI)
+- `defaults`: Settings applied to all cores (optional)
+- `cores`: Map of core name → settings override (required)
+- `null` core value = use defaults only
 
 Features:
 - Sets input to HDMI automatically

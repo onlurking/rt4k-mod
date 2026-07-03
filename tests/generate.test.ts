@@ -112,13 +112,13 @@ describe("generate", () => {
     ).rejects.toThrow("Base profile not found");
   });
 
-  it("throws when neither --cores nor --mister-path provided", async () => {
+  it("throws when neither --config, --cores, nor --mister-path provided", async () => {
     await expect(
       runGenerate({
         baseProfile: BASE_PROFILE,
         outputDir,
       }),
-    ).rejects.toThrow("Must provide --cores or --mister-path");
+    ).rejects.toThrow("Must provide --config, --cores, or --mister-path");
   });
 
   it("preserves base profile settings except input", async () => {
@@ -136,5 +136,62 @@ describe("generate", () => {
     expect(generated.getValue("output.transmitter.vrr").asString()).toBe(
       base.getValue("output.transmitter.vrr").asString(),
     );
+  });
+
+  it("generates profiles from JSON config", async () => {
+    const configPath = path.join(outputDir, "config.json");
+    await fs.promises.writeFile(
+      configPath,
+      JSON.stringify({
+        base_profile: BASE_PROFILE,
+        output_dir: outputDir,
+        defaults: {
+          "output.resolution": "1440p60",
+        },
+        cores: {
+          NES: { "scaling.crop.top": -1, "scaling.crop.bottom": 1 },
+          SNES: null,
+        },
+      }),
+    );
+
+    const result = await runGenerate({ config: configPath });
+
+    expect(result.created).toBe(2);
+    expect(result.skipped).toBe(0);
+    expect(result.errors).toHaveLength(0);
+
+    // NES should have custom crop
+    const nes = await RetroTinkProfile.build(path.join(outputDir, "NES.rt4"));
+    expect(nes.getValue("scaling.crop.top").asInt()).toBe(-1);
+    expect(nes.getValue("scaling.crop.bottom").asInt()).toBe(1);
+    expect(nes.getValue("output.resolution").asString()).toBe("1440p60");
+
+    // SNES should have defaults only
+    const snes = await RetroTinkProfile.build(path.join(outputDir, "SNES.rt4"));
+    expect(snes.getValue("scaling.crop.top").asInt()).toBe(0);
+    expect(snes.getValue("output.resolution").asString()).toBe("1440p60");
+  });
+
+  it("config defaults are overridden by per-core settings", async () => {
+    const configPath = path.join(outputDir, "config2.json");
+    await fs.promises.writeFile(
+      configPath,
+      JSON.stringify({
+        base_profile: BASE_PROFILE,
+        output_dir: outputDir,
+        defaults: {
+          "output.resolution": "1440p60",
+        },
+        cores: {
+          TestCore: { "output.resolution": "1080p60" },
+        },
+      }),
+    );
+
+    await runGenerate({ config: configPath });
+
+    const profile = await RetroTinkProfile.build(path.join(outputDir, "TestCore.rt4"));
+    expect(profile.getValue("output.resolution").asString()).toBe("1080p60");
   });
 });

@@ -1,0 +1,2238 @@
+{
+  "base_profile": "./profiles/SD/profile/_CRT Emulation/CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K HDR.rt4",
+  "output_dir": "./profiles/DV1",
+  "defaults": {
+    "output.transmitter.hdr": "HDR10 [8-bit]",
+    "output.transmitter.deep_color": true,
+    "output.transmitter.sync_lock": "Gen Lock",
+    "output.transmitter.vrr": "FreeSync",
+    "advanced.effects.interpolation.linear_light": true,
+    "advanced.effects.interpolation.anti_ringing": true,
+    "output.resolution": "4K60",
+    "scaling.crop.top": 0,
+    "scaling.crop.bottom": 0,
+    "scaling.crop.left": 0,
+    "scaling.crop.right": 0,
+    "advanced.effects.mask.enabled": true,
+    "advanced.effects.mask.strength": -3,
+    "output.transmitter.colorimetry": "Auto-Rec.709",
+    "output.transmitter.rgb_range": "Full",
+    "hdmi_receiver.mister_dv1.auto_crop": true,
+    "hdmi_receiver.mister_dv1.auto_decimate": true,
+    "hdmi_receiver.mister_dv1.enabled": true,
+    "advanced.effects.mask.path": "Mono Masks/A Grille Dense Mono.bmp",
+    "advanced.system.osd_firmware.banner_image.load_banner": "KH - Sony 20L5.bmp"
+  },
+  "cores": {
+    "1941": null,
+    "1942": null,
+    "1943": null,
+    "1943kai": null,
+    "1943mii": null,
+    "1944": null,
+    "19xx": null,
+    "280zzzap": {
+      "scaling.crop.top": -1,
+      "scaling.crop.right": -4
+    },
+    "3DO": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "3wonders": null,
+    "4dwarrio": null,
+    "A.COMSPC": null,
+    "A.PACMAN": null,
+    "ADCTest": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "AY-3-8500": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "AcornAtom": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "AcornElectron": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "AdventureVision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "AliceMC10": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Altair8800": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "AmigaCD32": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Amstrad": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Amstrad-PCW": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Apogee": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Apple-I": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Apple-II": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Aquarius": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Arcadia": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Archie": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Astrocade": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Atari2600": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Atari5200": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Atari7800": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Atari800": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "AtariLynx": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "AtariST": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "BBCBridgeCompanion": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "BBCMicro": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "BK0011M": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "C128": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "C16": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "C64": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Casio": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "ChannelF": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "CoCo2": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "CoCo3": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "ColecoAdam": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "ColecoVision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "CreatiVision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "EDSAC": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "GBA": {
+      "advanced.effects.interpolation.linear_light": false,
+      "advanced.effects.interpolation.anti_ringing": false,
+      "advanced.effects.mask.strength": 0,
+      "hdmi_receiver.mister_dv1.auto_crop": false,
+      "hdmi_receiver.mister_dv1.auto_decimate": false,
+      "hdmi_receiver.mister_dv1.enabled": false,
+      "advanced.effects.mask.path": "GBA/GBA_Real_13.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": ""
+    },
+    "GBA2P": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "GBC": {
+      "advanced.effects.interpolation.linear_light": false,
+      "advanced.effects.interpolation.anti_ringing": false,
+      "advanced.effects.mask.strength": 10,
+      "hdmi_receiver.mister_dv1.auto_crop": false,
+      "hdmi_receiver.mister_dv1.auto_decimate": false,
+      "hdmi_receiver.mister_dv1.enabled": false,
+      "advanced.effects.mask.path": "GBC/GBC_Real_15x.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": ""
+    },
+    "Galaksija": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Gamate": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Game and Watch": {
+      "advanced.effects.interpolation.anti_ringing": false,
+      "advanced.effects.mask.enabled": false,
+      "advanced.effects.mask.strength": 0,
+      "hdmi_receiver.mister_dv1.auto_crop": false,
+      "hdmi_receiver.mister_dv1.auto_decimate": false,
+      "hdmi_receiver.mister_dv1.enabled": false,
+      "advanced.effects.mask.path": "RGB Masks/A Grille Coarse RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "Fox 83.bmp"
+    },
+    "GameAndWatch": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "GameGear": null,
+    "Gameboy": {
+      "advanced.effects.interpolation.anti_ringing": false,
+      "advanced.effects.mask.enabled": false,
+      "advanced.effects.mask.strength": 0,
+      "hdmi_receiver.mister_dv1.auto_crop": false,
+      "hdmi_receiver.mister_dv1.auto_decimate": false,
+      "hdmi_receiver.mister_dv1.enabled": false,
+      "advanced.effects.mask.path": "RGB Masks/A Grille Coarse RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "Fox 83.bmp"
+    },
+    "Gameboy2P": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Genesis": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "GnW": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Homelab": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "InputTest": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Intellivision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Interact": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Jaguar": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Jupiter": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Laser310": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Lynx48": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "MSX": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "MSX1": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "MacPlus": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "MegaCD": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "MegaDrive": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "MegaDuck": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Menu": {
+      "output.transmitter.hdr": "Off",
+      "advanced.effects.interpolation.anti_ringing": false,
+      "scaling.crop.top": -14,
+      "scaling.crop.bottom": -6,
+      "scaling.crop.left": -49,
+      "scaling.crop.right": -11,
+      "advanced.effects.mask.enabled": false,
+      "advanced.effects.mask.strength": 0,
+      "hdmi_receiver.mister_dv1.auto_crop": false,
+      "hdmi_receiver.mister_dv1.auto_decimate": false,
+      "hdmi_receiver.mister_dv1.enabled": false,
+      "advanced.effects.mask.path": "",
+      "advanced.system.osd_firmware.banner_image.load_banner": ""
+    },
+    "MiSTerLaggy": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Minimig": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "MultiComp": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "MyVision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "N64": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "NES": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "NeoGeo": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "NeoGeoPocket.rbf": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "ORAO": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Odyssey2": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Ondra": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Oric": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "PC88": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "PCXT": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "PDP1": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "PET2001": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "PMD85": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "PSX": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "PocketChalleng": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "PokemonMini": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Portman": null,
+    "QL": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "RX78": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "S32X": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "SAMCoupe": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "SCV": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "SGB": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "SMS": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "SNES": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Saturn": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "SharpMZ": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "SordM5": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Specialist": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Super": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "SuperVision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Svi328": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "TGFX16": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "TRS-80": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "TSConf": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "TatungEinstein": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Ti994a": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "TomyTutor": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "UK101": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "VC4000": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "VIC20": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "VT52": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Vector-06C": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "Vectrex": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "WonderSwan": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "WonderSwanColo": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "X68000": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "ZX-Spectrum": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "ZX81": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "ZXNext": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "aceattaca": null,
+    "adcanoe": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "afighter": null,
+    "agallet": null,
+    "agalletj": null,
+    "airass": {
+      "scaling.crop.top": -33,
+      "scaling.crop.bottom": -26,
+      "scaling.crop.left": -8,
+      "scaling.crop.right": -1
+    },
+    "airdueljm72": null,
+    "airduelm72": null,
+    "ajax": null,
+    "alcon": null,
+    "alexkidd": null,
+    "alibaba": null,
+    "alienaru": null,
+    "aliens": null,
+    "aliensyn": null,
+    "alpine": null,
+    "altbeast": null,
+    "amatelas": {
+      "scaling.crop.top": -43,
+      "scaling.crop.bottom": -53,
+      "scaling.crop.left": -17,
+      "scaling.crop.right": -9
+    },
+    "amidars": null,
+    "anteater": null,
+    "ao486": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "aquario": {
+      "scaling.crop.left": -3
+    },
+    "arkanoid": null,
+    "arkanoidj": null,
+    "arknoid2": null,
+    "armedf": {
+      "scaling.crop.top": -7,
+      "scaling.crop.bottom": -23,
+      "scaling.crop.left": -5,
+      "scaling.crop.right": -5
+    },
+    "armorcar": null,
+    "armwar": null,
+    "aso": null,
+    "astdelux": null,
+    "asteroid": null,
+    "astorm": {
+      "scaling.crop.left": -3
+    },
+    "astrass": null,
+    "astrofl": null,
+    "atetris": {
+      "scaling.crop.top": -3,
+      "scaling.crop.bottom": -2,
+      "scaling.crop.left": -1
+    },
+    "atetrisc": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": -1,
+      "scaling.crop.right": -3
+    },
+    "athena": null,
+    "atlantis2": null,
+    "attackfc": null,
+    "aurail": null,
+    "avengers": null,
+    "avsp": null,
+    "azurian": null,
+    "backfirt": null,
+    "baddudes": null,
+    "bagman": {
+      "scaling.crop.left": -11,
+      "scaling.crop.right": 11
+    },
+    "bakubaku": null,
+    "bakutotu": null,
+    "ballbomb": null,
+    "baluba": {
+      "scaling.crop.left": -12,
+      "scaling.crop.right": 12
+    },
+    "bankp": null,
+    "batcir": null,
+    "batmanfr": null,
+    "batriderj": null,
+    "battroad": null,
+    "bayroute": null,
+    "bbakraidj": null,
+    "bbmanw": null,
+    "beastfp": null,
+    "berabohm": null,
+    "berzerk": null,
+    "bgaregga": null,
+    "bigfghtr": {
+      "scaling.crop.top": -5,
+      "scaling.crop.bottom": -4,
+      "scaling.crop.left": -25,
+      "scaling.crop.right": -10
+    },
+    "bigkong": {
+      "scaling.crop.left": -11,
+      "scaling.crop.right": 11
+    },
+    "bilyard": null,
+    "bioatack": null,
+    "bionicc": null,
+    "birdiy": null,
+    "blasto": null,
+    "blastoff": {
+      "scaling.crop.left": -12,
+      "scaling.crop.right": 12
+    },
+    "blazer": null,
+    "blkbustr": null,
+    "blkhole": null,
+    "blktiger": null,
+    "block": null,
+    "blockade": null,
+    "blockgal": null,
+    "bloodbro": null,
+    "bloxeed": {
+      "scaling.crop.left": -3
+    },
+    "blueprnt": null,
+    "blueshrk": {
+      "scaling.crop.left": -5,
+      "scaling.crop.right": -11
+    },
+    "bmaster": null,
+    "bodyslam": null,
+    "bombjack": null,
+    "boothill": {
+      "scaling.crop.left": -5,
+      "scaling.crop.right": -11
+    },
+    "bosco": {
+      "scaling.crop.left": -4
+    },
+    "boscomd": {
+      "scaling.crop.left": -4
+    },
+    "botanic": {
+      "scaling.crop.left": -11,
+      "scaling.crop.right": 11
+    },
+    "bouldash": null,
+    "boxyboy": null,
+    "bradley": null,
+    "brain": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "breakout": null,
+    "bronx": null,
+    "brubber": {
+      "scaling.crop.right": -1
+    },
+    "btime": null,
+    "bubbles": null,
+    "bublbobl": null,
+    "bullet": null,
+    "bullfgt": null,
+    "bwidow": null,
+    "bzone": null,
+    "bzonea": null,
+    "calipso": null,
+    "cameltry": null,
+    "canyon": {
+      "scaling.crop.left": -4
+    },
+    "captcomm": null,
+    "carnival": null,
+    "catacomb": null,
+    "cavelon": {
+      "scaling.crop.left": -12,
+      "scaling.crop.right": 12
+    },
+    "cavenger": null,
+    "cawing": null,
+    "ccastles": null,
+    "cclimber": null,
+    "cclimbr2": {
+      "scaling.crop.top": -28,
+      "scaling.crop.bottom": -1,
+      "scaling.crop.left": -163,
+      "scaling.crop.right": -24
+    },
+    "cd-i": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "centiped": null,
+    "centiped3": null,
+    "chameleo": null,
+    "chelnov": null,
+    "chinagat": null,
+    "choko": null,
+    "chopliftu": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "circusc": null,
+    "citycon": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "ckong": {
+      "scaling.crop.left": -11,
+      "scaling.crop.right": 11
+    },
+    "ckongdks": {
+      "scaling.crop.left": -11,
+      "scaling.crop.right": 11
+    },
+    "ckongo": {
+      "scaling.crop.left": -11,
+      "scaling.crop.right": 11
+    },
+    "ckongpt2": {
+      "scaling.crop.left": -11,
+      "scaling.crop.right": 11
+    },
+    "ckongpt2b": {
+      "scaling.crop.left": -11,
+      "scaling.crop.right": 11
+    },
+    "cleansweept": null,
+    "clowns": {
+      "scaling.crop.right": -5
+    },
+    "cltchitr": {
+      "scaling.crop.left": -3
+    },
+    "clubpacm": null,
+    "cninja": null,
+    "colmns97": null,
+    "colony7": {
+      "scaling.crop.right": -1
+    },
+    "combatsc": {
+      "scaling.crop.left": -8
+    },
+    "combh": {
+      "scaling.crop.top": -4,
+      "scaling.crop.bottom": -72,
+      "scaling.crop.left": -14,
+      "scaling.crop.right": -13
+    },
+    "commando": null,
+    "comotion": null,
+    "complexx": null,
+    "congo": null,
+    "contra": null,
+    "cosmica": null,
+    "cosmicg": {
+      "scaling.crop.right": -1
+    },
+    "cosmo": {
+      "scaling.crop.top": -37,
+      "scaling.crop.bottom": -16,
+      "scaling.crop.left": -6,
+      "scaling.crop.right": -7
+    },
+    "cotton": null,
+    "cotton2": {
+      "scaling.crop.top": -8,
+      "scaling.crop.bottom": -8,
+      "scaling.crop.left": -8,
+      "scaling.crop.right": -8
+    },
+    "cottonbm": {
+      "scaling.crop.top": -8,
+      "scaling.crop.bottom": -7,
+      "scaling.crop.left": -8,
+      "scaling.crop.right": -8
+    },
+    "countryc": null,
+    "crater": null,
+    "crazyblk": null,
+    "crbaloon": {
+      "scaling.crop.top": -10,
+      "scaling.crop.bottom": -10,
+      "scaling.crop.left": -2,
+      "scaling.crop.right": -2
+    },
+    "crimfght": null,
+    "crush2": null,
+    "csclub": null,
+    "ctribe": null,
+    "cworld": null,
+    "cworld2j": null,
+    "cybots": null,
+    "dakkochn": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "danchih": null,
+    "danchiq": null,
+    "dangar": {
+      "scaling.crop.top": -17
+    },
+    "dangseed": null,
+    "darius": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "darius2": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "darkplnt": null,
+    "dbreedjm72": null,
+    "dcon": null,
+    "ddcrew": {
+      "scaling.crop.left": -3
+    },
+    "ddonpach": null,
+    "ddonpacha": null,
+    "ddonpachj": null,
+    "ddonpachjt": null,
+    "ddragon": null,
+    "ddragon2": null,
+    "ddragon3": null,
+    "ddsom": null,
+    "ddtod": null,
+    "ddux": null,
+    "deadconx": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "decathlt": null,
+    "defender": null,
+    "demoderm": null,
+    "demonwld2": null,
+    "desertbr": null,
+    "devilfsg": null,
+    "devilw": null,
+    "devzone": null,
+    "dfeveron": null,
+    "diehard": null,
+    "digdug": null,
+    "digdug2": null,
+    "dimahoo": null,
+    "dino": null,
+    "dinorex": null,
+    "dkgensan": null,
+    "dkgensanm72": null,
+    "dkong": null,
+    "dkong3": null,
+    "dkongjr": null,
+    "dnmtdeka": null,
+    "dokaben": null,
+    "dokaben2": null,
+    "domino": null,
+    "dominos": {
+      "scaling.crop.left": -8
+    },
+    "dondokod": null,
+    "donpachi": null,
+    "donpachij": null,
+    "dorodon": {
+      "scaling.crop.left": -1
+    },
+    "dotrikun": null,
+    "dotrikun2": null,
+    "dotriman": null,
+    "dotron": null,
+    "dremshpr": null,
+    "driftout": null,
+    "drtoppel": {
+      "scaling.crop.left": -2
+    },
+    "dsoccr94": {
+      "scaling.crop.top": -8,
+      "scaling.crop.left": -26,
+      "scaling.crop.right": -34
+    },
+    "dsoccr94j": null,
+    "dspirit": null,
+    "dstlk": null,
+    "dunkshot": null,
+    "dynablst": null,
+    "dynwar": null,
+    "ebases": null,
+    "ecofghtr": null,
+    "eeekkp": null,
+    "eg2000": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "eggor": null,
+    "ejihon": null,
+    "elandore": null,
+    "elevator": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "elevatorb": {
+      "scaling.crop.left": -1
+    },
+    "esprade": null,
+    "espradej": null,
+    "eswat": null,
+    "euroch92": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "exctleag": null,
+    "exedexes": null,
+    "exeriont": null,
+    "exprraid": null,
+    "extrmatn": null,
+    "eyes": null,
+    "f1dream": null,
+    "faceoff": null,
+    "fantasyu": {
+      "scaling.crop.top": -27,
+      "scaling.crop.bottom": -40,
+      "scaling.crop.left": -5,
+      "scaling.crop.right": -12
+    },
+    "fantzn2": null,
+    "fantzn2x": null,
+    "fantzone": null,
+    "fastlane": null,
+    "feversos": null,
+    "ffight": null,
+    "ffreveng": null,
+    "fhboxers": null,
+    "finalb": null,
+    "finalizr": null,
+    "finalizra": null,
+    "finalizrb": null,
+    "findlove": null,
+    "finlarch": null,
+    "fitegolf": null,
+    "flicky": null,
+    "flstory": null,
+    "foodf": null,
+    "footchmp": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "forgottn": null,
+    "fpoint": null,
+    "freeze": null,
+    "frenzy": null,
+    "frogger": null,
+    "froggers2": null,
+    "frontlin": null,
+    "fround": null,
+    "futspy": null,
+    "gaia": null,
+    "galaga3": {
+      "scaling.crop.left": -10,
+      "scaling.crop.right": 10
+    },
+    "galaga88": null,
+    "galagamw": null,
+    "galaxian": null,
+    "galivan": null,
+    "gallopm72": null,
+    "galxwars": null,
+    "gangwars": {
+      "scaling.crop.top": -16,
+      "scaling.crop.bottom": -10,
+      "scaling.crop.left": -51,
+      "scaling.crop.right": -41
+    },
+    "gaplus": {
+      "scaling.crop.left": -10,
+      "scaling.crop.right": 10
+    },
+    "gardia": null,
+    "gaunt2": null,
+    "gauntlet": null,
+    "gaxeduel": null,
+    "gberet": null,
+    "gbusters": {
+      "scaling.crop.top": -16,
+      "scaling.crop.bottom": -16
+    },
+    "gemini": {
+      "scaling.crop.top": -40,
+      "scaling.crop.bottom": -52,
+      "scaling.crop.left": -14,
+      "scaling.crop.right": -13
+    },
+    "genpeitd": null,
+    "ghouls": null,
+    "gigawing": null,
+    "glfgreat": {
+      "scaling.crop.right": -1
+    },
+    "gng": null,
+    "goldnaxe": null,
+    "gorf": null,
+    "gorkans": null,
+    "gorodki": null,
+    "gradius": null,
+    "gradius3": null,
+    "grasspin": null,
+    "gravitar": null,
+    "grdforce": null,
+    "gridiron": null,
+    "grobda": null,
+    "groovef": null,
+    "growl": null,
+    "gulunpa": null,
+    "gunfight": null,
+    "gunforc2": null,
+    "gunforce": null,
+    "gunfront": {
+      "scaling.crop.left": -1,
+      "scaling.crop.right": 1
+    },
+    "gunsmoke": null,
+    "guwange": null,
+    "guwanges": null,
+    "gwarrior": null,
+    "gyruss": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "hachoo": null,
+    "hamaway": {
+      "scaling.crop.top": -3,
+      "scaling.crop.left": -12,
+      "scaling.crop.right": 12
+    },
+    "hanagumi": null,
+    "hangonjr": null,
+    "hardhat": null,
+    "hbarrel": null,
+    "hcastle": {
+      "scaling.crop.left": -8
+    },
+    "hellfire": null,
+    "hharryu": null,
+    "higemaru": null,
+    "hippodrm": null,
+    "hishouza": null,
+    "hook": null,
+    "hopmappy": null,
+    "horekid": {
+      "scaling.crop.top": -49,
+      "scaling.crop.bottom": -52,
+      "scaling.crop.left": -17,
+      "scaling.crop.right": -9
+    },
+    "horizon": null,
+    "hotdogst": null,
+    "hsf2": null,
+    "hustle": null,
+    "hvymetal": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "hwrace": {
+      "scaling.crop.bottom": -7
+    },
+    "hyperspt": null,
+    "iganinju": null,
+    "ikari": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "ikari3": {
+      "scaling.crop.top": -12,
+      "scaling.crop.bottom": -14,
+      "scaling.crop.left": -207,
+      "scaling.crop.right": -161
+    },
+    "imgfight": null,
+    "imgfightj": null,
+    "imsorry": null,
+    "indytemp4": null,
+    "inferno": null,
+    "insectx": {
+      "scaling.crop.left": -1
+    },
+    "inthunt": null,
+    "introdon": null,
+    "invaders": {
+      "scaling.crop.top": -11,
+      "scaling.crop.bottom": -4
+    },
+    "invadpt2": null,
+    "inyourfa": null,
+    "ironhors": null,
+    "jack": null,
+    "jackal": null,
+    "jackalbl": null,
+    "jackalj": null,
+    "jackalr": null,
+    "jailbrek": {
+      "scaling.crop.left": -8,
+      "scaling.crop.right": -8
+    },
+    "jin": null,
+    "jitsupro": null,
+    "journey": {
+      "scaling.crop.right": -2
+    },
+    "joust": null,
+    "joust2": {
+      "scaling.crop.right": -4
+    },
+    "jumpshot": null,
+    "jungleh": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "junglek": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "junofrst": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "jyangoku": null,
+    "kageki": null,
+    "karnov": null,
+    "kchamp": null,
+    "kick": {
+      "scaling.crop.right": -4
+    },
+    "kicker": null,
+    "kickman": {
+      "scaling.crop.right": -4
+    },
+    "kicknrun": null,
+    "kidniki": null,
+    "kingball": null,
+    "kingballj": null,
+    "kiwames": null,
+    "knights": null,
+    "kod": null,
+    "konek": null,
+    "koroleva": null,
+    "koshien": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "kot": null,
+    "kozure": {
+      "scaling.crop.top": -5,
+      "scaling.crop.bottom": -13,
+      "scaling.crop.left": -23,
+      "scaling.crop.right": -8
+    },
+    "kram": null,
+    "kroozr": null,
+    "ktiger": null,
+    "kungfum": null,
+    "ladybug": {
+      "scaling.crop.left": -1
+    },
+    "lagunar": null,
+    "ldrun": null,
+    "ldrun2": null,
+    "ldrun3": null,
+    "ldrun4": null,
+    "legionj2": {
+      "scaling.crop.top": -9,
+      "scaling.crop.bottom": -57,
+      "scaling.crop.left": -28,
+      "scaling.crop.right": -2
+    },
+    "lethalth": null,
+    "lghost": null,
+    "lgtnfght": null,
+    "lifefrcej": null,
+    "liquidk": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "lizwiz": null,
+    "llander": null,
+    "lohtj": null,
+    "lordofk": null,
+    "losttomb": null,
+    "lrescue": null,
+    "luctoday": null,
+    "lunarbat": null,
+    "lupin3a": null,
+    "lwings": null,
+    "magspot": null,
+    "mahoudai": null,
+    "majtitl2": null,
+    "manhatan": {
+      "scaling.crop.left": -8,
+      "scaling.crop.right": -8
+    },
+    "maniach": null,
+    "mappy": null,
+    "marble5": {
+      "scaling.crop.left": -24,
+      "scaling.crop.right": -24
+    },
+    "mario": null,
+    "mars": null,
+    "maruchan": null,
+    "matmania": null,
+    "mausuke": null,
+    "maxrpm": null,
+    "mayday": null,
+    "maze": null,
+    "mazinger": null,
+    "mazingerj": null,
+    "mbombrd": null,
+    "megablst": null,
+    "megaman": null,
+    "megaman2": null,
+    "megrescu": {
+      "scaling.crop.top": -8,
+      "scaling.crop.left": -27,
+      "scaling.crop.right": 27
+    },
+    "memtest": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "mercs": null,
+    "metalb": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "metmqstr": null,
+    "metrocrs": null,
+    "mia": null,
+    "midres": null,
+    "mikie": null,
+    "mimonscr": null,
+    "minefld": null,
+    "missile": null,
+    "missile1": null,
+    "missile2": null,
+    "mjleague": null,
+    "mmatrix": null,
+    "mmaze": null,
+    "mooncrgx": null,
+    "moonqsr": null,
+    "moonwar": null,
+    "motos": null,
+    "mpang": null,
+    "mpatrol": null,
+    "mplanets": null,
+    "mpumpkin": null,
+    "mrdo": null,
+    "mrdofix": null,
+    "mrdonight": null,
+    "mrgoemon": null,
+    "mrheli": null,
+    "mrjong": null,
+    "mrtnt": null,
+    "mrviking": {
+      "scaling.crop.right": -1
+    },
+    "msh": null,
+    "mshvsf": null,
+    "mspacman": null,
+    "msword": null,
+    "mtrap": null,
+    "mtwins": null,
+    "mvp": null,
+    "mvsc": null,
+    "mwalk": null,
+    "mx5000": null,
+    "myfairld": null,
+    "myhero": null,
+    "mysticm": null,
+    "mysticri": null,
+    "naughtyb": {
+      "scaling.crop.left": -115,
+      "scaling.crop.right": -12
+    },
+    "nbbatman": null,
+    "nemo": null,
+    "ngp": null,
+    "nibbler": {
+      "scaling.crop.top": -27,
+      "scaling.crop.bottom": -39,
+      "scaling.crop.left": -5,
+      "scaling.crop.right": -12
+    },
+    "ninjak": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "ninjakun": {
+      "scaling.crop.left": -1
+    },
+    "ninjaw": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "nobb": {
+      "scaling.crop.top": -7,
+      "scaling.crop.bottom": -9
+    },
+    "nomnlnd": null,
+    "nova2001": {
+      "scaling.crop.left": -1
+    },
+    "nova2001h": {
+      "scaling.crop.left": -1
+    },
+    "nrallyx": {
+      "scaling.crop.left": -1
+    },
+    "nspiritj": null,
+    "numcrash": null,
+    "nwarr": null,
+    "nycaptor": null,
+    "omegab": null,
+    "onna34ro": null,
+    "opaopa": {
+      "scaling.crop.left": -8
+    },
+    "opaopan": {
+      "scaling.crop.left": -8
+    },
+    "orbitron": null,
+    "oscar": null,
+    "othellos": null,
+    "outrun": null,
+    "outzone": null,
+    "p47j": null,
+    "pacland": null,
+    "pacman": null,
+    "pacmania": null,
+    "pacnchmp": {
+      "scaling.crop.left": -1
+    },
+    "pacnpal": {
+      "scaling.crop.left": -1
+    },
+    "pacplus": null,
+    "paddlema": {
+      "scaling.crop.top": -122,
+      "scaling.crop.bottom": -98,
+      "scaling.crop.left": -9,
+      "scaling.crop.right": -18
+    },
+    "pang": null,
+    "pang3": null,
+    "panic": {
+      "scaling.crop.right": -1
+    },
+    "parodius": null,
+    "passsht": null,
+    "pballoon": {
+      "scaling.crop.top": -27,
+      "scaling.crop.bottom": -39,
+      "scaling.crop.left": -13,
+      "scaling.crop.right": -4
+    },
+    "pblbeach": null,
+    "pengo": null,
+    "pepper2": null,
+    "perfrman": null,
+    "pestplce": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -1
+    },
+    "peterpak": null,
+    "phoenix": null,
+    "pickin": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -11,
+      "scaling.crop.right": 11
+    },
+    "pingpong": {
+      "scaling.crop.bottom": 1
+    },
+    "pipibibs": {
+      "scaling.crop.top": -11,
+      "scaling.crop.bottom": -1,
+      "scaling.crop.left": -71,
+      "scaling.crop.right": -52
+    },
+    "piratpet": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "pisces": null,
+    "pistoldm": null,
+    "pitfall2": null,
+    "pkunwar": {
+      "scaling.crop.left": -1
+    },
+    "pkunwarj": {
+      "scaling.crop.left": -1
+    },
+    "playball": {
+      "scaling.crop.right": -2
+    },
+    "pleiadce": null,
+    "pleiads": null,
+    "plusalph": null,
+    "pnickj": null,
+    "pokonyan": null,
+    "polaris": {
+      "scaling.crop.left": -1
+    },
+    "polyplay": null,
+    "polyplay2": null,
+    "pong": null,
+    "ponpoko": {
+      "scaling.crop.left": -16,
+      "scaling.crop.right": -16
+    },
+    "pooyan": {
+      "scaling.crop.left": -8,
+      "scaling.crop.right": 8
+    },
+    "popeye": null,
+    "popflamn": null,
+    "porter": null,
+    "pow": {
+      "scaling.crop.top": -12,
+      "scaling.crop.bottom": -15,
+      "scaling.crop.left": -53,
+      "scaling.crop.right": -40
+    },
+    "powerdrv": null,
+    "pprobe": {
+      "scaling.crop.bottom": -8,
+      "scaling.crop.left": -4,
+      "scaling.crop.right": 4
+    },
+    "prehisle": null,
+    "prikura": null,
+    "prmrsocr": null,
+    "progear": null,
+    "psychic5": null,
+    "psychic5j": null,
+    "puckman": null,
+    "pulirula": {
+      "scaling.crop.left": -1
+    },
+    "pulsar": null,
+    "punisher": null,
+    "punkshot": {
+      "scaling.crop.left": -2
+    },
+    "puyosun": null,
+    "pzloop2": null,
+    "qad": null,
+    "qbert": null,
+    "qbertqub": null,
+    "qcrayon": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "qcrayon2": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "qix": null,
+    "qix2": null,
+    "qjinsei": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "qndream": null,
+    "qtono2j": null,
+    "qtorimon": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "quartet": null,
+    "quartet2a": null,
+    "quester": null,
+    "quizhq": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "qzchikyu": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "qzquest": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
+    },
+    "radarscp": null,
+    "raflesia": null,
+    "raiders5": {
+      "scaling.crop.left": -1
+    },
+    "rallybik": null,
+    "rallyx": {
+      "scaling.crop.left": -1
+    },
+    "rampage": {
+      "scaling.crop.bottom": -2
+    },
+    "rastan": null,
+    "reactor": null,
+    "redbaron": null,
+    "redbarona": null,
+    "redearthn": {
+      "scaling.crop.left": -1
+    },
+    "regulus": {
+      "scaling.crop.right": -1
+    },
+    "renegade": null,
+    "rescue": null,
+    "ridleofp": {
+      "scaling.crop.top": -8,
+      "scaling.crop.left": -27,
+      "scaling.crop.right": 27
+    },
+    "ringdest": {
+      "scaling.crop.top": -8,
+      "scaling.crop.bottom": -7
+    },
+    "riotcity": {
+      "scaling.crop.left": -16,
+      "scaling.crop.right": -16
+    },
+    "riskchal": null,
+    "roadblst": null,
+    "roadf": null,
+    "roadrunn": null,
+    "robby": {
+      "scaling.crop.left": -5
+    },
+    "robocop": null,
+    "robotron": null,
+    "rocnrope": {
+      "scaling.crop.left": -17,
+      "scaling.crop.right": 17
+    },
+    "rodland": null,
+    "roishtar": null,
+    "rompers": null,
+    "rpatroln": null,
+    "rsgun": null,
+    "rthunder": null,
+    "rtype": null,
+    "rtype2": null,
+    "rtype2j": null,
+    "rtypej": null,
+    "rtypeleo": null,
+    "rumba": null,
+    "rungun": {
+      "scaling.crop.top": -1,
+      "scaling.crop.left": -30,
+      "scaling.crop.right": -2
+    },
+    "rushatck": null,
+    "rygar": {
+      "scaling.crop.top": -14,
+      "scaling.crop.bottom": -12,
+      "scaling.crop.left": -52,
+      "scaling.crop.right": -40
+    },
+    "rygarj": {
+      "scaling.crop.top": -14,
+      "scaling.crop.bottom": -13,
+      "scaling.crop.left": -53,
+      "scaling.crop.right": -40
+    },
+    "ryukyu": null,
+    "sailormn": null,
+    "sailormnj": null,
+    "salamandj": null,
+    "samesame2": null,
+    "sandor": null,
+    "sanjeon": null,
+    "sarge": null,
+    "sasissu": null,
+    "saturnzi": null,
+    "sbagman": {
+      "scaling.crop.left": -11,
+      "scaling.crop.right": 11
+    },
+    "sbasketb": {
+      "scaling.crop.left": -17,
+      "scaling.crop.right": 17
+    },
+    "sbrkout": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -2
+    },
+    "schaser": null,
+    "scobra": null,
+    "scontra": null,
+    "scotrsht": null,
+    "scramble": null,
+    "sdgnmps": {
+      "scaling.crop.left": -1
+    },
+    "sdi": null,
+    "sdungeon": null,
+    "seabass": null,
+    "searchar": {
+      "scaling.crop.top": -40,
+      "scaling.crop.bottom": -52,
+      "scaling.crop.left": -10,
+      "scaling.crop.right": -14
+    },
+    "seawolf": null,
+    "seawolf2": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -14
+    },
+    "secretag": null,
+    "sectionz": null,
+    "seganinj": null,
+    "sf": null,
+    "sf2": null,
+    "sf2ce": null,
+    "sf2hf": null,
+    "sfa": null,
+    "sfa2": null,
+    "sfa3": null,
+    "sfiiin": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "sfposeid": {
+      "scaling.crop.left": -8,
+      "scaling.crop.right": -8
+    },
+    "sfz2al": null,
+    "sfzch": null,
+    "sgemf": null,
+    "shadowld": null,
+    "shadoww": null,
+    "shangon": null,
+    "shanhigw": null,
+    "shdancer": {
+      "scaling.crop.left": -3
+    },
+    "shienryu": null,
+    "shinobi": null,
+    "shippumd": null,
+    "shollow": {
+      "scaling.crop.right": -3
+    },
+    "shtrider": null,
+    "shuffle": null,
+    "sidearms": null,
+    "silkworm": {
+      "scaling.crop.top": -14,
+      "scaling.crop.bottom": -11,
+      "scaling.crop.left": -52,
+      "scaling.crop.right": -40
+    },
+    "silvland": null,
+    "simpsons": null,
+    "sinistar": {
+      "scaling.crop.right": -2
+    },
+    "sjryuko": null,
+    "skyadvnt": {
+      "scaling.crop.top": -41,
+      "scaling.crop.bottom": -51,
+      "scaling.crop.left": -16,
+      "scaling.crop.right": -11
+    },
+    "skykiddx": null,
+    "skyskipr": null,
+    "skysmash": null,
+    "skysoldr": {
+      "scaling.crop.top": -41,
+      "scaling.crop.bottom": -51,
+      "scaling.crop.left": -16,
+      "scaling.crop.right": -11
+    },
+    "slammast": null,
+    "slapfighb1": null,
+    "slapshtr": {
+      "scaling.crop.left": -8,
+      "scaling.crop.right": -8
+    },
+    "smleague": null,
+    "snapjack": null,
+    "snowbro2": {
+      "scaling.crop.top": -11,
+      "scaling.crop.bottom": -1,
+      "scaling.crop.left": -51,
+      "scaling.crop.right": -38
+    },
+    "snowbrosj": null,
+    "sokyugrt": null,
+    "solarfox": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -4
+    },
+    "soldam": null,
+    "solfigtr": {
+      "scaling.crop.left": -1
+    },
+    "solomon": null,
+    "solomonj": null,
+    "sonicbom": null,
+    "sonson": {
+      "scaling.crop.left": -2
+    },
+    "sosterm": null,
+    "spacecr": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "spacerace": null,
+    "spaceskr": {
+      "scaling.crop.left": -1
+    },
+    "spacezap": {
+      "scaling.crop.left": -4
+    },
+    "spang": null,
+    "spatter": null,
+    "spcenctr": null,
+    "spdcoin": null,
+    "spectar": null,
+    "spelunk2": null,
+    "spelunkr": null,
+    "spf2t": null,
+    "splat": null,
+    "splatter": null,
+    "sprglbpg": null,
+    "sprint1": {
+      "scaling.crop.left": -8
+    },
+    "sprint2": {
+      "scaling.crop.left": -8
+    },
+    "spyhunt": null,
+    "sqbert": null,
+    "squaitsa": null,
+    "srumbler": null,
+    "ssf2": null,
+    "ssf2t": null,
+    "ssi": null,
+    "ssoldier": null,
+    "ssriders": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -1
+    },
+    "sss": null,
+    "starforc": {
+      "scaling.crop.left": -12,
+      "scaling.crop.right": 12
+    },
+    "stargate": null,
+    "stargrds": {
+      "scaling.crop.bottom": -2
+    },
+    "starjack": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -1
+    },
+    "starjacks": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -1
+    },
+    "stdragon": null,
+    "stratgyx": null,
+    "stratof": null,
+    "streetsm": {
+      "scaling.crop.top": -12,
+      "scaling.crop.bottom": -13,
+      "scaling.crop.left": -155,
+      "scaling.crop.right": -121
+    },
+    "strider": null,
+    "subs": null,
+    "sucasino": null,
+    "suikoenb": null,
+    "superpac": {
+      "scaling.crop.left": -1
+    },
+    "suprleag": null,
+    "suprloco": null,
+    "suprlocoo": null,
+    "suratk": null,
+    "swat": null,
+    "sxevious": null,
+    "szaxxon": null,
+    "tankbatt": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "tankfrce": null,
+    "tapper": {
+      "scaling.crop.bottom": -2
+    },
+    "targ": null,
+    "tazmania": null,
+    "teddybb": null,
+    "tehkanwc": null,
+    "tekipaki": null,
+    "terracre": {
+      "scaling.crop.top": -43,
+      "scaling.crop.bottom": -53,
+      "scaling.crop.left": -17,
+      "scaling.crop.right": -9
+    },
+    "terrafj": {
+      "scaling.crop.top": -5,
+      "scaling.crop.bottom": -5,
+      "scaling.crop.left": -23,
+      "scaling.crop.right": -8
+    },
+    "tetris": null,
+    "tetrisse": null,
+    "theend": null,
+    "theglobp": null,
+    "theroes": null,
+    "thunderx": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -16,
+      "scaling.crop.right": -16
+    },
+    "thundfox": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 2,
+      "scaling.crop.left": -1
+    },
+    "thunt": null,
+    "thuntk": null,
+    "tigerhb1": null,
+    "tigeroad": null,
+    "timber": {
+      "scaling.crop.bottom": -2
+    },
+    "timeplt": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "timescan": null,
+    "timesold": {
+      "scaling.crop.top": -41,
+      "scaling.crop.bottom": -51,
+      "scaling.crop.left": -16,
+      "scaling.crop.right": -11
+    },
+    "timetunl": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -8,
+      "scaling.crop.right": -8
+    },
+    "tinstar": {
+      "scaling.crop.left": -1
+    },
+    "tiptop": {
+      "scaling.crop.left": -1
+    },
+    "tmnt": null,
+    "tmnt2": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -8,
+      "scaling.crop.right": -8
+    },
+    "tnextspcj": {
+      "scaling.crop.top": -41,
+      "scaling.crop.bottom": -52,
+      "scaling.crop.left": -17,
+      "scaling.crop.right": -10
+    },
+    "tnk3": null,
+    "tnzs": null,
+    "todruaga": null,
+    "toki": null,
+    "tokio": null,
+    "topgunbl": null,
+    "topgunr": null,
+    "toryumon": null,
+    "toutrun": null,
+    "tp84": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "tp84a": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "tp84b": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "trackfld": {
+      "scaling.crop.bottom": 1
+    },
+    "transfrm": {
+      "scaling.crop.bottom": 1
+    },
+    "travrusa": null,
+    "tricktrp": {
+      "scaling.crop.top": -8,
+      "scaling.crop.bottom": -1
+    },
+    "tripool": null,
+    "troangel": null,
+    "trojan": null,
+    "tron": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -3
+    },
+    "truxton": null,
+    "truxton2": {
+      "scaling.crop.top": -38,
+      "scaling.crop.bottom": -50,
+      "scaling.crop.left": -11,
+      "scaling.crop.right": -2
+    },
+    "tshoot": {
+      "scaling.crop.top": -8,
+      "scaling.crop.bottom": -3,
+      "scaling.crop.left": -7,
+      "scaling.crop.right": -3
+    },
+    "tturfu": {
+      "scaling.crop.top": -8,
+      "scaling.crop.bottom": -7,
+      "scaling.crop.left": -8,
+      "scaling.crop.right": -8
+    },
+    "tumblep": null,
+    "turbotag": {
+      "scaling.crop.bottom": -17
+    },
+    "turtles": {
+      "scaling.crop.bottom": 1
+    },
+    "tutankhm": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "twcup98": null,
+    "twinbee": {
+      "scaling.crop.bottom": 1
+    },
+    "twinbeeb": null,
+    "twotigerc": null,
+    "twsoc98": null,
+    "uccops": null,
+    "ultratnk": {
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -1
+    },
+    "uniwars": null,
+    "unsquad": null,
+    "uopoko": null,
+    "uopokoj": null,
+    "upndown": {
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -1
+    },
+    "vanguard": {
+      "scaling.crop.top": -27,
+      "scaling.crop.bottom": -40,
+      "scaling.crop.left": -5,
+      "scaling.crop.right": -12
+    },
+    "vanvan": null,
+    "varth": null,
+    "vastar": null,
+    "vball": null,
+    "vballb": null,
+    "vendetta": null,
+    "venture": null,
+    "vfkids": null,
+    "vfremix": null,
+    "vhunt2": null,
+    "victnine": null,
+    "victorycb": null,
+    "victroad": {
+      "scaling.crop.left": -13,
+      "scaling.crop.right": 13
+    },
+    "vigilant": null,
+    "vimanaj": null,
+    "vindctr2": null,
+    "vortex": null,
+    "vsav": null,
+    "vsav2": null,
+    "vulcan": null,
+    "vulgus": null,
+    "wacko": {
+      "scaling.crop.bottom": -2
+    },
+    "warofbug": null,
+    "waterski": {
+      "scaling.crop.bottom": -9
+    },
+    "wb3": {
+      "scaling.crop.left": -16,
+      "scaling.crop.right": -16
+    },
+    "wbmlvcd": {
+      "scaling.crop.left": -1
+    },
+    "wboy": {
+      "scaling.crop.left": -16,
+      "scaling.crop.right": -16
+    },
+    "wexpress": null,
+    "wildfang": null,
+    "willow": null,
+    "winterht": null,
+    "wldcourt": {
+      "scaling.crop.bottom": 1
+    },
+    "wmatch": {
+      "scaling.crop.right": -1
+    },
+    "wndrmomo": null,
+    "wndrplnt": null,
+    "wof": null,
+    "wofch": null,
+    "woodpeck": null,
+    "wow": {
+      "scaling.crop.top": -2,
+      "scaling.crop.bottom": 1,
+      "scaling.crop.left": -26,
+      "scaling.crop.right": -30
+    },
+    "wrestwar": null,
+    "ws": {
+      "scaling.crop.bottom": 1
+    },
+    "wwallyj": {
+      "scaling.crop.left": -4
+    },
+    "wwestern": null,
+    "wwfsstar": null,
+    "wwfwfest": null,
+    "xevious": null,
+    "xmcota": null,
+    "xmen": {
+      "scaling.crop.left": -10,
+      "scaling.crop.right": -6
+    },
+    "xmultiplm72": null,
+    "xmvsf": null,
+    "xsleenab": null,
+    "xsleenaba": null,
+    "yiear": null,
+    "youjyudn": null,
+    "zaxxon": null,
+    "zerowing": null,
+    "zigzagb": {
+      "scaling.crop.left": -12,
+      "scaling.crop.right": 11
+    },
+    "znpwfv": null,
+    "zx48": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
+      "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
+    },
+    "zzyzzyxx": null
+  }
+}
