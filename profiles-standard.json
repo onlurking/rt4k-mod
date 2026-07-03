@@ -2,6 +2,8 @@
   "base_profile": "./profiles/SD/profile/_CRT Emulation/CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K HDR.rt4",
   "output_dir": "./profiles/DV1",
   "defaults": {
+    "advanced.effects.mask.enabled": true,
+    "advanced.effects.mask.strength": -3,
     "output.transmitter.hdr": "HDR10 [8-bit]",
     "output.transmitter.deep_color": false,
     "output.transmitter.sync_lock": "Gen Lock",
@@ -9,13 +11,12 @@
     "advanced.effects.interpolation.linear_light": true,
     "advanced.effects.interpolation.anti_ringing": true,
     "output.resolution": "4K60",
+    "scaling.crop.right": 0,
+    "scaling.crop.left": 0,
     "scaling.crop.top": 0,
     "scaling.crop.bottom": 0,
-    "scaling.crop.left": 0,
-    "scaling.crop.right": 0,
-    "advanced.effects.mask.enabled": true,
-    "advanced.effects.mask.strength": -3,
     "output.transmitter.colorimetry": "Auto-Rec.709",
+    "advanced.system.osd_firmware.on_screen_display.hide_input_res": false,
     "output.transmitter.rgb_range": "Full",
     "hdmi_receiver.mister_dv1.auto_crop": true,
     "hdmi_receiver.mister_dv1.auto_decimate": true,
@@ -32,9 +33,9 @@
     "1944": null,
     "19xx": null,
     "280zzzap": {
+      "scaling.crop.right": -5,
       "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1,
-      "scaling.crop.right": -5
+      "scaling.crop.bottom": 1
     },
     "3DO": {
       "advanced.effects.mask.strength": -2,
@@ -234,9 +235,9 @@
       "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
     },
     "GBA": {
+      "advanced.effects.mask.strength": 0,
       "advanced.effects.interpolation.linear_light": false,
       "advanced.effects.interpolation.anti_ringing": false,
-      "advanced.effects.mask.strength": 0,
       "hdmi_receiver.mister_dv1.auto_crop": false,
       "hdmi_receiver.mister_dv1.auto_decimate": false,
       "hdmi_receiver.mister_dv1.enabled": false,
@@ -249,9 +250,9 @@
       "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
     },
     "GBC": {
+      "advanced.effects.mask.strength": 10,
       "advanced.effects.interpolation.linear_light": false,
       "advanced.effects.interpolation.anti_ringing": false,
-      "advanced.effects.mask.strength": 10,
       "hdmi_receiver.mister_dv1.auto_crop": false,
       "hdmi_receiver.mister_dv1.auto_decimate": false,
       "hdmi_receiver.mister_dv1.enabled": false,
@@ -269,9 +270,9 @@
       "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
     },
     "Game and Watch": {
-      "advanced.effects.interpolation.anti_ringing": false,
       "advanced.effects.mask.enabled": false,
       "advanced.effects.mask.strength": 0,
+      "advanced.effects.interpolation.anti_ringing": false,
       "hdmi_receiver.mister_dv1.auto_crop": false,
       "hdmi_receiver.mister_dv1.auto_decimate": false,
       "hdmi_receiver.mister_dv1.enabled": false,
@@ -285,9 +286,9 @@
     },
     "GameGear": null,
     "Gameboy": {
-      "advanced.effects.interpolation.anti_ringing": false,
       "advanced.effects.mask.enabled": false,
       "advanced.effects.mask.strength": 0,
+      "advanced.effects.interpolation.anti_ringing": false,
       "hdmi_receiver.mister_dv1.auto_crop": false,
       "hdmi_receiver.mister_dv1.auto_decimate": false,
       "hdmi_receiver.mister_dv1.enabled": false,
@@ -380,10 +381,10 @@
       "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
     },
     "Menu": {
-      "scaling.crop.top": -12,
-      "scaling.crop.bottom": -2,
+      "scaling.crop.right": -11,
       "scaling.crop.left": -54,
-      "scaling.crop.right": -11
+      "scaling.crop.top": -12,
+      "scaling.crop.bottom": -2
     },
     "MiSTerLaggy": {
       "advanced.effects.mask.strength": -2,
@@ -653,8 +654,8 @@
     },
     "aceattaca": null,
     "adcanoe": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "afighter": null,
     "agallet": null,
@@ -662,10 +663,10 @@
       "output.transmitter.deep_color": true
     },
     "airass": {
-      "scaling.crop.top": -34,
-      "scaling.crop.bottom": -26,
+      "scaling.crop.right": -1,
       "scaling.crop.left": -8,
-      "scaling.crop.right": -1
+      "scaling.crop.top": -34,
+      "scaling.crop.bottom": -26
     },
     "airdueljm72": null,
     "airduelm72": null,
@@ -679,10 +680,10 @@
     "alpine": null,
     "altbeast": null,
     "amatelas": {
-      "scaling.crop.top": -43,
-      "scaling.crop.bottom": -53,
+      "scaling.crop.right": -9,
       "scaling.crop.left": -17,
-      "scaling.crop.right": -9
+      "scaling.crop.top": -43,
+      "scaling.crop.bottom": -53
     },
     "amidars": null,
     "anteater": null,
@@ -698,10 +699,10 @@
     "arkanoidj": null,
     "arknoid2": null,
     "armedf": {
-      "scaling.crop.top": -7,
-      "scaling.crop.bottom": -23,
+      "scaling.crop.right": -5,
       "scaling.crop.left": -5,
-      "scaling.crop.right": -5
+      "scaling.crop.top": -7,
+      "scaling.crop.bottom": -23
     },
     "armorcar": null,
     "armwar": null,
@@ -712,14 +713,14 @@
     "astrass": null,
     "astrofl": null,
     "atetris": {
+      "scaling.crop.left": -1,
       "scaling.crop.top": -3,
-      "scaling.crop.bottom": -2,
-      "scaling.crop.left": -1
+      "scaling.crop.bottom": -2
     },
     "atetrisc": {
+      "scaling.crop.right": -3,
       "scaling.crop.top": -1,
-      "scaling.crop.bottom": -1,
-      "scaling.crop.right": -3
+      "scaling.crop.bottom": -1
     },
     "athena": null,
     "atlantis2": null,
@@ -731,15 +732,15 @@
     "backfirt": null,
     "baddudes": null,
     "bagman": {
-      "scaling.crop.left": -11,
-      "scaling.crop.right": 11
+      "scaling.crop.right": 11,
+      "scaling.crop.left": -11
     },
     "bakubaku": null,
     "bakutotu": null,
     "ballbomb": null,
     "baluba": {
-      "scaling.crop.left": -12,
-      "scaling.crop.right": 12
+      "scaling.crop.right": 12,
+      "scaling.crop.left": -12
     },
     "bankp": null,
     "batcir": null,
@@ -754,14 +755,14 @@
     "berzerk": null,
     "bgaregga": null,
     "bigfghtr": {
-      "scaling.crop.top": -5,
-      "scaling.crop.bottom": -4,
+      "scaling.crop.right": -10,
       "scaling.crop.left": -25,
-      "scaling.crop.right": -10
+      "scaling.crop.top": -5,
+      "scaling.crop.bottom": -4
     },
     "bigkong": {
-      "scaling.crop.left": -11,
-      "scaling.crop.right": 11
+      "scaling.crop.right": 11,
+      "scaling.crop.left": -11
     },
     "bilyard": null,
     "bioatack": null,
@@ -769,8 +770,8 @@
     "birdiy": null,
     "blasto": null,
     "blastoff": {
-      "scaling.crop.left": -12,
-      "scaling.crop.right": 12
+      "scaling.crop.right": 12,
+      "scaling.crop.left": -12
     },
     "blazer": null,
     "blkbustr": null,
@@ -785,31 +786,31 @@
     "bloxeed": null,
     "blueprnt": null,
     "blueshrk": {
-      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -11,
       "scaling.crop.left": -5,
-      "scaling.crop.right": -11
+      "scaling.crop.bottom": 1
     },
     "bmaster": null,
     "bodyslam": null,
     "bombjack": null,
     "boothill": {
-      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -6,
       "scaling.crop.left": -5,
-      "scaling.crop.right": -6
+      "scaling.crop.bottom": 1
     },
     "bosco": null,
     "boscomd": null,
     "botanic": {
-      "scaling.crop.left": -11,
-      "scaling.crop.right": 11
+      "scaling.crop.right": 11,
+      "scaling.crop.left": -11
     },
     "bouldash": null,
     "boxyboy": null,
     "bradley": null,
     "brain": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -1,
       "advanced.effects.mask.strength": -2,
+      "scaling.crop.left": -1,
+      "scaling.crop.bottom": 1,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
       "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
     },
@@ -833,18 +834,18 @@
     "carnival": null,
     "catacomb": null,
     "cavelon": {
-      "scaling.crop.left": -12,
-      "scaling.crop.right": 12
+      "scaling.crop.right": 12,
+      "scaling.crop.left": -12
     },
     "cavenger": null,
     "cawing": null,
     "ccastles": null,
     "cclimber": null,
     "cclimbr2": {
-      "scaling.crop.top": -28,
-      "scaling.crop.bottom": -1,
+      "scaling.crop.right": -8,
       "scaling.crop.left": -55,
-      "scaling.crop.right": -8
+      "scaling.crop.top": -28,
+      "scaling.crop.bottom": -1
     },
     "cd-i": {
       "advanced.effects.mask.strength": -2,
@@ -858,9 +859,9 @@
     "chinagat": null,
     "choko": null,
     "chopliftu": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -1,
       "advanced.effects.mask.strength": -2,
+      "scaling.crop.left": -1,
+      "scaling.crop.bottom": 1,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
       "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
     },
@@ -870,24 +871,24 @@
       "scaling.crop.bottom": 1
     },
     "ckong": {
-      "scaling.crop.left": -11,
-      "scaling.crop.right": 11
+      "scaling.crop.right": 11,
+      "scaling.crop.left": -11
     },
     "ckongdks": {
-      "scaling.crop.left": -11,
-      "scaling.crop.right": 11
+      "scaling.crop.right": 11,
+      "scaling.crop.left": -11
     },
     "ckongo": {
-      "scaling.crop.left": -11,
-      "scaling.crop.right": 11
+      "scaling.crop.right": 11,
+      "scaling.crop.left": -11
     },
     "ckongpt2": {
-      "scaling.crop.left": -11,
-      "scaling.crop.right": 11
+      "scaling.crop.right": 11,
+      "scaling.crop.left": -11
     },
     "ckongpt2b": {
-      "scaling.crop.left": -11,
-      "scaling.crop.right": 11
+      "scaling.crop.right": 11,
+      "scaling.crop.left": -11
     },
     "cleansweept": null,
     "clowns": null,
@@ -896,15 +897,15 @@
     "cninja": null,
     "colmns97": null,
     "colony7": {
-      "scaling.crop.bottom": -9,
-      "scaling.crop.right": -1
+      "scaling.crop.right": -1,
+      "scaling.crop.bottom": -9
     },
     "combatsc": null,
     "combh": {
-      "scaling.crop.top": -4,
-      "scaling.crop.bottom": -72,
+      "scaling.crop.right": -13,
       "scaling.crop.left": -14,
-      "scaling.crop.right": -13
+      "scaling.crop.top": -4,
+      "scaling.crop.bottom": -72
     },
     "commando": null,
     "comotion": null,
@@ -918,25 +919,25 @@
     "cosmo": null,
     "cotton": null,
     "cotton2": {
-      "scaling.crop.top": -8,
-      "scaling.crop.bottom": -8,
+      "scaling.crop.right": -8,
       "scaling.crop.left": -8,
-      "scaling.crop.right": -8
+      "scaling.crop.top": -8,
+      "scaling.crop.bottom": -8
     },
     "cottonbm": {
-      "scaling.crop.top": -8,
-      "scaling.crop.bottom": -8,
+      "scaling.crop.right": -8,
       "scaling.crop.left": -8,
-      "scaling.crop.right": -8
+      "scaling.crop.top": -8,
+      "scaling.crop.bottom": -8
     },
     "countryc": null,
     "crater": null,
     "crazyblk": null,
     "crbaloon": {
-      "scaling.crop.top": -10,
-      "scaling.crop.bottom": -10,
+      "scaling.crop.right": -2,
       "scaling.crop.left": -2,
-      "scaling.crop.right": -2
+      "scaling.crop.top": -10,
+      "scaling.crop.bottom": -10
     },
     "crimfght": null,
     "crush2": null,
@@ -946,9 +947,9 @@
     "cworld2j": null,
     "cybots": null,
     "dakkochn": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -1,
       "advanced.effects.mask.strength": -2,
+      "scaling.crop.left": -1,
+      "scaling.crop.bottom": 1,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",
       "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
     },
@@ -1027,9 +1028,9 @@
       "scaling.crop.left": -2
     },
     "dsoccr94": {
-      "scaling.crop.top": -8,
+      "scaling.crop.right": -34,
       "scaling.crop.left": -26,
-      "scaling.crop.right": -34
+      "scaling.crop.top": -8
     },
     "dsoccr94j": null,
     "dspirit": null,
@@ -1049,8 +1050,8 @@
     "ejihon": null,
     "elandore": null,
     "elevator": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -1
+      "scaling.crop.left": -1,
+      "scaling.crop.bottom": 1
     },
     "elevatorb": null,
     "esprade": null,
@@ -1069,10 +1070,10 @@
     "f1dream": null,
     "faceoff": null,
     "fantasyu": {
-      "scaling.crop.top": -27,
-      "scaling.crop.bottom": -40,
+      "scaling.crop.right": -12,
       "scaling.crop.left": -5,
-      "scaling.crop.right": -12
+      "scaling.crop.top": -27,
+      "scaling.crop.bottom": -40
     },
     "fantzn2": null,
     "fantzn2x": null,
@@ -1109,8 +1110,8 @@
     "futspy": null,
     "gaia": null,
     "galaga3": {
-      "scaling.crop.left": -9,
-      "scaling.crop.right": 9
+      "scaling.crop.right": 9,
+      "scaling.crop.left": -9
     },
     "galaga88": null,
     "galagamw": null,
@@ -1121,14 +1122,14 @@
     "gallopm72": null,
     "galxwars": null,
     "gangwars": {
-      "scaling.crop.top": -16,
-      "scaling.crop.bottom": -10,
+      "scaling.crop.right": -124,
       "scaling.crop.left": -152,
-      "scaling.crop.right": -124
+      "scaling.crop.top": -16,
+      "scaling.crop.bottom": -10
     },
     "gaplus": {
-      "scaling.crop.left": -9,
-      "scaling.crop.right": 9
+      "scaling.crop.right": 9,
+      "scaling.crop.left": -9
     },
     "gardia": null,
     "gaunt2": null,
@@ -1140,10 +1141,10 @@
       "scaling.crop.bottom": -16
     },
     "gemini": {
-      "scaling.crop.top": -40,
-      "scaling.crop.bottom": -52,
+      "scaling.crop.right": -13,
       "scaling.crop.left": -14,
-      "scaling.crop.right": -13
+      "scaling.crop.top": -40,
+      "scaling.crop.bottom": -52
     },
     "genpeitd": null,
     "ghouls": null,
@@ -1177,14 +1178,14 @@
     "guwanges": null,
     "gwarrior": null,
     "gyruss": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "hachoo": null,
     "hamaway": {
-      "scaling.crop.top": -3,
+      "scaling.crop.right": 12,
       "scaling.crop.left": -12,
-      "scaling.crop.right": 12
+      "scaling.crop.top": -3
     },
     "hanagumi": null,
     "hangonjr": null,
@@ -1199,18 +1200,18 @@
     "hook": null,
     "hopmappy": null,
     "horekid": {
-      "scaling.crop.top": -49,
-      "scaling.crop.bottom": -53,
+      "scaling.crop.right": -9,
       "scaling.crop.left": -17,
-      "scaling.crop.right": -9
+      "scaling.crop.top": -49,
+      "scaling.crop.bottom": -53
     },
     "horizon": null,
     "hotdogst": null,
     "hsf2": null,
     "hustle": null,
     "hvymetal": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -1
+      "scaling.crop.left": -1,
+      "scaling.crop.bottom": 1
     },
     "hwrace": {
       "scaling.crop.bottom": -7
@@ -1218,14 +1219,14 @@
     "hyperspt": null,
     "iganinju": null,
     "ikari": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "ikari3": {
-      "scaling.crop.top": -12,
-      "scaling.crop.bottom": -13,
+      "scaling.crop.right": -40,
       "scaling.crop.left": -52,
-      "scaling.crop.right": -40
+      "scaling.crop.top": -12,
+      "scaling.crop.bottom": -13
     },
     "imgfight": null,
     "imgfightj": null,
@@ -1259,16 +1260,16 @@
     },
     "jumpshot": null,
     "jungleh": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -1
+      "scaling.crop.left": -1,
+      "scaling.crop.bottom": 1
     },
     "junglek": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -1
+      "scaling.crop.left": -1,
+      "scaling.crop.bottom": 1
     },
     "junofrst": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "jyangoku": null,
     "kageki": null,
@@ -1296,10 +1297,10 @@
     },
     "kot": null,
     "kozure": {
-      "scaling.crop.top": -5,
-      "scaling.crop.bottom": -13,
+      "scaling.crop.right": -8,
       "scaling.crop.left": -23,
-      "scaling.crop.right": -8
+      "scaling.crop.top": -5,
+      "scaling.crop.bottom": -13
     },
     "kram": null,
     "kroozr": null,
@@ -1317,19 +1318,19 @@
     "ldrun3": null,
     "ldrun4": null,
     "legionj2": {
-      "scaling.crop.top": -10,
-      "scaling.crop.bottom": -57,
+      "scaling.crop.right": -2,
       "scaling.crop.left": -28,
-      "scaling.crop.right": -2
+      "scaling.crop.top": -10,
+      "scaling.crop.bottom": -57
     },
     "lethalth": null,
     "lghost": null,
     "lgtnfght": null,
     "lifefrcej": null,
     "liquidk": {
+      "scaling.crop.left": -1,
       "scaling.crop.top": -1,
-      "scaling.crop.bottom": 2,
-      "scaling.crop.left": -1
+      "scaling.crop.bottom": 2
     },
     "lizwiz": null,
     "llander": null,
@@ -1340,9 +1341,9 @@
     "luctoday": null,
     "lunarbat": null,
     "lupin3a": {
+      "scaling.crop.left": -1,
       "scaling.crop.top": -13,
-      "scaling.crop.bottom": -7,
-      "scaling.crop.left": -1
+      "scaling.crop.bottom": -7
     },
     "lwings": null,
     "magspot": {
@@ -1351,14 +1352,14 @@
     "mahoudai": null,
     "majtitl2": null,
     "manhatan": {
-      "scaling.crop.left": -8,
-      "scaling.crop.right": -8
+      "scaling.crop.right": -8,
+      "scaling.crop.left": -8
     },
     "maniach": null,
     "mappy": null,
     "marble5": {
-      "scaling.crop.left": -24,
-      "scaling.crop.right": -24
+      "scaling.crop.right": -24,
+      "scaling.crop.left": -24
     },
     "mario": null,
     "mars": null,
@@ -1375,9 +1376,9 @@
     "megaman": null,
     "megaman2": null,
     "megrescu": {
-      "scaling.crop.top": -8,
+      "scaling.crop.right": 27,
       "scaling.crop.left": -27,
-      "scaling.crop.right": 27
+      "scaling.crop.top": -8
     },
     "memtest": {
       "advanced.effects.mask.strength": -2,
@@ -1445,15 +1446,15 @@
     "nemo": null,
     "ngp": null,
     "nibbler": {
-      "scaling.crop.top": -27,
-      "scaling.crop.bottom": -40,
+      "scaling.crop.right": -12,
       "scaling.crop.left": -5,
-      "scaling.crop.right": -12
+      "scaling.crop.top": -27,
+      "scaling.crop.bottom": -40
     },
     "ninjak": {
+      "scaling.crop.left": -1,
       "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -1
+      "scaling.crop.bottom": 1
     },
     "ninjakun": {
       "scaling.crop.left": -1
@@ -1507,10 +1508,10 @@
     },
     "pacplus": null,
     "paddlema": {
-      "scaling.crop.top": -51,
-      "scaling.crop.bottom": -40,
+      "scaling.crop.right": -18,
       "scaling.crop.left": -9,
-      "scaling.crop.right": -18
+      "scaling.crop.top": -51,
+      "scaling.crop.bottom": -40
     },
     "pang": null,
     "pang3": null,
@@ -1520,37 +1521,37 @@
     "parodius": null,
     "passsht": null,
     "pballoon": {
-      "scaling.crop.top": -27,
-      "scaling.crop.bottom": -40,
+      "scaling.crop.right": -4,
       "scaling.crop.left": -13,
-      "scaling.crop.right": -4
+      "scaling.crop.top": -27,
+      "scaling.crop.bottom": -40
     },
     "pblbeach": null,
     "pengo": null,
     "pepper2": null,
     "perfrman": null,
     "pestplce": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.right": -1
+      "scaling.crop.right": -1,
+      "scaling.crop.bottom": 1
     },
     "peterpak": null,
     "phoenix": null,
     "pickin": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1,
+      "scaling.crop.right": 11,
       "scaling.crop.left": -11,
-      "scaling.crop.right": 11
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
     },
     "pingpong": null,
     "pipibibs": {
-      "scaling.crop.top": -11,
-      "scaling.crop.bottom": -1,
+      "scaling.crop.right": -53,
       "scaling.crop.left": -71,
-      "scaling.crop.right": -53
+      "scaling.crop.top": -11,
+      "scaling.crop.bottom": -1
     },
     "piratpet": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -1
+      "scaling.crop.left": -1,
+      "scaling.crop.bottom": 1
     },
     "pisces": null,
     "pistoldm": null,
@@ -1576,12 +1577,12 @@
     "polyplay2": null,
     "pong": null,
     "ponpoko": {
-      "scaling.crop.left": -15,
-      "scaling.crop.right": -16
+      "scaling.crop.right": -16,
+      "scaling.crop.left": -15
     },
     "pooyan": {
-      "scaling.crop.left": -8,
-      "scaling.crop.right": 8
+      "scaling.crop.right": 8,
+      "scaling.crop.left": -8
     },
     "popeye": null,
     "popflamn": null,
@@ -1589,16 +1590,16 @@
       "output.transmitter.deep_color": true
     },
     "pow": {
-      "scaling.crop.top": -12,
-      "scaling.crop.bottom": -13,
+      "scaling.crop.right": -39,
       "scaling.crop.left": -52,
-      "scaling.crop.right": -39
+      "scaling.crop.top": -12,
+      "scaling.crop.bottom": -13
     },
     "powerdrv": null,
     "pprobe": {
-      "scaling.crop.bottom": -8,
+      "scaling.crop.right": 4,
       "scaling.crop.left": -4,
-      "scaling.crop.right": 4
+      "scaling.crop.bottom": -8
     },
     "prehisle": null,
     "prikura": null,
@@ -1680,17 +1681,17 @@
     "renegade": null,
     "rescue": null,
     "ridleofp": {
-      "scaling.crop.top": -8,
+      "scaling.crop.right": 27,
       "scaling.crop.left": -27,
-      "scaling.crop.right": 27
+      "scaling.crop.top": -8
     },
     "ringdest": {
       "scaling.crop.top": -8,
       "scaling.crop.bottom": -7
     },
     "riotcity": {
-      "scaling.crop.left": -16,
-      "scaling.crop.right": -16
+      "scaling.crop.right": -16,
+      "scaling.crop.left": -16
     },
     "riskchal": null,
     "roadblst": null,
@@ -1702,8 +1703,8 @@
     "robocop": null,
     "robotron": null,
     "rocnrope": {
-      "scaling.crop.left": -17,
-      "scaling.crop.right": 17
+      "scaling.crop.right": 17,
+      "scaling.crop.left": -17
     },
     "rodland": null,
     "roishtar": null,
@@ -1718,16 +1719,16 @@
     "rtypeleo": null,
     "rumba": null,
     "rungun": {
-      "scaling.crop.top": -1,
+      "scaling.crop.right": -2,
       "scaling.crop.left": -30,
-      "scaling.crop.right": -2
+      "scaling.crop.top": -1
     },
     "rushatck": null,
     "rygar": {
-      "scaling.crop.top": -14,
-      "scaling.crop.bottom": -12,
+      "scaling.crop.right": -40,
       "scaling.crop.left": -52,
-      "scaling.crop.right": -40
+      "scaling.crop.top": -14,
+      "scaling.crop.bottom": -12
     },
     "rygarj": null,
     "ryukyu": null,
@@ -1741,16 +1742,16 @@
     "sasissu": null,
     "saturnzi": null,
     "sbagman": {
-      "scaling.crop.left": -11,
-      "scaling.crop.right": 11
+      "scaling.crop.right": 11,
+      "scaling.crop.left": -11
     },
     "sbasketb": {
-      "scaling.crop.left": -17,
-      "scaling.crop.right": 17
+      "scaling.crop.right": 17,
+      "scaling.crop.left": -17
     },
     "sbrkout": {
-      "scaling.crop.top": -1,
-      "scaling.crop.left": -2
+      "scaling.crop.left": -2,
+      "scaling.crop.top": -1
     },
     "schaser": null,
     "scobra": null,
@@ -1764,15 +1765,15 @@
     "sdungeon": null,
     "seabass": null,
     "searchar": {
-      "scaling.crop.top": -40,
-      "scaling.crop.bottom": -52,
+      "scaling.crop.right": -14,
       "scaling.crop.left": -10,
-      "scaling.crop.right": -14
+      "scaling.crop.top": -40,
+      "scaling.crop.bottom": -52
     },
     "seawolf": null,
     "seawolf2": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -4
+      "scaling.crop.left": -4,
+      "scaling.crop.bottom": 1
     },
     "secretag": null,
     "sectionz": null,
@@ -1785,12 +1786,12 @@
     "sfa2": null,
     "sfa3": null,
     "sfiiin": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.left": -1
+      "scaling.crop.left": -1,
+      "scaling.crop.bottom": 1
     },
     "sfposeid": {
-      "scaling.crop.left": -8,
-      "scaling.crop.right": -8
+      "scaling.crop.right": -8,
+      "scaling.crop.left": -8
     },
     "sfz2al": null,
     "sfzch": null,
@@ -1812,10 +1813,10 @@
     "shuffle": null,
     "sidearms": null,
     "silkworm": {
-      "scaling.crop.top": -14,
-      "scaling.crop.bottom": -12,
+      "scaling.crop.right": -40,
       "scaling.crop.left": -52,
-      "scaling.crop.right": -40
+      "scaling.crop.top": -14,
+      "scaling.crop.bottom": -12
     },
     "silvland": null,
     "simpsons": null,
@@ -1824,39 +1825,39 @@
     },
     "sjryuko": null,
     "skyadvnt": {
-      "scaling.crop.top": -41,
-      "scaling.crop.bottom": -51,
+      "scaling.crop.right": -11,
       "scaling.crop.left": -16,
-      "scaling.crop.right": -11
+      "scaling.crop.top": -41,
+      "scaling.crop.bottom": -51
     },
     "skykiddx": null,
     "skyskipr": null,
     "skysmash": null,
     "skysoldr": {
-      "scaling.crop.top": -41,
-      "scaling.crop.bottom": -51,
+      "scaling.crop.right": -11,
       "scaling.crop.left": -16,
-      "scaling.crop.right": -11
+      "scaling.crop.top": -41,
+      "scaling.crop.bottom": -51
     },
     "slammast": null,
     "slapfighb1": null,
     "slapshtr": {
-      "scaling.crop.left": -8,
-      "scaling.crop.right": -8
+      "scaling.crop.right": -8,
+      "scaling.crop.left": -8
     },
     "smleague": null,
     "snapjack": null,
     "snowbro2": {
-      "scaling.crop.top": -11,
-      "scaling.crop.bottom": -1,
+      "scaling.crop.right": -38,
       "scaling.crop.left": -51,
-      "scaling.crop.right": -38
+      "scaling.crop.top": -11,
+      "scaling.crop.bottom": -1
     },
     "snowbrosj": null,
     "sokyugrt": null,
     "solarfox": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.right": -4
+      "scaling.crop.right": -4,
+      "scaling.crop.bottom": 1
     },
     "soldam": null,
     "solfigtr": {
@@ -1870,8 +1871,8 @@
     },
     "sosterm": null,
     "spacecr": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "spacerace": null,
     "spaceskr": {
@@ -1910,8 +1911,8 @@
     },
     "sss": null,
     "starforc": {
-      "scaling.crop.left": -12,
-      "scaling.crop.right": 12
+      "scaling.crop.right": 12,
+      "scaling.crop.left": -12
     },
     "stargate": null,
     "stargrds": {
@@ -1927,10 +1928,10 @@
     "stratgyx": null,
     "stratof": null,
     "streetsm": {
-      "scaling.crop.top": -12,
-      "scaling.crop.bottom": -13,
+      "scaling.crop.right": -121,
       "scaling.crop.left": -155,
-      "scaling.crop.right": -121
+      "scaling.crop.top": -12,
+      "scaling.crop.bottom": -13
     },
     "strider": null,
     "subs": null,
@@ -1949,8 +1950,8 @@
     "sxevious": null,
     "szaxxon": null,
     "tankbatt": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "tankfrce": null,
     "tapper": {
@@ -1962,16 +1963,16 @@
     "tehkanwc": null,
     "tekipaki": null,
     "terracre": {
-      "scaling.crop.top": -43,
-      "scaling.crop.bottom": -53,
+      "scaling.crop.right": -9,
       "scaling.crop.left": -17,
-      "scaling.crop.right": -9
+      "scaling.crop.top": -43,
+      "scaling.crop.bottom": -53
     },
     "terrafj": {
-      "scaling.crop.top": -5,
-      "scaling.crop.bottom": -4,
+      "scaling.crop.right": -8,
       "scaling.crop.left": -23,
-      "scaling.crop.right": -8
+      "scaling.crop.top": -5,
+      "scaling.crop.bottom": -4
     },
     "tetris": null,
     "tetrisse": null,
@@ -1979,14 +1980,14 @@
     "theglobp": null,
     "theroes": null,
     "thunderx": {
-      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -16,
       "scaling.crop.left": -16,
-      "scaling.crop.right": -16
+      "scaling.crop.bottom": 1
     },
     "thundfox": {
+      "scaling.crop.left": -1,
       "scaling.crop.top": -1,
-      "scaling.crop.bottom": 2,
-      "scaling.crop.left": -1
+      "scaling.crop.bottom": 2
     },
     "thunt": null,
     "thuntk": null,
@@ -1996,21 +1997,21 @@
       "scaling.crop.bottom": -2
     },
     "timeplt": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "timescan": null,
     "timesold": {
-      "scaling.crop.top": -41,
-      "scaling.crop.bottom": -51,
+      "scaling.crop.right": -11,
       "scaling.crop.left": -15,
-      "scaling.crop.right": -11
+      "scaling.crop.top": -41,
+      "scaling.crop.bottom": -51
     },
     "timetunl": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -8,
       "scaling.crop.left": -8,
-      "scaling.crop.right": -8
+      "scaling.crop.top": -1,
+      "scaling.crop.bottom": 1
     },
     "tinstar": {
       "scaling.crop.left": -1
@@ -2020,15 +2021,15 @@
     },
     "tmnt": null,
     "tmnt2": {
-      "scaling.crop.bottom": 1,
+      "scaling.crop.right": -8,
       "scaling.crop.left": -8,
-      "scaling.crop.right": -8
+      "scaling.crop.bottom": 1
     },
     "tnextspcj": {
-      "scaling.crop.top": -41,
-      "scaling.crop.bottom": -52,
+      "scaling.crop.right": -10,
       "scaling.crop.left": -17,
-      "scaling.crop.right": -10
+      "scaling.crop.top": -41,
+      "scaling.crop.bottom": -52
     },
     "tnk3": null,
     "tnzs": null,
@@ -2040,16 +2041,16 @@
     "toryumon": null,
     "toutrun": null,
     "tp84": {
-      "scaling.crop.left": 13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": 13
     },
     "tp84a": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "tp84b": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "trackfld": {
       "scaling.crop.bottom": 1
@@ -2066,34 +2067,34 @@
     "troangel": null,
     "trojan": null,
     "tron": {
-      "scaling.crop.bottom": 1,
-      "scaling.crop.right": -3
+      "scaling.crop.right": -3,
+      "scaling.crop.bottom": 1
     },
     "truxton": null,
     "truxton2": {
-      "scaling.crop.top": -38,
-      "scaling.crop.bottom": -50,
+      "scaling.crop.right": -2,
       "scaling.crop.left": -11,
-      "scaling.crop.right": -2
+      "scaling.crop.top": -38,
+      "scaling.crop.bottom": -50
     },
     "tshoot": {
-      "scaling.crop.top": -10,
-      "scaling.crop.bottom": -13,
+      "scaling.crop.right": -1,
       "scaling.crop.left": -5,
-      "scaling.crop.right": -1
+      "scaling.crop.top": -10,
+      "scaling.crop.bottom": -13
     },
     "tturfu": {
-      "scaling.crop.top": -8,
-      "scaling.crop.bottom": -7,
+      "scaling.crop.right": -8,
       "scaling.crop.left": -8,
-      "scaling.crop.right": -8
+      "scaling.crop.top": -8,
+      "scaling.crop.bottom": -7
     },
     "tumblep": null,
     "turbotag": null,
     "turtles": null,
     "tutankhm": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "twcup98": null,
     "twinbee": null,
@@ -2109,14 +2110,14 @@
     "uopoko": null,
     "uopokoj": null,
     "upndown": {
-      "scaling.crop.top": -1,
-      "scaling.crop.right": -1
+      "scaling.crop.right": -1,
+      "scaling.crop.top": -1
     },
     "vanguard": {
-      "scaling.crop.top": -27,
-      "scaling.crop.bottom": -40,
+      "scaling.crop.right": -12,
       "scaling.crop.left": -5,
-      "scaling.crop.right": -12
+      "scaling.crop.top": -27,
+      "scaling.crop.bottom": -40
     },
     "vanvan": null,
     "varth": null,
@@ -2131,8 +2132,8 @@
     "victnine": null,
     "victorycb": null,
     "victroad": {
-      "scaling.crop.left": -13,
-      "scaling.crop.right": 13
+      "scaling.crop.right": 13,
+      "scaling.crop.left": -13
     },
     "vigilant": null,
     "vimanaj": null,
@@ -2150,15 +2151,15 @@
       "scaling.crop.bottom": -9
     },
     "wb3": {
-      "scaling.crop.left": -16,
-      "scaling.crop.right": -16
+      "scaling.crop.right": -16,
+      "scaling.crop.left": -16
     },
     "wbmlvcd": {
       "scaling.crop.left": -1
     },
     "wboy": {
-      "scaling.crop.left": -16,
-      "scaling.crop.right": -16
+      "scaling.crop.right": -16,
+      "scaling.crop.left": -16
     },
     "wexpress": null,
     "wildfang": null,
@@ -2176,10 +2177,10 @@
     "wofch": null,
     "woodpeck": null,
     "wow": {
-      "scaling.crop.top": -2,
-      "scaling.crop.bottom": -1,
+      "scaling.crop.right": -30,
       "scaling.crop.left": -26,
-      "scaling.crop.right": -30
+      "scaling.crop.top": -2,
+      "scaling.crop.bottom": -1
     },
     "wrestwar": null,
     "ws": {
@@ -2194,8 +2195,8 @@
     "xevious": null,
     "xmcota": null,
     "xmen": {
-      "scaling.crop.left": -10,
-      "scaling.crop.right": -6
+      "scaling.crop.right": -6,
+      "scaling.crop.left": -10
     },
     "xmultiplm72": null,
     "xmvsf": null,
@@ -2206,8 +2207,8 @@
     "zaxxon": null,
     "zerowing": null,
     "zigzagb": {
-      "scaling.crop.left": -12,
-      "scaling.crop.right": 12
+      "scaling.crop.right": 12,
+      "scaling.crop.left": -12
     },
     "znpwfv": null,
     "zx48": {
