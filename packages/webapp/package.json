@@ -1,14 +1,16 @@
 {
-  "name": "webapp",
+  "name": "@rt4k-mod/webapp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo 'No tests yet'"
   },
   "dependencies": {
+    "@rt4k-mod/shared": "workspace:*",
     "@vueuse/core": "^14.3.0",
     "splitpanes": "^4.1.2",
     "vue": "^3.5.39",

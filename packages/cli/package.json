@@ -1,0 +1,21 @@
+{
+  "name": "@rt4k-mod/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "rt4k-mod": "./src/index.ts"
+  },
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "test": "bun test",
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun",
+    "diff": "bun run src/diff.ts"
+  },
+  "dependencies": {
+    "@rt4k-mod/shared": "workspace:*",
+    "commander": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

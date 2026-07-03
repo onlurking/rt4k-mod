@@ -1,15 +1,4 @@
-import { DataType } from "./types";
-
-export interface SettingDef {
-  name: string;
-  desc: string;
-  byteRanges: { address: number; length: number }[];
-  type: DataType;
-  readOnly?: boolean;
-  enums?: { name: string; value: Uint8Array }[];
-  flagName?: string;
-  cliDesc?: string;
-}
+import { DataType, type SettingDef } from "./types";
 
 export const SCHEMA: SettingDef[] = [
   {
@@ -428,4 +417,3 @@ export function getValidValuesHint(def: SettingDef): string | undefined {
       return undefined;
   }
 }
-

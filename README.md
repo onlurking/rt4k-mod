@@ -2,13 +2,61 @@
 
 Batch-modify RetroTINK-4K `.rt4` profile settings from the command line.
 
+## Project Structure
+
+This is a Bun workspace monorepo:
+
+```
+rt4k-mod/
+├── packages/
+│   ├── shared/     # Shared types & schema
+│   ├── cli/        # CLI tool
+│   └── webapp/     # Vue web interface
+└── package.json    # Workspace root
+```
+
 ## Install
 
 ```bash
 bun install
 ```
 
+## Scripts
+
+| Script | Description |
+|--------|-------------|
+| `bun run cli` | Run CLI (same as `cli:dev`) |
+| `bun run cli:dev` | Run CLI |
+| `bun run cli:test` | Run CLI tests |
+| `bun run cli:build` | Build CLI |
+| `bun run web` | Start webapp dev server (same as `web:dev`) |
+| `bun run web:dev` | Start webapp dev server |
+| `bun run web:test` | Run webapp tests |
+| `bun run web:build` | Build webapp for production |
+
 ## Commands
+
+### CLI
+
+```bash
+# Run CLI commands
+bun run cli modify --file ./PSX.rt4 --output-dir ./out --vrr Off
+bun run cli inspect --file ./PSX.rt4
+bun run cli generate --config profiles.json
+
+# Run tests
+bun run cli:test
+```
+
+### Webapp
+
+```bash
+# Start dev server
+bun run web:dev
+
+# Build for production
+bun run web:build
+```
 
 ### modify
 
@@ -16,16 +64,16 @@ Apply setting overrides to one or many `.rt4` profiles. Outputs are written to a
 
 ```bash
 # Single file
-bun run src/index.ts modify --file ./PSX.rt4 --output-dir ./out --vrr Off
+bun run cli modify --file ./PSX.rt4 --output-dir ./out --vrr Off
 
 # Entire directory (recursive)
-bun run src/index.ts modify \
+bun run cli modify \
   --input-dir "./profiles/God's Chosen/" \
   --output-dir "./modified/God's Chosen/" \
   --vrr Off
 
 # Multiple flags at once
-bun run src/index.ts modify \
+bun run cli modify \
   --input-dir ./profiles \
   --output-dir ./out \
   --vrr Off \
@@ -34,7 +82,7 @@ bun run src/index.ts modify \
   --deep-color true
 
 # Crop settings for specific resolutions
-bun run src/index.ts modify \
+bun run cli modify \
   --file ./PSX.rt4 \
   --output-dir ./out \
   --crop-240p-top 10 \
@@ -43,7 +91,7 @@ bun run src/index.ts modify \
   --crop-480i-bottom -4
 
 # Preview changes without writing
-bun run src/index.ts modify --file ./PSX.rt4 --output-dir ./out --vrr Off --dry-run
+bun run cli modify --file ./PSX.rt4 --output-dir ./out --vrr Off --dry-run
 ```
 
 ### inspect
@@ -52,13 +100,13 @@ Dump current settings from `.rt4` profiles as JSON.
 
 ```bash
 # Single file → JSON
-bun run src/index.ts inspect --file ./PSX.rt4
+bun run cli inspect --file ./PSX.rt4
 
 # Pretty-printed
-bun run src/index.ts inspect --file ./PSX.rt4 --pretty
+bun run cli inspect --file ./PSX.rt4 --pretty
 
 # Directory → NDJSON (one JSON object per line)
-bun run src/index.ts inspect --input-dir ./profiles
+bun run cli inspect --input-dir ./profiles
 ```
 
 
@@ -68,19 +116,19 @@ Generate DV1 profiles for MiSTer cores by copying a base profile.
 
 ```bash
 # From explicit core list
-bun run src/index.ts generate \
+bun run cli generate \
   --base-profile ./profiles/JVC-D200.rt4 \
   --output-dir ./profiles/DV1 \
   --cores "NES,SNES,Genesis,PSX"
 
 # Scan MiSTer SD card for cores
-bun run src/index.ts generate \
+bun run cli generate \
   --base-profile ./profiles/JVC-D200.rt4 \
   --output-dir ./profiles/DV1 \
   --mister-path /media/fat
 
 # From JSON config file (recommended)
-bun run src/index.ts generate --config profiles.json --force
+bun run cli generate --config profiles.json --force
 ```
 
 #### JSON Config
@@ -128,10 +176,10 @@ Compare two `.rt4` files byte-by-byte to analyze format differences.
 
 ```bash
 # Basic diff
-bun run src/index.ts diff --original ./PSX.rt4 --modified ./PSX-Vesa.rt4
+bun run cli diff --original ./PSX.rt4 --modified ./PSX-Vesa.rt4
 
 # With labels
-bun run src/index.ts diff \
+bun run cli diff \
   --original ./PSX.rt4 --original-label "FreeSync" \
   --modified ./PSX-Vesa.rt4 --modified-label "VESA"
 ```

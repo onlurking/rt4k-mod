@@ -149,7 +149,7 @@ describe("generate", () => {
           "output.resolution": "1440p60",
         },
         cores: {
-          NES: { "scaling.crop.top": -1, "scaling.crop.bottom": 1 },
+          NES: { "output.crop_240p.top": -1, "output.crop_240p.bottom": 1 },
           SNES: null,
         },
       }),
@@ -163,13 +163,13 @@ describe("generate", () => {
 
     // NES should have custom crop
     const nes = await RetroTinkProfile.build(path.join(outputDir, "NES.rt4"));
-    expect(nes.getValue("scaling.crop.top").asInt()).toBe(-1);
-    expect(nes.getValue("scaling.crop.bottom").asInt()).toBe(1);
+    expect(nes.getValue("output.crop_240p.top").asInt()).toBe(-1);
+    expect(nes.getValue("output.crop_240p.bottom").asInt()).toBe(1);
     expect(nes.getValue("output.resolution").asString()).toBe("1440p60");
 
     // SNES should have defaults only
     const snes = await RetroTinkProfile.build(path.join(outputDir, "SNES.rt4"));
-    expect(snes.getValue("scaling.crop.top").asInt()).toBe(0);
+    expect(snes.getValue("output.crop_240p.top").asInt()).toBe(0);
     expect(snes.getValue("output.resolution").asString()).toBe("1440p60");
   });
 
