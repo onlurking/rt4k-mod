@@ -5,7 +5,7 @@ import { useEditor } from '../composables/useEditor'
 import CoreListItem from './CoreListItem.vue'
 
 const { coreNames } = useProfile()
-const { selectedCore, selectCore, isCoreModified } = useEditor()
+const { selectedCore, selectCore, isCoreModified, getCoreChangeCount } = useEditor()
 
 const search = ref('')
 
@@ -30,6 +30,7 @@ const filteredCores = computed(() => {
         :label="name"
         :active="selectedCore === name"
         :modified="isCoreModified(name)"
+        :change-count="getCoreChangeCount(name)"
         @click="selectCore(name)"
       />
     </div>

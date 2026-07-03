@@ -76,6 +76,13 @@ export function useEditor() {
     return config.value.cores[name] !== null
   }
 
+  function getCoreChangeCount(name: string): number {
+    if (!config.value) return 0
+    const core = config.value.cores[name]
+    if (!core) return 0
+    return Object.keys(core).length
+  }
+
   function nextModifiedCore(): void {
     const names = Array.from(modifiedCores.value).sort()
     if (names.length === 0) return
@@ -95,14 +102,27 @@ export function useEditor() {
   function bulkSetSetting(settingPath: string, value: string | number | boolean, onlyModified = false) {
     if (!config.value) return
     history.snapshot(`Bulk set ${settingPath}`)
+    const isDefault = config.value.defaults[settingPath] === value
     for (const [name, settings] of Object.entries(config.value.cores)) {
       if (onlyModified && settings === null) continue
-      if (settings === null) {
-        config.value.cores[name] = { [settingPath]: value }
+      if (isDefault) {
+        // Value matches default — remove override if present
+        if (settings && settingPath in settings) {
+          delete settings[settingPath]
+          if (Object.keys(settings).length === 0) {
+            config.value.cores[name] = null
+          }
+        }
       } else {
-        settings[settingPath] = value
+        if (settings === null) {
+          config.value.cores[name] = { [settingPath]: value }
+        } else {
+          settings[settingPath] = value
+        }
       }
     }
+    // Update default itself
+    config.value.defaults[settingPath] = value
   }
 
   return {
@@ -115,6 +135,7 @@ export function useEditor() {
     modifiedCores,
     effectiveSettings,
     isCoreModified,
+    getCoreChangeCount,
     nextModifiedCore,
     prevModifiedCore,
     bulkSetSetting,

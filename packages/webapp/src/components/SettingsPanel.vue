@@ -5,7 +5,7 @@ import { useProfile } from '../composables/useProfile'
 import { useHistory } from '../composables/useHistory'
 import { SETTING_GROUPS, getSettingDef } from '../schema'
 import SettingField from './SettingField.vue'
-import BulkEditBar from './BulkEditBar.vue'
+import BulkEditPanel from './BulkEditPanel.vue'
 
 const { config, restoreFromJson } = useProfile()
 const { selectedCore, effectiveSettings, setSetting, resetSetting, resetCore } = useEditor()
@@ -59,7 +59,9 @@ function handleResetCore() {
       </div>
     </div>
 
-    <BulkEditBar v-if="isDefaults" />
+    <div v-if="isDefaults" class="bulk-section">
+      <BulkEditPanel />
+    </div>
   </div>
 
   <div v-else class="empty-state">
@@ -74,7 +76,8 @@ function handleResetCore() {
 
 <style scoped>
 .settings-panel {
-  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
 }
 
 .panel-header {
@@ -87,6 +90,7 @@ function handleResetCore() {
   top: 0;
   background: var(--canvas);
   z-index: 10;
+  flex-shrink: 0;
 }
 
 h2 {
@@ -139,6 +143,15 @@ h2 {
 
 .settings-group {
   margin-bottom: var(--sp-xs);
+}
+
+.bulk-section {
+  flex-shrink: 0;
+  border-top: 1px solid var(--hairline);
+  position: sticky;
+  bottom: 0;
+  background: var(--canvas);
+  z-index: 10;
 }
 
 .empty-state {

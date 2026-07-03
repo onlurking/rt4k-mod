@@ -304,6 +304,7 @@ function handleLineClick(line: DiffLine) {
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 0;
 }
 
 .preview-header {
@@ -314,20 +315,27 @@ function handleLineClick(line: DiffLine) {
   border-bottom: 1px solid var(--hairline);
   flex-shrink: 0;
   background: var(--canvas);
+  min-height: 0;
 }
 
 .preview-title {
   display: flex;
   align-items: center;
   gap: var(--sp-sm);
+  min-width: 0;
+  overflow: hidden;
 }
 
-h3 { font-size: 13px; font-weight: 600; }
+h3 { font-size: 13px; font-weight: 600; flex-shrink: 0; }
 
 .change-count {
   font-size: 11px;
   color: var(--ink-tertiary);
   font-family: var(--font-mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .preview-actions { display: flex; gap: 2px; }
@@ -338,7 +346,8 @@ h3 { font-size: 13px; font-weight: 600; }
 .preview-body {
   flex: 1;
   overflow-y: auto;
-  overflow-x: auto;
+  overflow-x: hidden;
+  min-height: 0;
 }
 
 .diff-content {
@@ -348,6 +357,7 @@ h3 { font-size: 13px; font-weight: 600; }
   margin: 0;
   padding: var(--sp-xs) 0;
   white-space: pre;
+  overflow-x: auto;
 }
 
 .diff-line {

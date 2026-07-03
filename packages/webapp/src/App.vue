@@ -154,22 +154,26 @@ onUnmounted(() => document.removeEventListener('keydown', handleGlobalKeydown))
 
 .app-body {
   border-top: 1px solid var(--hairline);
+  min-height: 0;
+  flex: 1;
 }
 
 .pane-sidebar {
   background: var(--canvas);
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
 }
 
 .pane-main {
   background: var(--canvas);
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
 }
 
 .pane-preview {
   background: var(--canvas);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 </style>

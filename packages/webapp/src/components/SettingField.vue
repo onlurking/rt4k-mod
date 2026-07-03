@@ -54,7 +54,7 @@ function onTextChange(e: Event) { emit('update:value', (e.target as HTMLInputEle
         <span></span>
       </div>
 
-      <input v-else-if="def.type === DataType.SIGNED_INT" type="number" :value="displayValue" @change="onNumberChange" />
+      <input v-else-if="def.type === DataType.SIGNED_INT || def.type === DataType.SIGNED_SHORT" type="number" :value="displayValue" @change="onNumberChange" />
       <input v-else-if="def.type === DataType.STR" type="text" :value="displayValue" @change="onTextChange" />
 
       <button v-if="isModified" class="btn-reset btn-ghost" @click="$emit('reset')" title="Reset to default">
@@ -98,6 +98,17 @@ function onTextChange(e: Event) { emit('update:value', (e.target as HTMLInputEle
 
 .setting-control select {
   flex: 0 0 auto;
+}
+
+.setting-control input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.setting-control input[type="number"]::-webkit-inner-spin-button,
+.setting-control input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .setting-control input[type="text"] {
