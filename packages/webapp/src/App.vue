@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-import { useMagicKeys, whenever } from '@vueuse/core'
 import { Splitpanes, Pane } from 'splitpanes'
 import 'splitpanes/dist/splitpanes.css'
 import AppHeader from './components/AppHeader.vue'
@@ -49,6 +48,16 @@ function handleGlobalKeydown(e: KeyboardEvent) {
     if (!showPalette.value) exportConfig()
     return
   }
+  if (ctrl && e.key === 'b') {
+    e.preventDefault()
+    if (!showPalette.value) sidebarVisible.value = !sidebarVisible.value
+    return
+  }
+  if (ctrl && e.shiftKey && (e.key === 'p' || e.key === 'P')) {
+    e.preventDefault()
+    if (!showPalette.value) showPreview.value = !showPreview.value
+    return
+  }
   if (e.key === 'Escape' && showPalette.value) {
     e.preventDefault()
     showPalette.value = false
@@ -74,10 +83,6 @@ function handleGlobalKeydown(e: KeyboardEvent) {
 
 onMounted(() => document.addEventListener('keydown', handleGlobalKeydown))
 onUnmounted(() => document.removeEventListener('keydown', handleGlobalKeydown))
-
-const keys = useMagicKeys()
-whenever(keys['ctrl+b'], () => { if (!showPalette.value) sidebarVisible.value = !sidebarVisible.value })
-whenever(keys['ctrl+shift+p'], () => { if (!showPalette.value) showPreview.value = !showPreview.value })
 </script>
 
 <template>

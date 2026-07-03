@@ -1,11 +1,13 @@
-export enum DataType {
-  SIGNED_INT = 'SIGNED_INTEGER',
-  SIGNED_SHORT = 'SIGNED_SHORT',
-  INT = 'INTEGER',
-  STR = 'STRING',
-  BIT = 'BIT',
-  ENUM = 'ENUM',
-}
+export const DataType = {
+  SIGNED_INT: 'SIGNED_INTEGER',
+  SIGNED_SHORT: 'SIGNED_SHORT',
+  INT: 'INTEGER',
+  STR: 'STRING',
+  BIT: 'BIT',
+  ENUM: 'ENUM',
+} as const
+
+export type DataType = (typeof DataType)[keyof typeof DataType]
 
 export interface SettingDef {
   name: string

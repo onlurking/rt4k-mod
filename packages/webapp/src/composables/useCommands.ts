@@ -20,15 +20,11 @@ export function useCommands(
   showPreview: { value: boolean },
   sidebarVisible: { value: boolean },
 ) {
-  const { config, exportConfig, coreNames } = useProfile()
+  const { config, exportConfig } = useProfile()
   const {
     selectedCore,
-    selectCore,
     setSetting,
     resetCore,
-    resetAllCores,
-    nextModifiedCore,
-    prevModifiedCore,
     bulkSetSetting,
   } = useEditor()
 
@@ -73,42 +69,6 @@ export function useCommands(
 
     // Everything below requires a loaded config
     if (!config.value) return commands
-
-    // Navigation - Defaults
-    commands.push({
-      id: 'nav:defaults',
-      label: 'Go to Defaults',
-      group: 'Navigation',
-      keywords: 'defaults home',
-      action: () => selectCore('defaults'),
-    })
-
-    // Navigation - Cores
-    for (const name of coreNames.value) {
-      commands.push({
-        id: `nav:core:${name}`,
-        label: `Go to ${name}`,
-        group: 'Navigation',
-        keywords: name.toLowerCase(),
-        action: () => selectCore(name),
-      })
-    }
-
-    // Navigation - Modified
-    commands.push({
-      id: 'nav:next-modified',
-      label: 'Next modified core',
-      group: 'Navigation',
-      keywords: 'next modified',
-      action: () => nextModifiedCore(),
-    })
-    commands.push({
-      id: 'nav:prev-modified',
-      label: 'Previous modified core',
-      group: 'Navigation',
-      keywords: 'previous modified',
-      action: () => prevModifiedCore(),
-    })
 
     // Settings - Enum-based (opens sub-prompt)
     const enumSettings = SCHEMA.filter((s) => s.type === DataType.ENUM && !s.readOnly)
@@ -171,37 +131,6 @@ export function useCommands(
         action: () => resetCore(selectedCore.value as string),
       })
     }
-
-    // Bulk Edit
-    for (const def of enumSettings) {
-      commands.push({
-        id: `bulk:enum:${def.name}`,
-        label: `Set ${def.desc} for all cores…`,
-        group: 'Bulk Edit',
-        keywords: `bulk all ${def.name} ${def.desc}`.toLowerCase(),
-        action: () => {},
-      })
-    }
-    for (const def of numSettings) {
-      commands.push({
-        id: `bulk:num:${def.name}`,
-        label: `Set ${def.desc} for all cores…`,
-        group: 'Bulk Edit',
-        keywords: `bulk all ${def.name} ${def.desc}`.toLowerCase(),
-        action: () => {},
-      })
-    }
-    commands.push({
-      id: 'bulk:reset-all',
-      label: 'Reset all cores to defaults',
-      group: 'Bulk Edit',
-      keywords: 'bulk reset all clear',
-      action: () => {
-        if (confirm('Reset all cores to defaults? This cannot be undone.')) {
-          resetAllCores()
-        }
-      },
-    })
 
     return commands
   })

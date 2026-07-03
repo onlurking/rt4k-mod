@@ -1,4 +1,65 @@
-import { DataType, type SettingDef } from "./types";
+import { DataType, type SettingDef, type SettingGroup } from "./types";
+
+export const SETTING_GROUPS: SettingGroup[] = [
+  {
+    label: 'Output / Transmitter',
+    settingNames: [
+      'output.resolution',
+      'output.transmitter.hdr',
+      'output.transmitter.deep_color',
+      'output.transmitter.vrr',
+      'output.transmitter.sync_lock',
+      'output.transmitter.colorimetry',
+      'output.transmitter.rgb_range',
+      'input',
+    ],
+  },
+  {
+    label: 'Scaling / Crop',
+    settingNames: [
+      'output.scaling_mode',
+      'output.rotation',
+      'output.auto_rotate',
+      'output.auto_crop',
+      'output.crop_240p.top',
+      'output.crop_240p.bottom',
+      'output.crop_240p.left',
+      'output.crop_240p.right',
+      'output.crop_480i.top',
+      'output.crop_480i.bottom',
+      'output.crop_480i.left',
+      'output.crop_480i.right',
+    ],
+  },
+  {
+    label: 'Effects / Processing',
+    settingNames: [
+      'advanced.effects.mask.enabled',
+      'advanced.effects.mask.strength',
+      'advanced.effects.mask.path',
+      'advanced.effects.interpolation.linear_light',
+      'advanced.effects.interpolation.anti_ringing',
+    ],
+  },
+  {
+    label: 'System / OSD',
+    settingNames: [
+      'advanced.system.osd_firmware.banner_image.load_banner',
+      'advanced.system.osd_firmware.on_screen_display.position',
+      'advanced.system.osd_firmware.on_screen_display.auto_off',
+      'advanced.system.osd_firmware.on_screen_display.hide_input_res',
+      'advanced.system.osd_firmware.on_screen_display.enable_debug_osd',
+    ],
+  },
+  {
+    label: 'DV1',
+    settingNames: [
+      'hdmi_receiver.mister_dv1.enabled',
+      'hdmi_receiver.mister_dv1.auto_crop',
+      'hdmi_receiver.mister_dv1.auto_decimate',
+    ],
+  },
+];
 
 export const SCHEMA: SettingDef[] = [
   {
@@ -416,4 +477,12 @@ export function getValidValuesHint(def: SettingDef): string | undefined {
     default:
       return undefined;
   }
+}
+
+export function getEnumOptions(name: string): string[] {
+  const def = getSettingDef(name);
+  if (def.type !== DataType.ENUM || !def.enums) {
+    return [];
+  }
+  return def.enums.map(e => e.name);
 }

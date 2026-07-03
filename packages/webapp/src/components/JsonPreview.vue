@@ -1,13 +1,21 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useProfile } from '../composables/useProfile'
+import { useEditor } from '../composables/useEditor'
 
 const emit = defineEmits<{ close: [] }>()
 const { config, originalJson, exportConfig } = useProfile()
+const { selectCore } = useEditor()
+
+function navigateToCore(name: string) {
+  selectCore(name)
+}
 
 interface DiffLine {
   type: 'same' | 'add' | 'remove' | 'key'
   text: string
+  clickable?: boolean
+  core?: string
 }
 
 function deepDiff(
@@ -32,8 +40,10 @@ function deepDiff(
       const oVal = orig[key]
       const cVal = curr[key]
 
-      // Special case: cores map — show core name as header
-      if (dotted === 'cores' && typeof oVal === 'object' && typeof cVal === 'object') {
+      // Special case: defaults — show as grouped settings
+      if (dotted === 'defaults' && typeof oVal === 'object' && typeof cVal === 'object') {
+        lines.push(...diffDefaults(oVal ?? {}, cVal ?? {}))
+      } else if (dotted === 'cores' && typeof oVal === 'object' && typeof cVal === 'object') {
         lines.push(...diffCores(oVal ?? {}, cVal ?? {}))
       } else if (
         typeof oVal === 'object' && oVal !== null &&
@@ -47,6 +57,48 @@ function deepDiff(
       }
     }
   }
+
+  return lines
+}
+
+function diffDefaults(
+  orig: Record<string, any>,
+  curr: Record<string, any>,
+): DiffLine[] {
+  const lines: DiffLine[] = []
+  const allKeys = new Set([...Object.keys(orig), ...Object.keys(curr)])
+  const changes: DiffLine[] = []
+
+  let hasAdds = false
+  let hasRemoves = false
+
+  for (const key of allKeys) {
+    const oVal = orig[key]
+    const cVal = curr[key]
+
+    if (JSON.stringify(oVal) === JSON.stringify(cVal)) continue
+
+    if (!(key in orig)) {
+      changes.push({ type: 'add', text: `  + ${key}: ${JSON.stringify(cVal)}` })
+      hasAdds = true
+    } else if (!(key in curr)) {
+      changes.push({ type: 'remove', text: `  - ${key}: ${JSON.stringify(oVal)}` })
+      hasRemoves = true
+    } else {
+      changes.push({ type: 'remove', text: `  - ${key}: ${JSON.stringify(oVal)}` })
+      changes.push({ type: 'add', text: `  + ${key}: ${JSON.stringify(cVal)}` })
+      hasAdds = true
+      hasRemoves = true
+    }
+  }
+
+  if (changes.length === 0) return lines
+
+  // Green when adds (or both), red when only removes
+  const headerType: DiffLine['type'] = hasAdds && !hasRemoves ? 'add' : hasRemoves && !hasAdds ? 'remove' : 'add'
+  const prefix = headerType === 'add' ? '+ ' : '- '
+  lines.push({ type: headerType, text: `${prefix}defaults:`, clickable: true, core: 'defaults' })
+  lines.push(...changes)
 
   return lines
 }
@@ -68,7 +120,7 @@ function diffCores(
 
     // Core added
     if (oVal === null && cVal !== null) {
-      lines.push({ type: 'add', text: `+ ${header}:` })
+      lines.push({ type: 'add', text: `+ ${header}:`, clickable: true, core })
       for (const [k, v] of Object.entries(cVal)) {
         lines.push({ type: 'add', text: `    ${k}: ${JSON.stringify(v)}` })
       }
@@ -77,7 +129,7 @@ function diffCores(
 
     // Core removed
     if (oVal !== null && cVal === null) {
-      lines.push({ type: 'remove', text: `- ${header}:` })
+      lines.push({ type: 'remove', text: `- ${header}:`, clickable: true, core })
       for (const [k, v] of Object.entries(oVal)) {
         lines.push({ type: 'remove', text: `    ${k}: ${JSON.stringify(v)}` })
       }
@@ -88,7 +140,9 @@ function diffCores(
     const oObj = oVal ?? {} as Record<string, any>
     const cObj = cVal ?? {} as Record<string, any>
     const allKeys = new Set([...Object.keys(oObj), ...Object.keys(cObj)])
-    let headerShown = false
+    const coreChanges: DiffLine[] = []
+    let coreHasAdds = false
+    let coreHasRemoves = false
 
     for (const setting of allKeys) {
       const oSetting = oObj[setting]
@@ -96,19 +150,25 @@ function diffCores(
 
       if (JSON.stringify(oSetting) === JSON.stringify(cSetting)) continue
 
-      if (!headerShown) {
-        lines.push({ type: 'key', text: `  ${header}:` })
-        headerShown = true
-      }
-
       if (!(setting in oObj)) {
-        lines.push({ type: 'add', text: `    + ${setting}: ${JSON.stringify(cSetting)}` })
+        coreChanges.push({ type: 'add', text: `    + ${setting}: ${JSON.stringify(cSetting)}` })
+        coreHasAdds = true
       } else if (!(setting in cObj)) {
-        lines.push({ type: 'remove', text: `    - ${setting}: ${JSON.stringify(oSetting)}` })
+        coreChanges.push({ type: 'remove', text: `    - ${setting}: ${JSON.stringify(oSetting)}` })
+        coreHasRemoves = true
       } else {
-        lines.push({ type: 'remove', text: `    - ${setting}: ${JSON.stringify(oSetting)}` })
-        lines.push({ type: 'add', text: `    + ${setting}: ${JSON.stringify(cSetting)}` })
+        coreChanges.push({ type: 'remove', text: `    - ${setting}: ${JSON.stringify(oSetting)}` })
+        coreChanges.push({ type: 'add', text: `    + ${setting}: ${JSON.stringify(cSetting)}` })
+        coreHasAdds = true
+        coreHasRemoves = true
       }
+    }
+
+    if (coreChanges.length > 0) {
+      const hType: DiffLine['type'] = coreHasAdds && !coreHasRemoves ? 'add' : coreHasRemoves && !coreHasAdds ? 'remove' : 'add'
+      const hPrefix = hType === 'add' ? '+ ' : '- '
+      lines.push({ type: hType, text: `${hPrefix}${header}:`, clickable: true, core })
+      lines.push(...coreChanges)
     }
   }
 
@@ -158,6 +218,54 @@ const changedCores = computed(() => {
 function copyToClipboard() {
   if (config.value) navigator.clipboard.writeText(JSON.stringify(config.value, null, 2))
 }
+
+interface LinePart {
+  text: string
+  clickable: boolean
+  core?: string
+}
+
+function parseLine(line: DiffLine): LinePart[] {
+  const text = line.text
+  const parts: LinePart[] = []
+  
+  // Match cores.XXX pattern
+  const regex = /(cores\.)([\w.-]+)/g
+  let lastIndex = 0
+  let match
+  
+  while ((match = regex.exec(text)) !== null) {
+    // Add text before match
+    if (match.index > lastIndex) {
+      parts.push({ text: text.slice(lastIndex, match.index), clickable: false })
+    }
+    // Add cores. prefix
+    parts.push({ text: match[1], clickable: false })
+    // Add clickable core name
+    parts.push({ text: match[2], clickable: true, core: match[2] as string })
+    lastIndex = match.index + match[0].length
+  }
+  
+  // Add remaining text
+  if (lastIndex < text.length) {
+    parts.push({ text: text.slice(lastIndex), clickable: false })
+  }
+  
+  // If no match, return whole text as non-clickable
+  if (parts.length === 0) {
+    parts.push({ text, clickable: false })
+  }
+  
+  return parts
+}
+
+function handleLineClick(line: DiffLine) {
+  // Extract core name from line if present
+  const match = line.text.match(/cores\.([\w.-]+)/)
+  if (match) {
+    navigateToCore(match[1])
+  }
+}
 </script>
 
 <template>
@@ -186,7 +294,7 @@ function copyToClipboard() {
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"><polyline points="20 6 9 17 4 12"/></svg>
         <span>No changes</span>
       </div>
-      <pre v-else class="diff-content"><code><template v-for="(line, idx) in diffLines" :key="idx"><span :class="['diff-line', `diff-${line.type}`]">{{ line.text + '\n' }}</span></template></code></pre>
+      <pre v-else class="diff-content"><code><template v-for="(line, idx) in diffLines" :key="idx"><span :class="['diff-line', `diff-${line.type}`]" @click="handleLineClick(line)"><template v-if="line.clickable"><span class="diff-link" @click.stop="navigateToCore(line.core!)">{{ line.text }}</span></template><template v-else><template v-for="(part, pidx) in parseLine(line)" :key="pidx"><span v-if="part.clickable" class="diff-link" @click.stop="navigateToCore(part.core!)">{{ part.text }}</span><span v-else>{{ part.text }}</span></template></template></span></template></code></pre>
     </div>
   </div>
 </template>
@@ -271,5 +379,17 @@ h3 { font-size: 13px; font-weight: 600; }
   gap: var(--sp-xs);
   color: var(--ink-tertiary);
   font-size: 13px;
+}
+
+.diff-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.15s;
+}
+
+.diff-link:hover {
+  text-decoration-color: currentColor;
 }
 </style>
