@@ -6,7 +6,7 @@ const emit = defineEmits<{
   'toggle-preview': []
 }>()
 
-const { fileName, isDirty, config, modifiedCoreCount, exportConfig } = useProfile()
+const { fileName, isDirty, config, modifiedCoreCount, exportConfig, downloadProfiles, isGenerating, generateProgress } = useProfile()
 </script>
 
 <template>
@@ -22,7 +22,11 @@ const { fileName, isDirty, config, modifiedCoreCount, exportConfig } = useProfil
         <kbd>⌘K</kbd>
       </button>
       <button class="btn-ghost" @click="$emit('toggle-preview')" :disabled="!config">Preview</button>
-      <button class="btn-primary" @click="exportConfig()" :disabled="!config">Export</button>
+      <button class="btn-ghost" @click="exportConfig()" :disabled="!config">Export</button>
+      <button class="btn-primary btn-download" @click="downloadProfiles()" :disabled="!config || isGenerating">
+        <span v-if="isGenerating" class="spinner"></span>
+        {{ isGenerating ? `Generating ${generateProgress?.current}/${generateProgress?.total}` : 'Download' }}
+      </button>
       <span v-if="config" class="core-count">{{ modifiedCoreCount }} modified</span>
     </div>
   </header>
@@ -93,5 +97,24 @@ h1 {
   color: var(--ink-tertiary);
   font-size: 12px;
   margin-left: var(--sp-xs);
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 </style>

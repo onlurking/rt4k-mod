@@ -1,0 +1,3044 @@
+{
+  "base_profile": "./profiles/SD/profile/_CRT Emulation/CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K HDR.rt4",
+  "output_dir": "./profiles/DV1",
+  "defaults": {
+    "advanced.effects.mask.enabled": true,
+    "advanced.effects.mask.strength": -3,
+    "output.transmitter.hdr": "HDR10 [8-bit]",
+    "output.transmitter.deep_color": false,
+    "output.transmitter.sync_lock": "Gen Lock",
+    "output.transmitter.vrr": "FreeSync",
+    "advanced.effects.interpolation.linear_light": true,
+    "advanced.effects.interpolation.anti_ringing": true,
+    "output.resolution": "4K60",
+    "output.rotation": "None",
+    "output.auto_rotate": "On",
+    "output.auto_crop": "Off",
+    "output.scaling_mode": "Auto Fill",
+    "output.crop_240p.right": 0,
+    "output.crop_240p.left": 0,
+    "output.crop_240p.top": 0,
+    "output.crop_240p.bottom": 0,
+    "output.crop_480i.right": 0,
+    "output.crop_480i.left": 0,
+    "output.crop_480i.top": 0,
+    "output.crop_480i.bottom": 0,
+    "output.transmitter.colorimetry": "Auto-Rec.709",
+    "advanced.system.osd_firmware.on_screen_display.hide_input_res": false,
+    "output.transmitter.rgb_range": "Full",
+    "hdmi_receiver.mister_dv1.auto_crop": true,
+    "hdmi_receiver.mister_dv1.auto_decimate": true,
+    "hdmi_receiver.mister_dv1.enabled": true,
+    "advanced.effects.mask.path": "Mono Masks/A Grille Dense Mono.bmp",
+    "advanced.system.osd_firmware.banner_image.load_banner": "KH - Sony 20L5.bmp",
+    "input": "HDMI",
+    "advanced.system.osd_firmware.on_screen_display.position": "Left",
+    "advanced.system.osd_firmware.on_screen_display.auto_off": "Off",
+    "advanced.system.osd_firmware.on_screen_display.enable_debug_osd": "Off"
+  },
+  "cores": {
+    "1941": {
+      "output.rotation": "Left 90"
+    },
+    "1942": {
+      "output.rotation": "Left 90"
+    },
+    "1943": {
+      "output.rotation": "Left 90"
+    },
+    "1944": null,
+    "1943kai": {
+      "output.rotation": "Left 90"
+    },
+    "1943mii": {
+      "output.rotation": "Left 90"
+    },
+    "19xx": {
+      "output.rotation": "Left 90"
+    },
+    "280zzzap": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -5
+    },
+    "3DO": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "3wonders": null,
+    "4dwarrio": null,
+    "A.COMSPC": null,
+    "A.PACMAN": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -16
+    },
+    "ADCTest": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "AY-3-8500": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "AcornAtom": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "AcornElectron": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "AdventureVision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "AliceMC10": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Altair8800": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "AmigaCD32": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Amstrad-PCW": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Amstrad": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Apogee": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Apple-I": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Apple-II": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Aquarius": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Arcadia": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Archie": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Astrocade": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Atari2600": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Atari5200": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Atari7800": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Atari800": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "AtariLynx": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "AtariST": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "BBCBridgeCompanion": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "BBCMicro": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "BK0011M": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "C128": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "C16": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "C64": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Casio": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "ChannelF": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "CoCo2": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "CoCo3": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "ColecoAdam": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "ColecoVision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "CreatiVision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "EDSAC": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "GBA": {
+      "advanced.effects.mask.strength": 0,
+      "advanced.effects.mask.path": "GBA/GBA_Real_13.bmpmp",
+      "advanced.effects.interpolation.linear_light": false,
+      "advanced.effects.interpolation.anti_ringing": false,
+      "hdmi_receiver.mister_dv1.auto_crop": false,
+      "hdmi_receiver.mister_dv1.auto_decimate": false,
+      "hdmi_receiver.mister_dv1.enabled": false
+    },
+    "GBA2P": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "GBC": {
+      "advanced.effects.mask.strength": 10,
+      "advanced.effects.mask.path": "GBC/GBC_Real_15x.bmp",
+      "advanced.effects.interpolation.linear_light": false,
+      "advanced.effects.interpolation.anti_ringing": false,
+      "hdmi_receiver.mister_dv1.auto_crop": false,
+      "hdmi_receiver.mister_dv1.auto_decimate": false,
+      "hdmi_receiver.mister_dv1.enabled": false
+    },
+    "Galaksija": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Gamate": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Game and Watch": {
+      "advanced.effects.mask.enabled": false,
+      "advanced.effects.mask.strength": 0,
+      "advanced.effects.mask.path": "RGB Masks/A Grille Coarse RGB.bmpp",
+      "advanced.effects.interpolation.anti_ringing": false,
+      "hdmi_receiver.mister_dv1.auto_crop": false,
+      "hdmi_receiver.mister_dv1.auto_decimate": false,
+      "hdmi_receiver.mister_dv1.enabled": false
+    },
+    "GameAndWatch": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "GameGear": null,
+    "Gameboy": {
+      "advanced.effects.mask.enabled": false,
+      "advanced.effects.mask.strength": 0,
+      "advanced.effects.mask.path": "RGB Masks/A Grille Coarse RGB.bmpp",
+      "advanced.effects.interpolation.anti_ringing": false,
+      "hdmi_receiver.mister_dv1.auto_crop": false,
+      "hdmi_receiver.mister_dv1.auto_decimate": false,
+      "hdmi_receiver.mister_dv1.enabled": false
+    },
+    "Gameboy2P": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Genesis": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "GnW": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Homelab": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "InputTest": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Intellivision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Interact": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Jaguar": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Jupiter": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Laser310": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Lynx48": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "MSX": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "MSX1": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "MacPlus": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "MegaCD": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "MegaDrive": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "MegaDuck": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Menu": {
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -12,
+      "output.crop_240p.bottom": -2,
+      "output.crop_240p.left": -54,
+      "output.crop_240p.right": -11,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "MiSTerLaggy": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Minimig": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "MultiComp": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "MyVision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "N64": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "NES": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "NeoGeo": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "NeoGeoPocket.rbf": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "ORAO": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Odyssey2": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Ondra": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Oric": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "PC88": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "PCXT": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "PDP1": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "PET2001": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "PMD85": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "PSX": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "PocketChalleng": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "PokemonMini": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Portman": {
+      "output.rotation": "Left 90"
+    },
+    "QL": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "RX78": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "S32X": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "SAMCoupe": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "SCV": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "SGB": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "SMS": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "SNES": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Saturn": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "SharpMZ": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "SordM5": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Specialist": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Super": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "SuperVision": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Svi328": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "TGFX16": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "TRS-80": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "TSConf": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "TatungEinstein": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Ti994a": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "TomyTutor": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "UK101": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "VC4000": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "VIC20": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "VT52": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Vector-06C": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "Vectrex": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "WonderSwan": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "WonderSwanColo": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "X68000": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "ZX-Spectrum": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "ZX81": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "ZXNext": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "aceattaca": {
+      "output.rotation": "Left 90"
+    },
+    "actfancr": {
+      "output.auto_crop": "On"
+    },
+    "adcanoe": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "afighter": {
+      "output.rotation": "Left 90"
+    },
+    "agallet": {
+      "output.rotation": "Left 90",
+      "output.auto_crop": "On"
+    },
+    "agalletj": {
+      "output.rotation": "Left 90"
+    },
+    "airass": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -34,
+      "output.crop_240p.bottom": -26,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -1
+    },
+    "airdueljm72": {
+      "output.rotation": "Left 90"
+    },
+    "airduelm72": {
+      "output.rotation": "Left 90"
+    },
+    "ajax": {
+      "output.rotation": "Left 90"
+    },
+    "alcon": {
+      "output.rotation": "Right 90"
+    },
+    "alexkidd": null,
+    "alibaba": {
+      "output.rotation": "Left 90"
+    },
+    "alienaru": null,
+    "aliens": null,
+    "aliensyn": null,
+    "alpine": {
+      "output.rotation": "Left 90"
+    },
+    "altbeast": null,
+    "amatelas": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -43,
+      "output.crop_240p.bottom": -53,
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": -9
+    },
+    "amidars": {
+      "output.rotation": "Left 90"
+    },
+    "anteater": {
+      "output.rotation": "Left 90"
+    },
+    "ao486": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "aquario": {
+      "output.crop_240p.left": -4
+    },
+    "arkanoid": {
+      "output.rotation": "Left 90"
+    },
+    "arkanoidj": {
+      "output.rotation": "Left 90"
+    },
+    "arknoid2": {
+      "output.rotation": "Left 90"
+    },
+    "armedf": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -7,
+      "output.crop_240p.bottom": -23,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -5,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "armorcar": {
+      "output.rotation": "Left 90"
+    },
+    "armwar": null,
+    "aso": {
+      "output.rotation": "Left 90"
+    },
+    "astdelux": null,
+    "asteroid": null,
+    "astorm": null,
+    "astrass": {
+      "output.crop_480i.top": -1,
+      "output.crop_480i.bottom": 1
+    },
+    "astrofl": null,
+    "atetris": {
+      "output.crop_240p.top": -3,
+      "output.crop_240p.bottom": -2,
+      "output.crop_240p.left": -1
+    },
+    "atetrisc": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": -1,
+      "output.crop_240p.right": -3
+    },
+    "athena": null,
+    "atlantis2": {
+      "output.rotation": "Left 90"
+    },
+    "attackfc": null,
+    "aurail": null,
+    "avengers": {
+      "output.rotation": "Left 90"
+    },
+    "avsp": null,
+    "azurian": {
+      "output.rotation": "Left 90"
+    },
+    "backfirt": null,
+    "baddudes": null,
+    "bagman": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
+    },
+    "bakubaku": null,
+    "bakutotu": null,
+    "ballbomb": {
+      "output.rotation": "Left 90"
+    },
+    "baluba": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
+    },
+    "bankp": null,
+    "batcir": null,
+    "batmanfr": null,
+    "batriderj": {
+      "output.rotation": "Left 90"
+    },
+    "battroad": {
+      "output.rotation": "Right 90"
+    },
+    "bayroute": null,
+    "bbakraidj": {
+      "output.rotation": "Left 90"
+    },
+    "bbmanw": null,
+    "beastfp": {
+      "output.rotation": "Left 90"
+    },
+    "berabohm": null,
+    "berzerk": null,
+    "bgaregga": {
+      "output.rotation": "Left 90"
+    },
+    "bigfghtr": {
+      "output.crop_240p.top": -5,
+      "output.crop_240p.bottom": -4,
+      "output.crop_240p.left": -25,
+      "output.crop_240p.right": -10,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "bigkong": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
+    },
+    "bilyard": null,
+    "bioatack": {
+      "output.rotation": "Left 90"
+    },
+    "bionicc": null,
+    "birdiy": {
+      "output.rotation": "Left 90"
+    },
+    "blasto": null,
+    "blastoff": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
+    },
+    "blazer": {
+      "output.rotation": "Left 90"
+    },
+    "blkbustr": {
+      "output.rotation": "Left 90"
+    },
+    "blkhole": {
+      "output.rotation": "Left 90"
+    },
+    "blktiger": null,
+    "block": {
+      "output.rotation": "Left 90"
+    },
+    "blockade": null,
+    "blockgal": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -1
+    },
+    "bloodbro": {
+      "output.auto_crop": "On"
+    },
+    "bloxeed": null,
+    "blueprnt": {
+      "output.rotation": "Left 90"
+    },
+    "blueshrk": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -11
+    },
+    "bmaster": null,
+    "bodyslam": null,
+    "bombjack": {
+      "output.rotation": "Left 90"
+    },
+    "boothill": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -6
+    },
+    "bosco": null,
+    "boscomd": null,
+    "botanic": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
+    },
+    "bouldash": null,
+    "boxyboy": null,
+    "bradley": null,
+    "brain": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1,
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "breakout": {
+      "output.rotation": "Right 90"
+    },
+    "bronx": {
+      "output.rotation": "Right 90"
+    },
+    "brubber": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -1
+    },
+    "btime": {
+      "output.rotation": "Left 90"
+    },
+    "bubbles": null,
+    "bublbobl": null,
+    "bullet": null,
+    "bullfgt": null,
+    "bwidow": null,
+    "bzone": null,
+    "bzonea": null,
+    "cadanglr": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "calipso": {
+      "output.rotation": "Left 90"
+    },
+    "cameltry": null,
+    "canyon": null,
+    "captcomm": null,
+    "carnival": {
+      "output.rotation": "Left 90"
+    },
+    "castfant": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "catacomb": {
+      "output.rotation": "Left 90"
+    },
+    "cavelon": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
+    },
+    "cavenger": null,
+    "cawing": null,
+    "cbdash": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cbnj": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cbtime": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cburnrub": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cbuster": {
+      "output.auto_crop": "On"
+    },
+    "ccastles": null,
+    "cclimber": null,
+    "cclimbr2": {
+      "output.crop_240p.top": -28,
+      "output.crop_240p.bottom": -1,
+      "output.crop_240p.left": -55,
+      "output.crop_240p.right": -8,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "cd-i": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "cdsteljn": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "centiped": {
+      "output.rotation": "Left 90"
+    },
+    "centiped3": {
+      "output.rotation": "Left 90"
+    },
+    "cfboy0a1": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cfghtice": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cflyball": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cgraplop": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "chamburger": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "chameleo": null,
+    "chelnov": null,
+    "chinagat": null,
+    "choko": null,
+    "chopliftu": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1,
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "chwy": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "circusc": {
+      "output.rotation": "Left 90"
+    },
+    "citycon": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "ckong": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
+    },
+    "ckongdks": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
+    },
+    "ckongo": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
+    },
+    "ckongpt2": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
+    },
+    "ckongpt2b": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
+    },
+    "clapapa2": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cleansweept": {
+      "output.rotation": "Left 90"
+    },
+    "clocknch": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "clowns": null,
+    "cltchitr": null,
+    "clubpacm": {
+      "output.rotation": "Left 90"
+    },
+    "cluckypo": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cmanhat": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cmissnx": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cnebula": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cnightst": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cninja": {
+      "output.auto_crop": "On"
+    },
+    "cobracom": {
+      "output.auto_crop": "On"
+    },
+    "cocean6b": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "colmns97": {
+      "output.crop_480i.top": -1,
+      "output.crop_480i.bottom": 1
+    },
+    "colony7": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.bottom": -9,
+      "output.crop_240p.right": -1
+    },
+    "combatsc": null,
+    "combh": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -4,
+      "output.crop_240p.bottom": -72,
+      "output.crop_240p.left": -14,
+      "output.crop_240p.right": -13
+    },
+    "commando": {
+      "output.rotation": "Left 90"
+    },
+    "comotion": null,
+    "complexx": {
+      "output.rotation": "Left 90"
+    },
+    "congo": {
+      "output.rotation": "Left 90"
+    },
+    "contra": {
+      "output.rotation": "Left 90"
+    },
+    "coozumou": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cosmica": {
+      "output.rotation": "Left 90"
+    },
+    "cosmicg": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -1
+    },
+    "cosmo": null,
+    "cotton": null,
+    "cotton2": {
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -8,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
+    },
+    "cottonbm": {
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -8,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8,
+      "output.crop_480i.top": -5,
+      "output.crop_480i.bottom": -3,
+      "output.crop_480i.left": -16,
+      "output.crop_480i.right": -16
+    },
+    "countryc": null,
+    "cppicf": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cprobowl": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cprogolf": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cprogolf18": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cpsoccer": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cptennis": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "crater": null,
+    "crazyblk": {
+      "output.rotation": "Left 90"
+    },
+    "crbaloon": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -10,
+      "output.crop_240p.bottom": -10,
+      "output.crop_240p.left": -2,
+      "output.crop_240p.right": -2
+    },
+    "crimfght": null,
+    "crush2": {
+      "output.rotation": "Left 90"
+    },
+    "csclub": null,
+    "cscrtry": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "csdtenis": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cskater": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "csuperas": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "csweetht": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cterrani": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "ctornado": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "ctower": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "ctribe": null,
+    "ctsttape": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "cworld": null,
+    "cworld2j": null,
+    "cybots": null,
+    "dakkochn": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1,
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "danchih": null,
+    "danchiq": null,
+    "dangar": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -17
+    },
+    "dangseed": {
+      "output.rotation": "Left 90"
+    },
+    "darius": {
+      "output.scaling_mode": "Free Form",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "darius2": {
+      "output.scaling_mode": "Free Form",
+      "output.crop_240p.top": -1
+    },
+    "darkplnt": null,
+    "dbreedjm72": null,
+    "dcon": {
+      "output.auto_crop": "On"
+    },
+    "ddcrew": {
+      "output.crop_240p.left": -3
+    },
+    "ddonpach": {
+      "output.rotation": "Left 90"
+    },
+    "ddonpacha": {
+      "output.rotation": "Left 90"
+    },
+    "ddonpachj": {
+      "output.rotation": "Left 90"
+    },
+    "ddonpachjt": {
+      "output.rotation": "Left 90"
+    },
+    "ddp2": {
+      "output.rotation": "Left 90",
+      "output.auto_crop": "On"
+    },
+    "ddp3": {
+      "output.rotation": "Left 90",
+      "output.auto_crop": "On"
+    },
+    "ddragon": null,
+    "ddragon2": null,
+    "ddragon3": null,
+    "ddsom": null,
+    "ddtod": null,
+    "ddux": null,
+    "deadconx": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "decathlt": null,
+    "decodark": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "defender": null,
+    "demoderm": null,
+    "demonwld2": null,
+    "desertbr": {
+      "output.rotation": "Left 90"
+    },
+    "devilfsg": {
+      "output.rotation": "Left 90"
+    },
+    "devilw": null,
+    "devzone": {
+      "output.rotation": "Left 90"
+    },
+    "dfeveron": {
+      "output.rotation": "Left 90"
+    },
+    "diehard": null,
+    "digdug": {
+      "output.rotation": "Left 90"
+    },
+    "digdug2": {
+      "output.rotation": "Left 90"
+    },
+    "dimahoo": {
+      "output.rotation": "Left 90"
+    },
+    "dino": null,
+    "dinorex": null,
+    "dkgensan": null,
+    "dkgensanm72": null,
+    "dkong": {
+      "output.rotation": "Left 90"
+    },
+    "dkong3": {
+      "output.rotation": "Left 90"
+    },
+    "dkongjr": {
+      "output.rotation": "Left 90"
+    },
+    "dmnfrnt": {
+      "output.auto_crop": "On"
+    },
+    "dnmtdeka": null,
+    "dokaben": null,
+    "dokaben2": null,
+    "domino": null,
+    "dominos": null,
+    "dondokod": null,
+    "donpachi": {
+      "output.rotation": "Left 90"
+    },
+    "donpachij": {
+      "output.rotation": "Left 90"
+    },
+    "dorodon": {
+      "output.rotation": "Left 90"
+    },
+    "dotrikun": null,
+    "dotrikun2": null,
+    "dotriman": null,
+    "dotron": null,
+    "dremshpr": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -16,
+      "output.crop_240p.bottom": -16
+    },
+    "drgw3": {
+      "output.auto_crop": "On"
+    },
+    "driftout": null,
+    "drtoppel": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.left": -2
+    },
+    "dsoccr94": {
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -8,
+      "output.crop_240p.left": -26,
+      "output.crop_240p.right": -34
+    },
+    "dsoccr94j": null,
+    "dspirit": {
+      "output.rotation": "Left 90"
+    },
+    "dstlk": null,
+    "dunkshot": null,
+    "dw2001": {
+      "output.auto_crop": "On"
+    },
+    "dwex": {
+      "output.auto_crop": "On",
+      "output.crop_240p.top": 1
+    },
+    "dynablst": null,
+    "dynwar": null,
+    "ebases": null,
+    "ecofghtr": null,
+    "eeekkp": {
+      "output.rotation": "Left 90"
+    },
+    "eg2000": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "eggor": {
+      "output.rotation": "Left 90"
+    },
+    "ejihon": {
+      "output.crop_480i.top": -1,
+      "output.crop_480i.bottom": 1
+    },
+    "elandore": null,
+    "elevator": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
+    },
+    "elevatorb": null,
+    "espgal": {
+      "output.rotation": "Left 90",
+      "output.auto_crop": "On"
+    },
+    "esprade": {
+      "output.rotation": "Left 90"
+    },
+    "espradej": {
+      "output.rotation": "Left 90"
+    },
+    "eswat": null,
+    "euroch92": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "exctleag": null,
+    "exedexes": {
+      "output.rotation": "Left 90"
+    },
+    "exeriont": {
+      "output.rotation": "Right 90"
+    },
+    "exprraid": null,
+    "extrmatn": {
+      "output.rotation": "Left 90"
+    },
+    "eyes": {
+      "output.rotation": "Left 90"
+    },
+    "f1dream": null,
+    "faceoff": null,
+    "fantasyu": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -27,
+      "output.crop_240p.bottom": -40,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -12
+    },
+    "fantzn2": null,
+    "fantzn2x": null,
+    "fantzone": null,
+    "fastlane": {
+      "output.rotation": "Left 90"
+    },
+    "feversos": {
+      "output.rotation": "Left 90"
+    },
+    "ffight": null,
+    "ffreveng": null,
+    "fhboxers": {
+      "output.crop_240p.bottom": 1
+    },
+    "finalb": null,
+    "finalizr": {
+      "output.rotation": "Left 90"
+    },
+    "finalizra": {
+      "output.rotation": "Left 90"
+    },
+    "finalizrb": {
+      "output.rotation": "Left 90"
+    },
+    "findlove": null,
+    "finlarch": null,
+    "fitegolf": null,
+    "flicky": null,
+    "flstory": null,
+    "fnkyfish": {
+      "output.rotation": "Right 90",
+      "output.auto_crop": "On",
+      "output.crop_240p.top": -12,
+      "output.crop_240p.bottom": -7,
+      "output.crop_240p.left": -1,
+      "output.crop_240p.right": 1
+    },
+    "foodf": null,
+    "footchmp": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "forgottn": null,
+    "fpoint": null,
+    "freeze": {
+      "output.rotation": "Left 90"
+    },
+    "frenzy": null,
+    "frogger": {
+      "output.rotation": "Left 90"
+    },
+    "froggers2": {
+      "output.rotation": "Left 90"
+    },
+    "frontlin": {
+      "output.rotation": "Left 90"
+    },
+    "fround": null,
+    "futspy": {
+      "output.rotation": "Left 90"
+    },
+    "gaia": null,
+    "galaga3": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -9,
+      "output.crop_240p.right": 9
+    },
+    "galaga88": {
+      "output.rotation": "Left 90"
+    },
+    "galagamw": {
+      "output.rotation": "Left 90"
+    },
+    "galaxian": {
+      "output.rotation": "Left 90"
+    },
+    "galivan": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -17
+    },
+    "gallopm72": null,
+    "galxwars": {
+      "output.rotation": "Left 90"
+    },
+    "gangwars": {
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -16,
+      "output.crop_240p.bottom": -10,
+      "output.crop_240p.left": -152,
+      "output.crop_240p.right": -124,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "gaplus": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -9,
+      "output.crop_240p.right": 9
+    },
+    "gardia": {
+      "output.rotation": "Left 90"
+    },
+    "gaunt2": null,
+    "gauntlet": null,
+    "gaxeduel": null,
+    "gberet": null,
+    "gbusters": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -16,
+      "output.crop_240p.bottom": -16
+    },
+    "gemini": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -40,
+      "output.crop_240p.bottom": -52,
+      "output.crop_240p.left": -14,
+      "output.crop_240p.right": -13
+    },
+    "genpeitd": null,
+    "ghouls": null,
+    "gigawing": null,
+    "glfgreat": {
+      "output.crop_240p.right": -1
+    },
+    "gng": null,
+    "goldnaxe": null,
+    "gorf": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.bottom": -5
+    },
+    "gorkans": {
+      "output.rotation": "Left 90"
+    },
+    "gorodki": null,
+    "gradius": null,
+    "gradius3": {
+      "output.auto_crop": "On"
+    },
+    "grasspin": {
+      "output.rotation": "Left 90"
+    },
+    "gravitar": null,
+    "grdforce": null,
+    "gridiron": null,
+    "grobda": {
+      "output.rotation": "Left 90"
+    },
+    "groovef": null,
+    "growl": null,
+    "gulunpa": null,
+    "gunfight": null,
+    "gunforc2": null,
+    "gunforce": null,
+    "gunfront": null,
+    "gunsmoke": {
+      "output.rotation": "Left 90"
+    },
+    "guwange": {
+      "output.rotation": "Left 90"
+    },
+    "guwanges": {
+      "output.rotation": "Left 90"
+    },
+    "gwarrior": null,
+    "gyruss": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "hachoo": null,
+    "hamaway": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -3,
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
+    },
+    "hanagumi": null,
+    "hangonjr": null,
+    "hardhat": null,
+    "hbarrel": {
+      "output.rotation": "Left 90"
+    },
+    "hcastle": null,
+    "hellfire": null,
+    "hharryu": null,
+    "higemaru": null,
+    "hippodrm": null,
+    "hishouza": {
+      "output.rotation": "Left 90"
+    },
+    "hook": null,
+    "hopmappy": null,
+    "horekid": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -49,
+      "output.crop_240p.bottom": -53,
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": -9
+    },
+    "horizon": null,
+    "hotdogst": null,
+    "hsf2": null,
+    "hustle": null,
+    "hvymetal": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
+    },
+    "hwrace": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.bottom": -7
+    },
+    "hyperspt": null,
+    "iganinju": null,
+    "ikari": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "ikari3": {
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -12,
+      "output.crop_240p.bottom": -13,
+      "output.crop_240p.left": -52,
+      "output.crop_240p.right": -40,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "imgfight": {
+      "output.rotation": "Left 90"
+    },
+    "imgfightj": {
+      "output.rotation": "Left 90"
+    },
+    "imsorry": null,
+    "indytemp4": null,
+    "inferno": null,
+    "insectx": null,
+    "inthunt": null,
+    "introdon": null,
+    "invaders": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -11,
+      "output.crop_240p.bottom": -4
+    },
+    "invadpt2": {
+      "output.rotation": "Left 90"
+    },
+    "inyourfa": null,
+    "ironhors": null,
+    "jack": {
+      "output.rotation": "Left 90"
+    },
+    "jackal": {
+      "output.rotation": "Left 90"
+    },
+    "jackalbl": {
+      "output.rotation": "Left 90"
+    },
+    "jackalj": {
+      "output.rotation": "Left 90"
+    },
+    "jackalr": {
+      "output.rotation": "Left 90"
+    },
+    "jailbrek": null,
+    "jin": {
+      "output.rotation": "Right 90"
+    },
+    "jitsupro": null,
+    "jojon": {
+      "output.auto_crop": "On",
+      "output.crop_240p.left": -1
+    },
+    "journey": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -3
+    },
+    "joust": null,
+    "joust2": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -3
+    },
+    "jumpshot": {
+      "output.rotation": "Left 90"
+    },
+    "jungleh": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
+    },
+    "junglek": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
+    },
+    "junofrst": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "jyangoku": null,
+    "kageki": {
+      "output.rotation": "Left 90"
+    },
+    "kangaroo": {
+      "output.rotation": "Right 90",
+      "output.auto_crop": "On",
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -2
+    },
+    "karnov": null,
+    "kchamp": {
+      "output.rotation": "Left 90"
+    },
+    "ket": {
+      "output.rotation": "Left 90",
+      "output.auto_crop": "On"
+    },
+    "kick": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -4
+    },
+    "kicker": {
+      "output.rotation": "Left 90"
+    },
+    "kickman": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -4
+    },
+    "kicknrun": null,
+    "kidniki": null,
+    "killbld": {
+      "output.auto_crop": "On"
+    },
+    "killbldp": {
+      "output.auto_crop": "On"
+    },
+    "kingball": {
+      "output.rotation": "Left 90"
+    },
+    "kingballj": {
+      "output.rotation": "Left 90"
+    },
+    "kiwames": null,
+    "knights": null,
+    "kod": null,
+    "konek": null,
+    "koroleva": null,
+    "koshien": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "kot": null,
+    "kov2": {
+      "output.auto_crop": "On"
+    },
+    "kovsh": {
+      "output.auto_crop": "On"
+    },
+    "kozure": {
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -5,
+      "output.crop_240p.bottom": -13,
+      "output.crop_240p.left": -23,
+      "output.crop_240p.right": -8,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "kram": null,
+    "kroozr": null,
+    "ktiger": null,
+    "kungfum": null,
+    "ladybug": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.left": -1
+    },
+    "lagunar": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -11,
+      "output.crop_240p.bottom": -8
+    },
+    "ldrun": null,
+    "ldrun2": null,
+    "ldrun3": null,
+    "ldrun4": null,
+    "legionj2": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -10,
+      "output.crop_240p.bottom": -57,
+      "output.crop_240p.left": -28,
+      "output.crop_240p.right": -2,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "lethalth": {
+      "output.rotation": "Left 90"
+    },
+    "lghost": null,
+    "lgtnfght": {
+      "output.rotation": "Left 90"
+    },
+    "lifefrcej": null,
+    "liquidk": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 2,
+      "output.crop_240p.left": -1
+    },
+    "lizwiz": {
+      "output.rotation": "Left 90"
+    },
+    "llander": null,
+    "lohtj": null,
+    "lordofk": null,
+    "losttomb": {
+      "output.rotation": "Left 90"
+    },
+    "lrescue": {
+      "output.rotation": "Left 90"
+    },
+    "luctoday": {
+      "output.rotation": "Left 90"
+    },
+    "lunarbat": null,
+    "lupin3a": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -13,
+      "output.crop_240p.bottom": -7,
+      "output.crop_240p.left": -1
+    },
+    "lwings": {
+      "output.rotation": "Left 90"
+    },
+    "magspot": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -1
+    },
+    "mahoudai": {
+      "output.rotation": "Left 90"
+    },
+    "majtitl2": null,
+    "manhatan": {
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
+    },
+    "maniach": {
+      "output.rotation": "Left 90"
+    },
+    "mappy": {
+      "output.rotation": "Left 90"
+    },
+    "marble5": {
+      "output.crop_240p.left": -24,
+      "output.crop_240p.right": -24
+    },
+    "mario": null,
+    "mars": {
+      "output.rotation": "Left 90"
+    },
+    "martmast": {
+      "output.auto_crop": "On"
+    },
+    "maruchan": null,
+    "matmania": {
+      "output.rotation": "Left 90"
+    },
+    "mausuke": null,
+    "maxrpm": null,
+    "mayday": null,
+    "maze": null,
+    "mazinger": {
+      "output.rotation": "Right 90",
+      "output.auto_crop": "On"
+    },
+    "mazingerj": {
+      "output.rotation": "Right 90"
+    },
+    "mbombrd": null,
+    "megablst": null,
+    "megaman": null,
+    "megaman2": null,
+    "megrescu": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -8,
+      "output.crop_240p.left": -27,
+      "output.crop_240p.right": 27
+    },
+    "memtest": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "mercs": {
+      "output.rotation": "Left 90"
+    },
+    "metalb": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "metmqstr": {
+      "output.auto_crop": "On"
+    },
+    "metrocrs": null,
+    "mia": null,
+    "midres": null,
+    "mikie": {
+      "output.rotation": "Left 90"
+    },
+    "mimonscr": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.left": -2
+    },
+    "minefld": {
+      "output.rotation": "Left 90"
+    },
+    "missile": null,
+    "missile1": null,
+    "missile2": null,
+    "mjleague": {
+      "output.rotation": "Left 90"
+    },
+    "mmatrix": null,
+    "mmaze": null,
+    "mooncrgx": {
+      "output.rotation": "Left 90"
+    },
+    "moonqsr": {
+      "output.rotation": "Left 90"
+    },
+    "moonwar": {
+      "output.rotation": "Left 90"
+    },
+    "motos": {
+      "output.rotation": "Left 90"
+    },
+    "mpang": null,
+    "mpatrol": null,
+    "mplanets": {
+      "output.rotation": "Left 90"
+    },
+    "mpumpkin": null,
+    "mrdo": {
+      "output.rotation": "Left 90"
+    },
+    "mrdofix": {
+      "output.rotation": "Left 90"
+    },
+    "mrdonight": {
+      "output.rotation": "Left 90"
+    },
+    "mrgoemon": null,
+    "mrheli": null,
+    "mrjong": {
+      "output.rotation": "Left 90"
+    },
+    "mrtnt": {
+      "output.rotation": "Left 90"
+    },
+    "mrviking": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -1
+    },
+    "msh": null,
+    "mshvsf": null,
+    "mspacman": {
+      "output.rotation": "Left 90"
+    },
+    "msword": null,
+    "mtrap": null,
+    "mtwins": null,
+    "mvp": null,
+    "mvsc": null,
+    "mwalk": null,
+    "mx5000": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "myfairld": null,
+    "myhero": null,
+    "mysticm": null,
+    "mysticri": null,
+    "naughtyb": {
+      "output.rotation": "Left 90"
+    },
+    "nbbatman": null,
+    "nemesis": null,
+    "nemo": null,
+    "ngp": null,
+    "nibbler": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -27,
+      "output.crop_240p.bottom": -40,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -12
+    },
+    "ninjak": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
+    },
+    "ninjakun": {
+      "output.crop_240p.left": -1
+    },
+    "ninjaw": {
+      "output.scaling_mode": "Free Form",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "nobb": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -7,
+      "output.crop_240p.bottom": -9
+    },
+    "nomnlnd": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -1
+    },
+    "nova2001": {
+      "output.crop_240p.left": -1
+    },
+    "nova2001h": {
+      "output.crop_240p.left": -1
+    },
+    "nrallyx": {
+      "output.crop_240p.left": -1
+    },
+    "nspiritj": null,
+    "numcrash": {
+      "output.rotation": "Left 90"
+    },
+    "nwarr": null,
+    "nycaptor": null,
+    "olds103t": {
+      "output.auto_crop": "On"
+    },
+    "omegab": {
+      "output.rotation": "Left 90"
+    },
+    "onna34ro": null,
+    "opaopa": {
+      "output.crop_240p.left": -8
+    },
+    "opaopan": {
+      "output.crop_240p.left": -39
+    },
+    "orbitron": {
+      "output.rotation": "Left 90"
+    },
+    "orlegend": {
+      "output.auto_crop": "On"
+    },
+    "oscar": null,
+    "othellos": null,
+    "outrun": null,
+    "outzone": null,
+    "p47j": null,
+    "pacland": null,
+    "pacman": {
+      "output.rotation": "Left 90"
+    },
+    "pacmania": {
+      "output.rotation": "Left 90"
+    },
+    "pacnchmp": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.left": -1
+    },
+    "pacnpal": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.left": -1
+    },
+    "pacplus": {
+      "output.rotation": "Left 90"
+    },
+    "paddlema": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -51,
+      "output.crop_240p.bottom": -40,
+      "output.crop_240p.left": -9,
+      "output.crop_240p.right": -18,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "pang": null,
+    "pang3": null,
+    "panic": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -1
+    },
+    "parodius": null,
+    "passsht": {
+      "output.rotation": "Left 90"
+    },
+    "pballoon": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -27,
+      "output.crop_240p.bottom": -40,
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": -4
+    },
+    "pblbeach": null,
+    "pengo": {
+      "output.rotation": "Left 90"
+    },
+    "pepper2": null,
+    "perfrman": {
+      "output.rotation": "Right 90"
+    },
+    "pestplce": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -1
+    },
+    "peterpak": null,
+    "phoenix": {
+      "output.rotation": "Left 90"
+    },
+    "photoy2k": {
+      "output.auto_crop": "On"
+    },
+    "pickin": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
+    },
+    "pingpong": null,
+    "pipibibs": {
+      "output.crop_240p.top": -11,
+      "output.crop_240p.bottom": -1,
+      "output.crop_240p.left": -71,
+      "output.crop_240p.right": -53,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "piratpet": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
+    },
+    "pisces": {
+      "output.rotation": "Left 90"
+    },
+    "pistoldm": null,
+    "pitfall2": null,
+    "pkunwar": {
+      "output.crop_240p.left": -1
+    },
+    "pkunwarj": {
+      "output.crop_240p.left": -1
+    },
+    "playball": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -2
+    },
+    "plegends": {
+      "output.auto_crop": "On"
+    },
+    "pleiadce": {
+      "output.rotation": "Left 90"
+    },
+    "pleiads": {
+      "output.rotation": "Left 90"
+    },
+    "plusalph": {
+      "output.rotation": "Left 90"
+    },
+    "pnickj": null,
+    "pokonyan": null,
+    "polaris": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.left": -1
+    },
+    "polyplay": null,
+    "polyplay2": null,
+    "pong": null,
+    "ponpoko": {
+      "output.crop_240p.left": -15,
+      "output.crop_240p.right": -16
+    },
+    "pooyan": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": 8
+    },
+    "popeye": null,
+    "popflamn": null,
+    "porter": {
+      "output.rotation": "Left 90"
+    },
+    "pow": {
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -12,
+      "output.crop_240p.bottom": -13,
+      "output.crop_240p.left": -52,
+      "output.crop_240p.right": -39,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "powerdrv": null,
+    "pprobe": {
+      "output.rotation": "Right 90",
+      "output.auto_rotate": "Off",
+      "output.crop_240p.bottom": -8,
+      "output.crop_240p.left": -4,
+      "output.crop_240p.right": 4
+    },
+    "prehisle": null,
+    "prikura": null,
+    "prmrsocr": null,
+    "progear": null,
+    "psychic5": {
+      "output.rotation": "Left 90"
+    },
+    "psychic5j": {
+      "output.rotation": "Left 90"
+    },
+    "puckman": {
+      "output.rotation": "Left 90"
+    },
+    "pulirula": {
+      "output.crop_240p.left": -1
+    },
+    "pulsar": {
+      "output.rotation": "Left 90"
+    },
+    "punisher": null,
+    "punkshot": {
+      "output.crop_240p.left": -2
+    },
+    "puyosun": null,
+    "pwrinst2": {
+      "output.auto_crop": "On"
+    },
+    "pzloop2": null,
+    "qad": null,
+    "qbert": {
+      "output.rotation": "Left 90"
+    },
+    "qbertqub": {
+      "output.rotation": "Left 90"
+    },
+    "qcrayon": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "qcrayon2": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "qix": {
+      "output.rotation": "Left 90"
+    },
+    "qix2": {
+      "output.rotation": "Left 90"
+    },
+    "qjinsei": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "qndream": null,
+    "qtono2j": null,
+    "qtorimon": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "quartet": null,
+    "quartet2a": null,
+    "quester": {
+      "output.rotation": "Left 90"
+    },
+    "quizhq": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "qzchikyu": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "qzquest": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
+    },
+    "radarscp": {
+      "output.rotation": "Left 90"
+    },
+    "raflesia": {
+      "output.rotation": "Left 90"
+    },
+    "raiders5": {
+      "output.crop_240p.left": -1
+    },
+    "rallybik": null,
+    "rallyx": {
+      "output.crop_240p.left": -1
+    },
+    "rampage": {
+      "output.crop_240p.bottom": -2
+    },
+    "rastan": null,
+    "reactor": null,
+    "redbaron": null,
+    "redbarona": null,
+    "redearthn": {
+      "output.crop_240p.left": -1
+    },
+    "regulus": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -1
+    },
+    "renegade": null,
+    "rescue": {
+      "output.rotation": "Left 90"
+    },
+    "ridleofp": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -8,
+      "output.crop_240p.left": -27,
+      "output.crop_240p.right": 27
+    },
+    "ringdest": {
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -7
+    },
+    "riotcity": {
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -16
+    },
+    "riskchal": null,
+    "roadblst": null,
+    "roadf": {
+      "output.rotation": "Left 90"
+    },
+    "roadrunn": null,
+    "robby": {
+      "output.crop_240p.left": -5
+    },
+    "robocop": null,
+    "robotron": null,
+    "rocnrope": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": 17
+    },
+    "rodland": null,
+    "roishtar": null,
+    "rompers": {
+      "output.rotation": "Left 90"
+    },
+    "rpatroln": null,
+    "rsgun": {
+      "output.crop_480i.top": -1,
+      "output.crop_480i.bottom": 1
+    },
+    "rthunder": null,
+    "rtype": null,
+    "rtype2": null,
+    "rtype2j": null,
+    "rtypej": null,
+    "rtypeleo": null,
+    "rumba": {
+      "output.rotation": "Left 90"
+    },
+    "rungun": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.left": -30,
+      "output.crop_240p.right": -2
+    },
+    "rushatck": null,
+    "rygar": {
+      "output.crop_240p.top": -14,
+      "output.crop_240p.bottom": -12,
+      "output.crop_240p.left": -52,
+      "output.crop_240p.right": -40
+    },
+    "rygarj": null,
+    "ryukyu": null,
+    "sailormn": {
+      "output.auto_crop": "On"
+    },
+    "sailormnj": null,
+    "salamandj": null,
+    "samesame2": null,
+    "sandor": null,
+    "sanjeon": null,
+    "sarge": null,
+    "sasissu": null,
+    "saturnzi": {
+      "output.rotation": "Left 90"
+    },
+    "sbagman": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
+    },
+    "sbasketb": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": 17
+    },
+    "sbrkout": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.left": -2
+    },
+    "schaser": {
+      "output.rotation": "Left 90"
+    },
+    "scobra": {
+      "output.rotation": "Left 90"
+    },
+    "scontra": {
+      "output.rotation": "Left 90"
+    },
+    "scotrsht": {
+      "output.rotation": "Left 90"
+    },
+    "scramble": {
+      "output.rotation": "Left 90"
+    },
+    "sdgnmps": {
+      "output.crop_240p.left": -1
+    },
+    "sdi": null,
+    "sdungeon": {
+      "output.rotation": "Left 90"
+    },
+    "seabass": null,
+    "searchar": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -40,
+      "output.crop_240p.bottom": -52,
+      "output.crop_240p.left": -10,
+      "output.crop_240p.right": -14,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "seawolf": null,
+    "seawolf2": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -4
+    },
+    "secretag": null,
+    "sectionz": null,
+    "seganinj": null,
+    "sf": null,
+    "sf2": null,
+    "sf2ce": null,
+    "sf2hf": null,
+    "sfa": null,
+    "sfa2": null,
+    "sfa3": null,
+    "sfiii2n": {
+      "output.auto_crop": "On",
+      "output.crop_240p.left": -1
+    },
+    "sfiiin": {
+      "output.auto_crop": "On",
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
+    },
+    "sfposeid": {
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
+    },
+    "sfz2al": null,
+    "sfzch": null,
+    "sgemf": null,
+    "shadowld": null,
+    "shadoww": null,
+    "shangon": null,
+    "shanhigw": null,
+    "shdancer": {
+      "output.crop_240p.left": -3
+    },
+    "shienryu": {
+      "output.rotation": "Left 90"
+    },
+    "shinobi": null,
+    "shippumd": {
+      "output.rotation": "Left 90"
+    },
+    "shollow": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -3
+    },
+    "shtrider": {
+      "output.rotation": "Left 90"
+    },
+    "shuffle": {
+      "output.rotation": "Left 90"
+    },
+    "sidearms": null,
+    "silkworm": {
+      "output.crop_240p.top": -14,
+      "output.crop_240p.bottom": -12,
+      "output.crop_240p.left": -52,
+      "output.crop_240p.right": -40
+    },
+    "silvland": null,
+    "simpsons": null,
+    "sinistar": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -2
+    },
+    "sjryuko": null,
+    "skyadvnt": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -41,
+      "output.crop_240p.bottom": -51,
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -11,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "skykiddx": null,
+    "skyskipr": null,
+    "skysmash": {
+      "output.rotation": "Left 90",
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
+    "skysoldr": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -41,
+      "output.crop_240p.bottom": -51,
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -11,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "slammast": null,
+    "slapfighb1": {
+      "output.rotation": "Right 90"
+    },
+    "slapshtr": {
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
+    },
+    "smleague": null,
+    "snapjack": null,
+    "snowbro2": {
+      "output.crop_240p.top": -11,
+      "output.crop_240p.bottom": -1,
+      "output.crop_240p.left": -51,
+      "output.crop_240p.right": -38,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "snowbrosj": null,
+    "sokyugrt": null,
+    "solarfox": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -4
+    },
+    "soldam": null,
+    "solfigtr": {
+      "output.crop_240p.left": -1
+    },
+    "solomon": null,
+    "solomonj": null,
+    "sonicbom": {
+      "output.rotation": "Left 90"
+    },
+    "sonson": {
+      "output.crop_240p.left": -2
+    },
+    "sosterm": null,
+    "spacecr": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "spacedemon": {
+      "output.rotation": "Left 90",
+      "output.auto_crop": "On"
+    },
+    "spacerace": null,
+    "spacers": {
+      "output.rotation": "Left 90",
+      "output.auto_crop": "On"
+    },
+    "spaceskr": {
+      "output.crop_240p.left": -1
+    },
+    "spacezap": {
+      "output.crop_240p.left": -4
+    },
+    "spang": null,
+    "spatter": null,
+    "spcenctr": null,
+    "spdcoin": {
+      "output.rotation": "Left 90"
+    },
+    "spectar": null,
+    "spelunk2": null,
+    "spelunkr": null,
+    "spf2t": null,
+    "splat": null,
+    "splatter": null,
+    "sprglbpg": {
+      "output.rotation": "Left 90"
+    },
+    "sprint1": {
+      "output.crop_240p.left": -8
+    },
+    "sprint2": {
+      "output.crop_240p.left": -8
+    },
+    "spyhunt": {
+      "output.rotation": "Right 90"
+    },
+    "sqbert": {
+      "output.rotation": "Left 90"
+    },
+    "squaitsa": null,
+    "srumbler": null,
+    "ssf2": null,
+    "ssf2t": null,
+    "ssi": null,
+    "ssoldier": null,
+    "ssriders": {
+      "output.crop_240p.right": -1
+    },
+    "sss": null,
+    "starforc": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
+    },
+    "stargate": null,
+    "stargrds": {
+      "output.crop_240p.bottom": -2
+    },
+    "starjack": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -1
+    },
+    "starjacks": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -1
+    },
+    "stdragon": null,
+    "stratgyx": null,
+    "stratof": null,
+    "streetsm": {
+      "output.crop_240p.top": -12,
+      "output.crop_240p.bottom": -13,
+      "output.crop_240p.left": -155,
+      "output.crop_240p.right": -121,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "strider": null,
+    "subs": null,
+    "sucasino": {
+      "output.rotation": "Left 90"
+    },
+    "suikoenb": null,
+    "superpac": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.left": -1
+    },
+    "suprleag": null,
+    "suprloco": null,
+    "suprlocoo": null,
+    "suratk": null,
+    "svg": {
+      "output.auto_crop": "On"
+    },
+    "swat": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -1
+    },
+    "sxevious": {
+      "output.rotation": "Left 90"
+    },
+    "szaxxon": {
+      "output.rotation": "Left 90"
+    },
+    "tankbatt": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "tankfrce": null,
+    "tapper": {
+      "output.crop_240p.bottom": -2
+    },
+    "targ": null,
+    "tazmania": {
+      "output.rotation": "Left 90"
+    },
+    "teddybb": null,
+    "tehkanwc": null,
+    "tekipaki": null,
+    "terracre": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -43,
+      "output.crop_240p.bottom": -53,
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": -9
+    },
+    "terrafj": {
+      "output.crop_240p.top": -5,
+      "output.crop_240p.bottom": -4,
+      "output.crop_240p.left": -23,
+      "output.crop_240p.right": -8,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "tetris": null,
+    "tetrisse": null,
+    "theend": {
+      "output.rotation": "Left 90"
+    },
+    "theglad": {
+      "output.auto_crop": "On"
+    },
+    "theglobp": {
+      "output.rotation": "Left 90"
+    },
+    "theroes": null,
+    "thunderx": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -16
+    },
+    "thundfox": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 2,
+      "output.crop_240p.left": -1
+    },
+    "thunt": null,
+    "thuntk": null,
+    "tigerhb1": {
+      "output.rotation": "Right 90"
+    },
+    "tigeroad": null,
+    "timber": {
+      "output.crop_240p.bottom": -2
+    },
+    "timeplt": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "timescan": {
+      "output.rotation": "Left 90"
+    },
+    "timesold": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -41,
+      "output.crop_240p.bottom": -51,
+      "output.crop_240p.left": -15,
+      "output.crop_240p.right": -11,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "timetunl": {
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
+    },
+    "tinstar": {
+      "output.crop_240p.left": -1
+    },
+    "tiptop": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.left": -1
+    },
+    "tmnt": null,
+    "tmnt2": {
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
+    },
+    "tnextspcj": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -41,
+      "output.crop_240p.bottom": -52,
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": -10
+    },
+    "tnk3": {
+      "output.rotation": "Left 90"
+    },
+    "tnzs": null,
+    "todruaga": {
+      "output.rotation": "Left 90"
+    },
+    "toki": null,
+    "tokio": {
+      "output.rotation": "Left 90"
+    },
+    "topgunbl": {
+      "output.rotation": "Left 90"
+    },
+    "topgunr": {
+      "output.rotation": "Left 90"
+    },
+    "toryumon": null,
+    "toutrun": null,
+    "tp84": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": 13,
+      "output.crop_240p.right": 13
+    },
+    "tp84a": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "tp84b": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "trackfld": {
+      "output.crop_240p.bottom": 1
+    },
+    "transfrm": {
+      "output.crop_240p.bottom": 1
+    },
+    "travrusa": {
+      "output.rotation": "Right 90"
+    },
+    "tricktrp": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -1
+    },
+    "tripool": {
+      "output.rotation": "Left 90"
+    },
+    "troangel": null,
+    "trojan": null,
+    "tron": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -3
+    },
+    "truxton": null,
+    "truxton2": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -38,
+      "output.crop_240p.bottom": -50,
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": -2,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "tshoot": {
+      "output.crop_240p.top": -10,
+      "output.crop_240p.bottom": -13,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -1
+    },
+    "tturfu": {
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -7,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
+    },
+    "tumblep": null,
+    "turbotag": {
+      "output.rotation": "Right 90",
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
+    },
+    "turtles": {
+      "output.rotation": "Left 90"
+    },
+    "tutankhm": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "twcup98": null,
+    "twinbee": {
+      "output.rotation": "Left 90"
+    },
+    "twinbeeb": {
+      "output.rotation": "Left 90"
+    },
+    "twotigerc": null,
+    "twsoc98": null,
+    "uccops": null,
+    "ultratnk": {
+      "output.crop_240p.left": -1
+    },
+    "uniwars": {
+      "output.rotation": "Left 90"
+    },
+    "unsquad": null,
+    "uopoko": null,
+    "uopokoj": null,
+    "upndown": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.right": -1
+    },
+    "vanguard": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -27,
+      "output.crop_240p.bottom": -40,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -12
+    },
+    "vanvan": {
+      "output.rotation": "Left 90"
+    },
+    "varth": {
+      "output.rotation": "Left 90"
+    },
+    "vastar": {
+      "output.rotation": "Left 90"
+    },
+    "vball": null,
+    "vballb": null,
+    "vendetta": null,
+    "venture": null,
+    "vfkids": null,
+    "vfremix": null,
+    "vhunt2": null,
+    "victnine": null,
+    "victorycb": {
+      "output.rotation": "Left 90"
+    },
+    "victroad": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
+    },
+    "vigilant": null,
+    "vimanaj": null,
+    "vindctr2": null,
+    "vortex": {
+      "output.rotation": "Left 90"
+    },
+    "vsav": null,
+    "vsav2": null,
+    "vulcan": null,
+    "vulgus": null,
+    "wacko": {
+      "output.crop_240p.bottom": -2
+    },
+    "warofbug": {
+      "output.rotation": "Left 90"
+    },
+    "warriorb": {
+      "output.scaling_mode": "Free Form",
+      "output.auto_crop": "On"
+    },
+    "waterski": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.bottom": -9
+    },
+    "wb3": {
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -16
+    },
+    "wbmlvcd": {
+      "output.crop_240p.left": -1
+    },
+    "wboy": {
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -16
+    },
+    "wexpress": null,
+    "wildfang": null,
+    "willow": null,
+    "winterht": null,
+    "wldcourt": {
+      "output.crop_240p.bottom": 1
+    },
+    "wmatch": {
+      "output.rotation": "Left 90",
+      "output.crop_240p.right": -1
+    },
+    "wndrmomo": null,
+    "wndrplnt": {
+      "output.rotation": "Left 90"
+    },
+    "wof": null,
+    "wofch": null,
+    "woodpeck": {
+      "output.rotation": "Left 90"
+    },
+    "wow": {
+      "output.crop_240p.top": -2,
+      "output.crop_240p.bottom": -1,
+      "output.crop_240p.left": -26,
+      "output.crop_240p.right": -30
+    },
+    "wrestwar": {
+      "output.rotation": "Left 90"
+    },
+    "ws": {
+      "output.crop_240p.bottom": 1
+    },
+    "wwallyj": {
+      "output.crop_240p.left": -3
+    },
+    "wwestern": {
+      "output.rotation": "Left 90"
+    },
+    "wwfsstar": null,
+    "wwfwfest": null,
+    "xevious": {
+      "output.rotation": "Left 90"
+    },
+    "xmcota": null,
+    "xmen": {
+      "output.crop_240p.left": -10,
+      "output.crop_240p.right": -6
+    },
+    "xmultiplm72": null,
+    "xmvsf": null,
+    "xsleenab": null,
+    "xsleenaba": null,
+    "yiear": null,
+    "youjyudn": {
+      "output.rotation": "Left 90"
+    },
+    "zaxxon": {
+      "output.rotation": "Left 90"
+    },
+    "zerowing": null,
+    "zigzagb": {
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
+    },
+    "znpwfv": null,
+    "zookeep": {
+      "output.auto_crop": "On"
+    },
+    "zx48": {
+      "advanced.effects.mask.strength": -2,
+      "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
+    },
+    "zzyzzyxx": {
+      "output.rotation": "Left 90"
+    }
+  }
+}

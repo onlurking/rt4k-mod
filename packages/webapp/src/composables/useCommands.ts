@@ -20,7 +20,7 @@ export function useCommands(
   showPreview: { value: boolean },
   sidebarVisible: { value: boolean },
 ) {
-  const { config, exportConfig } = useProfile()
+  const { config, exportConfig, downloadProfiles } = useProfile()
   const {
     selectedCore,
     setSetting,
@@ -44,9 +44,16 @@ export function useCommands(
       id: 'file:export',
       label: 'Export JSON',
       group: 'File',
-      keywords: 'export save download',
+      keywords: 'export save',
       shortcut: 'Ctrl+S',
       action: () => exportConfig(),
+    })
+    commands.push({
+      id: 'file:download',
+      label: 'Download DV1.zip',
+      group: 'File',
+      keywords: 'download generate profiles rt4 zip',
+      action: () => downloadProfiles(),
     })
 
     // View — always available

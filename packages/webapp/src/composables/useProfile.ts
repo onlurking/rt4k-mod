@@ -1,11 +1,30 @@
 import { ref, computed } from 'vue'
+import JSZip from 'jszip'
 import type { ProfileConfig } from '../types'
+import { fetchBaseProfile, applySettings } from '../lib/browser-profile'
 
 const config = ref<ProfileConfig | null>(null)
 const originalJson = ref<string>('')
 const fileName = ref<string>('')
+let loadPromise: Promise<void> | null = null
+
+async function loadDefaultConfig(): Promise<void> {
+  try {
+    const res = await fetch('/default-config.json')
+    if (!res.ok) return
+    const parsed = await res.json() as ProfileConfig
+    config.value = parsed
+    originalJson.value = JSON.stringify(parsed, null, 2)
+    fileName.value = 'profiles-standard.json'
+  } catch {
+    // silent fail — user can still import manually
+  }
+}
 
 export function useProfile() {
+  if (!loadPromise && !config.value) {
+    loadPromise = loadDefaultConfig()
+  }
   async function importConfig(file: File): Promise<void> {
     const text = await file.text()
     try {
@@ -32,6 +51,54 @@ export function useProfile() {
     a.click()
     URL.revokeObjectURL(url)
     originalJson.value = json
+  }
+
+  const isGenerating = ref(false)
+  const generateProgress = ref<{ current: number; total: number } | null>(null)
+
+  async function downloadProfiles(): Promise<void> {
+    if (!config.value || isGenerating.value) return
+    isGenerating.value = true
+    generateProgress.value = { current: 0, total: 0 }
+
+    try {
+      const baseProfile = await fetchBaseProfile('/base-profile.rt4')
+      const { defaults, cores } = config.value
+
+      const coreNames = Object.keys(cores).sort()
+      generateProgress.value = { current: 0, total: coreNames.length }
+
+      const zip = new JSZip()
+      const dv1 = zip.folder('DV1')!
+
+      for (let i = 0; i < coreNames.length; i++) {
+        const coreName = coreNames[i]
+        const coreSettings = cores[coreName]
+        const merged = { ...defaults, ...(coreSettings ?? {}) }
+
+        const profile = baseProfile.clone()
+        applySettings(profile, merged)
+
+        dv1.file(`${coreName}.rt4`, profile.toBytes())
+        generateProgress.value = { current: i + 1, total: coreNames.length }
+
+        // Yield to keep UI responsive
+        if (i % 10 === 0) await new Promise(r => setTimeout(r, 0))
+      }
+
+      const blob = await zip.generateAsync({ type: 'blob' })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = 'DV1.zip'
+      a.click()
+      URL.revokeObjectURL(url)
+    } catch (err) {
+      alert(`Generation failed: ${err instanceof Error ? err.message : String(err)}`)
+    } finally {
+      isGenerating.value = false
+      generateProgress.value = null
+    }
   }
 
   const isDirty = computed(() => {
@@ -68,10 +135,13 @@ export function useProfile() {
     fileName,
     importConfig,
     exportConfig,
+    downloadProfiles,
     restoreFromJson,
     getSnapshot,
     isDirty,
     coreNames,
     modifiedCoreCount,
+    isGenerating,
+    generateProgress,
   }
 }
