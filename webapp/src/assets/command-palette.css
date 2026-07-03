@@ -1,0 +1,143 @@
+/*
+ * Linear-style command palette for vue-command-palette
+ *
+ * DOM structure (Teleported to <body>):
+ *   Command root [command-theme="linear"]
+ *     div[command-dialog]              ← overlay backdrop
+ *       div[command-dialog-mask]       ← click catcher (wraps wrapper!)
+ *         div[command-dialog-wrapper]  ← centers content
+ *           div[command-dialog-header]
+ *           div[command-dialog-body]
+ */
+
+/* ── Overlay backdrop ── */
+div[command-dialog] {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 10000 !important;
+  background: rgba(1, 1, 2, 0.7) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Mask wraps wrapper — use it as the flex container */
+div[command-dialog-mask] {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  padding-top: min(20vh, 180px) !important;
+}
+
+/* ── Wrapper — centered by mask's flex ── */
+div[command-dialog-wrapper] {
+  max-width: 520px !important;
+  width: 100% !important;
+  margin: 0 16px !important;
+}
+
+/* ── Command root ── */
+div[command-theme="linear"] {
+  background: #111113 !important;
+  color: #f7f8f8 !important;
+  font: 13px/1.5 'Inter', -apple-system, system-ui, sans-serif !important;
+  border: 1px solid #23252a !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 16px 70px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ── Input ── */
+input[command-input] {
+  width: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #23252a !important;
+  border-radius: 0 !important;
+  padding: 14px 16px !important;
+  font: 13px/1.5 'Inter', -apple-system, system-ui, sans-serif !important;
+  color: #f7f8f8 !important;
+  outline: 0 !important;
+  box-sizing: border-box !important;
+  box-shadow: none !important;
+}
+
+input[command-input]::placeholder {
+  color: #62666d !important;
+}
+
+/* ── List ── */
+div[command-list] {
+  max-height: 340px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 4px 0 !important;
+}
+
+/* ── Group heading ── */
+div[command-group-heading] {
+  padding: 8px 16px 4px !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.4px !important;
+  color: #62666d !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* ── Item ── */
+div[command-item] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 8px 14px !important;
+  margin: 0 4px !important;
+  cursor: pointer !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  color: #d0d6e0 !important;
+  background: transparent !important;
+  border: none !important;
+  transition: background 0.06s !important;
+}
+
+div[command-item]:hover,
+div[command-item][aria-selected="true"] {
+  background: #18181b !important;
+  color: #f7f8f8 !important;
+}
+
+/* ── Separator ── */
+div[command-separator] {
+  height: 1px !important;
+  background: #23252a !important;
+  margin: 4px 0 !important;
+}
+
+/* ── Empty ── */
+div[command-empty] {
+  padding: 48px !important;
+  text-align: center !important;
+  color: #62666d !important;
+  font-size: 13px !important;
+}
+
+/* ── Transition ── */
+.command-dialog-enter-active,
+.command-dialog-leave-active {
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+
+.command-dialog-enter-from,
+.command-dialog-leave-to {
+  opacity: 0;
+  transform: scale(0.98);
+}
