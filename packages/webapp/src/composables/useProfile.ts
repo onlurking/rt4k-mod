@@ -3,9 +3,16 @@ import JSZip from 'jszip'
 import type { ProfileConfig } from '../types'
 import { fetchBaseProfile, applySettings } from '../lib/browser-profile'
 
+interface ProfileEntry {
+  name: string
+  path: string
+}
+
 const config = ref<ProfileConfig | null>(null)
 const originalJson = ref<string>('')
 const fileName = ref<string>('')
+const availableProfiles = ref<ProfileEntry[]>([])
+const selectedProfile = ref<ProfileEntry | null>(null)
 let loadPromise: Promise<void> | null = null
 
 async function loadDefaultConfig(): Promise<void> {
@@ -21,9 +28,31 @@ async function loadDefaultConfig(): Promise<void> {
   }
 }
 
+const DEFAULT_PROFILE_PATH = 'CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K HDR.rt4'
+
+async function loadAvailableProfiles(): Promise<void> {
+  try {
+    const res = await fetch('/profiles/manifest.json')
+    if (!res.ok) return
+    const profiles = await res.json() as ProfileEntry[]
+    availableProfiles.value = profiles
+    // Select default profile if none selected
+    if (!selectedProfile.value && profiles.length > 0) {
+      selectedProfile.value = profiles.find(p => p.path === DEFAULT_PROFILE_PATH) ?? profiles[0]
+    }
+  } catch {
+    // silent fail — fallback to default base profile
+  }
+}
+
 export function useProfile() {
   if (!loadPromise && !config.value) {
     loadPromise = loadDefaultConfig()
+  }
+  
+  // Load available profiles on first use
+  if (availableProfiles.value.length === 0) {
+    loadAvailableProfiles()
   }
   async function importConfig(file: File): Promise<void> {
     const text = await file.text()
@@ -62,7 +91,10 @@ export function useProfile() {
     generateProgress.value = { current: 0, total: 0 }
 
     try {
-      const baseProfile = await fetchBaseProfile('/base-profile.rt4')
+      const baseUrl = selectedProfile.value 
+        ? `/profiles/${selectedProfile.value.path}`
+        : '/base-profile.rt4'
+      const baseProfile = await fetchBaseProfile(baseUrl)
       const { defaults, cores } = config.value
 
       const coreNames = Object.keys(cores).sort()
@@ -129,6 +161,10 @@ export function useProfile() {
     return config.value ? JSON.stringify(config.value) : ''
   }
 
+  function selectProfile(profile: ProfileEntry): void {
+    selectedProfile.value = profile
+  }
+
   return {
     config,
     originalJson,
@@ -143,5 +179,8 @@ export function useProfile() {
     modifiedCoreCount,
     isGenerating,
     generateProgress,
+    availableProfiles,
+    selectedProfile,
+    selectProfile,
   }
 }

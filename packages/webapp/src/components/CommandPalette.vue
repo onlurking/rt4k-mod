@@ -42,13 +42,16 @@ const { allCommands, getSubPrompt, applySubPromptValue } = useCommands(
 const subPrompt = ref<SubPromptState | null>(null)
 const subInputValue = ref('')
 const subSelectValue = ref('')
+const subSearchQuery = ref('')
+const subSelectedIndex = ref(0)
 
 // Search state
 const searchQuery = ref('')
 const inputRef = ref<HTMLInputElement | null>(null)
+const subSearchRef = ref<HTMLInputElement | null>(null)
 const selectedIndex = ref(0)
 
-// MiniSearch instance
+// MiniSearch for main commands
 interface IndexedCommand {
   id: string
   label: string
@@ -71,6 +74,33 @@ const miniSearch = computed(() => {
     keywords: cmd.keywords || '',
   })))
   return ms
+})
+
+// MiniSearch for enum options
+const enumMiniSearch = computed(() => {
+  if (!subPrompt.value?.options) return null
+  const ms = new MiniSearch<{ id: number; label: string }>({
+    fields: ['label'],
+    storeFields: ['id'],
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0.2,
+    },
+  })
+  ms.addAll(subPrompt.value.options.map((opt, i) => ({
+    id: i,
+    label: opt,
+  })))
+  return ms
+})
+
+// Filtered enum options
+const filteredEnumOptions = computed(() => {
+  if (!subPrompt.value?.options) return []
+  if (!subSearchQuery.value.trim()) return subPrompt.value.options
+  if (!enumMiniSearch.value) return subPrompt.value.options
+  const results = enumMiniSearch.value.search(subSearchQuery.value)
+  return results.map(r => subPrompt.value!.options![r.id as number])
 })
 
 // Filtered commands
@@ -112,14 +142,15 @@ watch(() => props.visible, (v) => {
     subPrompt.value = null
     subInputValue.value = ''
     subSelectValue.value = ''
+    subSearchQuery.value = ''
+    subSelectedIndex.value = 0
     nextTick(() => inputRef.value?.focus())
   }
 })
 
 // Reset index when search changes
-watch(searchQuery, () => {
-  selectedIndex.value = 0
-})
+watch(searchQuery, () => { selectedIndex.value = 0 })
+watch(subSearchQuery, () => { subSelectedIndex.value = 0 })
 
 function handleBackdropClick(e: MouseEvent) {
   const target = e.target as HTMLElement
@@ -134,10 +165,9 @@ function selectCommand(cmd: CommandItem) {
     subPrompt.value = sub
     subInputValue.value = ''
     subSelectValue.value = sub.options?.[0] ?? ''
-    nextTick(() => {
-      const el = document.querySelector('.sub-input') as HTMLInputElement
-      el?.focus()
-    })
+    subSearchQuery.value = ''
+    subSelectedIndex.value = 0
+    nextTick(() => subSearchRef.value?.focus())
     return
   }
   cmd.action()
@@ -163,13 +193,50 @@ function handleKeydown(e: KeyboardEvent) {
   }
 }
 
+function handleSubKeydown(e: KeyboardEvent) {
+  const options = filteredEnumOptions.value
+
+  if (e.key === 'ArrowDown') {
+    e.preventDefault()
+    subSelectedIndex.value = Math.min(subSelectedIndex.value + 1, options.length - 1)
+    scrollToSubOption()
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault()
+    subSelectedIndex.value = Math.max(subSelectedIndex.value - 1, 0)
+    scrollToSubOption()
+  } else if (e.key === 'Enter') {
+    e.preventDefault()
+    if (options[subSelectedIndex.value]) {
+      selectEnumOption(options[subSelectedIndex.value])
+    }
+  } else if (e.key === 'Escape') {
+    e.preventDefault()
+    e.stopPropagation()
+    handleSubBack()
+  }
+}
+
+function scrollToSubOption() {
+  nextTick(() => {
+    const el = document.querySelector('.sub-option-highlighted')
+    el?.scrollIntoView({ block: 'nearest' })
+  })
+}
+
+function selectEnumOption(opt: string) {
+  if (!subPrompt.value) return
+  applySubPromptValue(subPrompt.value, opt)
+  subPrompt.value = null
+  emit('close')
+}
+
 function handleSubSubmit() {
   if (!subPrompt.value) return
 
   let value: string | number | boolean
 
   if (subPrompt.value.type === 'enum') {
-    value = subSelectValue.value
+    value = filteredEnumOptions.value[subSelectedIndex.value] ?? subSelectValue.value
   } else if (subPrompt.value.type === 'number') {
     value = Number(subInputValue.value)
     if (isNaN(value)) return
@@ -184,18 +251,9 @@ function handleSubSubmit() {
 
 function handleSubBack() {
   subPrompt.value = null
+  subSearchQuery.value = ''
+  subSelectedIndex.value = 0
   nextTick(() => inputRef.value?.focus())
-}
-
-function handleSubKeydown(e: KeyboardEvent) {
-  if (e.key === 'Escape') {
-    e.preventDefault()
-    e.stopPropagation()
-    handleSubBack()
-  } else if (e.key === 'Enter') {
-    e.preventDefault()
-    handleSubSubmit()
-  }
 }
 
 function isItemSelected(cmd: CommandItem): boolean {
@@ -228,17 +286,33 @@ function isItemSelected(cmd: CommandItem): boolean {
               />
             </div>
 
-            <!-- Sub-prompt: Enum picker -->
-            <div v-if="subPrompt?.type === 'enum'" class="palette-list">
-              <div
-                v-for="opt in subPrompt.options"
-                :key="opt"
-                class="palette-item"
-                @click="applySubPromptValue(subPrompt!, opt); subPrompt = null; emit('close')"
-              >
-                {{ opt }}
+            <!-- Sub-prompt: Enum picker with search -->
+            <template v-if="subPrompt?.type === 'enum'">
+              <div class="sub-search-wrapper">
+                <input
+                  ref="subSearchRef"
+                  v-model="subSearchQuery"
+                  class="sub-search-input"
+                  placeholder="Search options…"
+                  spellcheck="false"
+                  autocomplete="off"
+                  @keydown="handleSubKeydown"
+                />
               </div>
-            </div>
+              <div class="palette-list" v-if="filteredEnumOptions.length">
+                <div
+                  v-for="(opt, idx) in filteredEnumOptions"
+                  :key="opt"
+                  class="palette-item"
+                  :class="{ 'palette-item-selected': idx === subSelectedIndex, 'sub-option-highlighted': idx === subSelectedIndex }"
+                  @click="selectEnumOption(opt)"
+                  @mouseenter="subSelectedIndex = idx"
+                >
+                  {{ opt }}
+                </div>
+              </div>
+              <div v-else class="palette-empty">No results</div>
+            </template>
 
             <!-- Sub-prompt: Number input -->
             <div v-else-if="subPrompt?.type === 'number'" class="command-sub-prompt">
@@ -346,6 +420,32 @@ function isItemSelected(cmd: CommandItem): boolean {
   color: #62666d;
 }
 
+.sub-search-wrapper {
+  padding: 8px;
+  border-bottom: 1px solid #23252a;
+}
+
+.sub-search-input {
+  width: 100%;
+  background: #18181b;
+  border: 1px solid #23252a;
+  padding: 8px 12px;
+  font: 13px/1.5 'Inter', -apple-system, system-ui, sans-serif;
+  color: #f7f8f8;
+  border-radius: 6px;
+  outline: 0;
+  box-sizing: border-box;
+  transition: border-color 0.12s;
+}
+
+.sub-search-input::placeholder {
+  color: #62666d;
+}
+
+.sub-search-input:focus {
+  border-color: #3a3d44;
+}
+
 .palette-list {
   max-height: 340px;
   overflow-y: auto;
@@ -373,6 +473,7 @@ function isItemSelected(cmd: CommandItem): boolean {
   font-size: 13px;
   color: #d0d6e0;
   transition: background 0.06s;
+  word-break: break-word;
 }
 
 .palette-item:hover,

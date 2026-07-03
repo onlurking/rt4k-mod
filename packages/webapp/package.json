@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "dev": "bun run build-profiles && vite",
+    "build": "bun run build-profiles && vue-tsc -b && vite build",
+    "build-profiles": "bun scripts/build-profiles.ts",
     "preview": "vite preview",
     "test": "echo 'No tests yet'"
   },

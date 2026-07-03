@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { DataType, type SettingDef } from '../types'
 import { useProfile } from '../composables/useProfile'
 import { useEditor } from '../composables/useEditor'
+import AutocompleteSelect from './AutocompleteSelect.vue'
 
 const props = defineProps<{
   def: SettingDef
@@ -26,16 +27,19 @@ const isModified = computed(() => {
 
 const displayValue = computed(() => props.value === undefined ? '' : String(props.value))
 
-const selectStyle = computed(() => {
+const enumOptions = computed(() => {
+  if (props.def.type !== DataType.ENUM || !props.def.enums) return []
+  return props.def.enums.map(e => ({ value: e.name, label: e.name }))
+})
+
+const selectWidth = computed(() => {
   if (props.def.type !== DataType.ENUM || !props.def.enums) return {}
-  // Find longest option text
   const longest = props.def.enums.reduce((max, e) => Math.max(max, e.name.length), 0)
-  // ~8px per char + padding + dropdown arrow
   const px = Math.max(120, longest * 8 + 48)
   return { width: px + 'px' }
 })
 
-function onSelectChange(e: Event) { emit('update:value', (e.target as HTMLSelectElement).value) }
+function onEnumChange(v: string) { emit('update:value', v) }
 function onNumberChange(e: Event) { emit('update:value', Number((e.target as HTMLInputElement).value)) }
 function onBoolChange(e: Event) { emit('update:value', (e.target as HTMLInputElement).checked) }
 function onTextChange(e: Event) { emit('update:value', (e.target as HTMLInputElement).value) }
@@ -45,9 +49,13 @@ function onTextChange(e: Event) { emit('update:value', (e.target as HTMLInputEle
   <div class="setting-field" :class="{ modified: isModified }">
     <label class="setting-label" :title="def.name">{{ def.desc }}</label>
     <div class="setting-control">
-      <select v-if="def.type === DataType.ENUM && def.enums" :value="displayValue" @change="onSelectChange" :style="selectStyle">
-        <option v-for="opt in def.enums" :key="opt.name" :value="opt.name">{{ opt.name }}</option>
-      </select>
+      <AutocompleteSelect
+        v-if="def.type === DataType.ENUM && def.enums"
+        :modelValue="displayValue"
+        :options="enumOptions"
+        @update:modelValue="onEnumChange"
+        :style="selectWidth"
+      />
 
       <div v-else-if="def.type === DataType.BIT" class="checkbox-wrap">
         <input type="checkbox" :checked="!!value" @change="onBoolChange" />
@@ -94,10 +102,6 @@ function onTextChange(e: Event) { emit('update:value', (e.target as HTMLInputEle
   gap: var(--sp-xs);
   flex: 0 0 auto;
   margin-left: auto;
-}
-
-.setting-control select {
-  flex: 0 0 auto;
 }
 
 .setting-control input[type="number"] {

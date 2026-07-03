@@ -20,7 +20,7 @@ export function useCommands(
   showPreview: { value: boolean },
   sidebarVisible: { value: boolean },
 ) {
-  const { config, exportConfig, downloadProfiles } = useProfile()
+  const { config, exportConfig, downloadProfiles, availableProfiles, selectedProfile, selectProfile } = useProfile()
   const {
     selectedCore,
     setSetting,
@@ -54,6 +54,13 @@ export function useCommands(
       group: 'File',
       keywords: 'download generate profiles rt4 zip',
       action: () => downloadProfiles(),
+    })
+    commands.push({
+      id: 'file:base-profile',
+      label: `Base profile: ${selectedProfile.value?.name ?? 'None'}`,
+      group: 'File',
+      keywords: `base profile crt emulation change switch ${availableProfiles.value.map(p => p.name).join(' ')}`,
+      action: () => {}, // handled via sub-prompt
     })
 
     // View — always available
@@ -152,8 +159,14 @@ export function useCommands(
   }
 
   function getSubPrompt(commandId: string): SubPromptState | null {
+    // Base profile
+    if (commandId === 'file:base-profile') {
+      const options = availableProfiles.value.map(p => p.name)
+      return { type: 'enum', label: 'Select base profile', options, settingPath: '__baseProfile' }
+    }
+
     // Settings - enum
-    const enumMatch = commandId.match(/^setting:enum:(.+)$/)
+    const enumMatch = commandId.match(/^setting:enum:(.+)$/)  
     if (enumMatch) {
       const path = enumMatch[1]
       const options = getEnumOptions(path)
@@ -207,6 +220,14 @@ export function useCommands(
 
   function applySubPromptValue(prompt: SubPromptState, value: string | number | boolean) {
     if (!prompt.settingPath) return
+    
+    // Handle base profile selection
+    if (prompt.settingPath === '__baseProfile') {
+      const profile = availableProfiles.value.find(p => p.name === value)
+      if (profile) selectProfile(profile)
+      return
+    }
+
     if (prompt.bulk) {
       bulkSetSetting(prompt.settingPath, value)
     } else {

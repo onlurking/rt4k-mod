@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import { useEditor } from '../composables/useEditor'
 import { SCHEMA, getEnumOptions } from '../schema'
 import { DataType } from '../types'
+import AutocompleteSelect from './AutocompleteSelect.vue'
 
 const { bulkSetSetting } = useEditor()
 
@@ -14,9 +15,18 @@ const actionableSettings = SCHEMA.filter(
   (s) => !s.readOnly && (s.type === DataType.ENUM || s.type === DataType.SIGNED_INT || s.type === DataType.SIGNED_SHORT)
 )
 
+const settingOptions = computed(() =>
+  actionableSettings.map(s => ({ value: s.name, label: s.desc }))
+)
+
 const currentDef = computed(() => SCHEMA.find((s) => s.name === selectedSetting.value))
 const isEnum = computed(() => currentDef.value?.type === DataType.ENUM)
 const isNum = computed(() => currentDef.value?.type === DataType.SIGNED_INT || currentDef.value?.type === DataType.SIGNED_SHORT)
+
+const enumOptions = computed(() => {
+  if (!selectedSetting.value) return []
+  return getEnumOptions(selectedSetting.value).map(o => ({ value: o, label: o }))
+})
 
 function applyBulk() {
   if (!selectedSetting.value) return
@@ -33,14 +43,18 @@ function onSettingChange() {
 <template>
   <div class="bulk-panel">
     <span class="bulk-label">Bulk Edit</span>
-    <select v-model="selectedSetting" @change="onSettingChange">
-      <option value="" disabled>Select setting…</option>
-      <option v-for="def in actionableSettings" :key="def.name" :value="def.name">{{ def.desc }}</option>
-    </select>
-    <select v-if="isEnum" v-model="enumValue">
-      <option value="" disabled>Value…</option>
-      <option v-for="opt in getEnumOptions(selectedSetting)" :key="opt" :value="opt">{{ opt }}</option>
-    </select>
+    <AutocompleteSelect
+      v-model="selectedSetting"
+      :options="settingOptions"
+      placeholder="Select setting…"
+      @update:modelValue="onSettingChange"
+    />
+    <AutocompleteSelect
+      v-if="isEnum"
+      v-model="enumValue"
+      :options="enumOptions"
+      placeholder="Value…"
+    />
     <input v-else-if="isNum" v-model.number="numValue" type="number" placeholder="Value" />
     <button class="btn-primary" @click="applyBulk" :disabled="!selectedSetting || (isEnum && !enumValue)">Apply to all</button>
   </div>
@@ -59,9 +73,5 @@ function onSettingChange() {
   font-weight: 500;
   color: var(--ink-tertiary);
   flex-shrink: 0;
-}
-
-.bulk-panel select {
-  max-width: 300px;
 }
 </style>

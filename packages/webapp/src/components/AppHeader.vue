@@ -1,12 +1,37 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useProfile } from '../composables/useProfile'
+import AutocompleteSelect from './AutocompleteSelect.vue'
 
 const emit = defineEmits<{
   'toggle-palette': []
   'toggle-preview': []
 }>()
 
-const { fileName, isDirty, config, modifiedCoreCount, exportConfig, downloadProfiles, isGenerating, generateProgress } = useProfile()
+const { 
+  fileName, 
+  isDirty, 
+  config, 
+  modifiedCoreCount, 
+  exportConfig, 
+  downloadProfiles, 
+  isGenerating, 
+  generateProgress,
+  availableProfiles,
+  selectedProfile,
+  selectProfile,
+} = useProfile()
+
+const profileOptions = computed(() => 
+  availableProfiles.value.map(p => ({ value: p.path, label: p.name }))
+)
+const selectedProfilePath = computed({
+  get: () => selectedProfile.value?.path ?? '',
+  set: (v: string) => {
+    const p = availableProfiles.value.find(p => p.path === v)
+    if (p) selectProfile(p)
+  }
+})
 </script>
 
 <template>
@@ -15,6 +40,13 @@ const { fileName, isDirty, config, modifiedCoreCount, exportConfig, downloadProf
       <h1>rt4k-mod</h1>
       <span v-if="fileName" class="filename">{{ fileName }}</span>
       <span v-if="isDirty" class="dirty-dot" title="Unsaved changes"></span>
+      <AutocompleteSelect
+        v-if="availableProfiles.length > 0"
+        v-model="selectedProfilePath"
+        :options="profileOptions"
+        placeholder="Base profile…"
+        class="profile-selector"
+      />
     </div>
     <div class="header-right">
       <button class="btn-ghost palette-btn" @click="$emit('toggle-palette')" title="Command Palette (Ctrl+K)">
@@ -97,6 +129,11 @@ h1 {
   color: var(--ink-tertiary);
   font-size: 12px;
   margin-left: var(--sp-xs);
+}
+
+.profile-selector {
+  margin-left: var(--sp-xs);
+  max-width: 680px;
 }
 
 .btn-download {
