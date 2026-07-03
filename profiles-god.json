@@ -11,10 +11,18 @@
     "advanced.effects.interpolation.linear_light": true,
     "advanced.effects.interpolation.anti_ringing": true,
     "output.resolution": "4K60",
-    "scaling.crop.right": 0,
-    "scaling.crop.left": 0,
-    "scaling.crop.top": 0,
-    "scaling.crop.bottom": 0,
+    "output.rotation": "None",
+    "output.auto_rotate": "On",
+    "output.auto_crop": "Off",
+    "output.scaling_mode": "Auto Fill",
+    "output.crop_240p.right": 0,
+    "output.crop_240p.left": 0,
+    "output.crop_240p.top": 0,
+    "output.crop_240p.bottom": 0,
+    "output.crop_480i.right": 0,
+    "output.crop_480i.left": 0,
+    "output.crop_480i.top": 0,
+    "output.crop_480i.bottom": 0,
     "output.transmitter.colorimetry": "Auto-Rec.709",
     "advanced.system.osd_firmware.on_screen_display.hide_input_res": false,
     "output.transmitter.rgb_range": "Full",
@@ -28,13 +36,14 @@
     "1941": null,
     "1942": null,
     "1943": null,
+    "1944": null,
     "1943kai": null,
     "1943mii": null,
-    "1944": null,
     "19xx": null,
     "280zzzap": {
-      "scaling.crop.right": -4,
-      "scaling.crop.top": -1
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.right": -4
     },
     "3DO": {
       "advanced.effects.mask.strength": -2,
@@ -232,13 +241,13 @@
     },
     "GBA": {
       "advanced.effects.mask.strength": 0,
+      "advanced.effects.mask.path": "GBA/GBA_Real_13.bmp",
       "advanced.effects.interpolation.linear_light": false,
       "advanced.effects.interpolation.anti_ringing": false,
+      "advanced.system.osd_firmware.banner_image.load_banner": "",
       "hdmi_receiver.mister_dv1.auto_crop": false,
       "hdmi_receiver.mister_dv1.auto_decimate": false,
-      "hdmi_receiver.mister_dv1.enabled": false,
-      "advanced.effects.mask.path": "GBA/GBA_Real_13.bmp",
-      "advanced.system.osd_firmware.banner_image.load_banner": ""
+      "hdmi_receiver.mister_dv1.enabled": false
     },
     "GBA2P": {
       "advanced.effects.mask.strength": -2,
@@ -247,13 +256,13 @@
     },
     "GBC": {
       "advanced.effects.mask.strength": 10,
+      "advanced.effects.mask.path": "GBC/GBC_Real_15x.bmp",
       "advanced.effects.interpolation.linear_light": false,
       "advanced.effects.interpolation.anti_ringing": false,
+      "advanced.system.osd_firmware.banner_image.load_banner": "",
       "hdmi_receiver.mister_dv1.auto_crop": false,
       "hdmi_receiver.mister_dv1.auto_decimate": false,
-      "hdmi_receiver.mister_dv1.enabled": false,
-      "advanced.effects.mask.path": "GBC/GBC_Real_15x.bmp",
-      "advanced.system.osd_firmware.banner_image.load_banner": ""
+      "hdmi_receiver.mister_dv1.enabled": false
     },
     "Galaksija": {
       "advanced.effects.mask.strength": -2,
@@ -268,12 +277,12 @@
     "Game and Watch": {
       "advanced.effects.mask.enabled": false,
       "advanced.effects.mask.strength": 0,
+      "advanced.effects.mask.path": "RGB Masks/A Grille Coarse RGB.bmpp",
       "advanced.effects.interpolation.anti_ringing": false,
+      "advanced.system.osd_firmware.banner_image.load_banner": "Fox 83.bmp",
       "hdmi_receiver.mister_dv1.auto_crop": false,
       "hdmi_receiver.mister_dv1.auto_decimate": false,
-      "hdmi_receiver.mister_dv1.enabled": false,
-      "advanced.effects.mask.path": "RGB Masks/A Grille Coarse RGB.bmp",
-      "advanced.system.osd_firmware.banner_image.load_banner": "Fox 83.bmp"
+      "hdmi_receiver.mister_dv1.enabled": false
     },
     "GameAndWatch": {
       "advanced.effects.mask.strength": -2,
@@ -284,12 +293,12 @@
     "Gameboy": {
       "advanced.effects.mask.enabled": false,
       "advanced.effects.mask.strength": 0,
+      "advanced.effects.mask.path": "RGB Masks/A Grille Coarse RGB.bmpp",
       "advanced.effects.interpolation.anti_ringing": false,
+      "advanced.system.osd_firmware.banner_image.load_banner": "Fox 83.bmp",
       "hdmi_receiver.mister_dv1.auto_crop": false,
       "hdmi_receiver.mister_dv1.auto_decimate": false,
-      "hdmi_receiver.mister_dv1.enabled": false,
-      "advanced.effects.mask.path": "RGB Masks/A Grille Coarse RGB.bmp",
-      "advanced.system.osd_firmware.banner_image.load_banner": "Fox 83.bmp"
+      "hdmi_receiver.mister_dv1.enabled": false
     },
     "Gameboy2P": {
       "advanced.effects.mask.strength": -2,
@@ -377,19 +386,20 @@
       "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
     },
     "Menu": {
+      "output.transmitter.hdr": "Off",
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -14,
+      "output.crop_240p.bottom": -6,
+      "output.crop_240p.left": -49,
+      "output.crop_240p.right": -11,
       "advanced.effects.mask.enabled": false,
       "advanced.effects.mask.strength": 0,
-      "output.transmitter.hdr": "Off",
+      "advanced.effects.mask.path": "",
       "advanced.effects.interpolation.anti_ringing": false,
-      "scaling.crop.right": -11,
-      "scaling.crop.left": -49,
-      "scaling.crop.top": -14,
-      "scaling.crop.bottom": -6,
+      "advanced.system.osd_firmware.banner_image.load_banner": "",
       "hdmi_receiver.mister_dv1.auto_crop": false,
       "hdmi_receiver.mister_dv1.auto_decimate": false,
-      "hdmi_receiver.mister_dv1.enabled": false,
-      "advanced.effects.mask.path": "",
-      "advanced.system.osd_firmware.banner_image.load_banner": ""
+      "hdmi_receiver.mister_dv1.enabled": false
     },
     "MiSTerLaggy": {
       "advanced.effects.mask.strength": -2,
@@ -659,22 +669,28 @@
     },
     "aceattaca": null,
     "adcanoe": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "afighter": null,
-    "agallet": null,
+    "agallet": {
+      "output.auto_crop": "On"
+    },
     "agalletj": null,
     "airass": {
-      "scaling.crop.right": -1,
-      "scaling.crop.left": -8,
-      "scaling.crop.top": -33,
-      "scaling.crop.bottom": -26
+      "output.crop_240p.top": -33,
+      "output.crop_240p.bottom": -26,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -1
     },
     "airdueljm72": null,
     "airduelm72": null,
     "ajax": null,
-    "alcon": null,
+    "alcon": {
+      "output.rotation": "Right 90",
+      "output.auto_rotate": "Off"
+    },
     "alexkidd": null,
     "alibaba": null,
     "alienaru": null,
@@ -683,10 +699,10 @@
     "alpine": null,
     "altbeast": null,
     "amatelas": {
-      "scaling.crop.right": -9,
-      "scaling.crop.left": -17,
-      "scaling.crop.top": -43,
-      "scaling.crop.bottom": -53
+      "output.crop_240p.top": -43,
+      "output.crop_240p.bottom": -53,
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": -9
     },
     "amidars": null,
     "anteater": null,
@@ -696,16 +712,17 @@
       "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
     },
     "aquario": {
-      "scaling.crop.left": -3
+      "output.crop_240p.left": -3
     },
     "arkanoid": null,
     "arkanoidj": null,
     "arknoid2": null,
     "armedf": {
-      "scaling.crop.right": -5,
-      "scaling.crop.left": -5,
-      "scaling.crop.top": -7,
-      "scaling.crop.bottom": -23
+      "output.crop_240p.top": -7,
+      "output.crop_240p.bottom": -23,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -5,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "armorcar": null,
     "armwar": null,
@@ -713,19 +730,19 @@
     "astdelux": null,
     "asteroid": null,
     "astorm": {
-      "scaling.crop.left": -3
+      "output.crop_240p.left": -3
     },
     "astrass": null,
     "astrofl": null,
     "atetris": {
-      "scaling.crop.left": -1,
-      "scaling.crop.top": -3,
-      "scaling.crop.bottom": -2
+      "output.crop_240p.top": -3,
+      "output.crop_240p.bottom": -2,
+      "output.crop_240p.left": -1
     },
     "atetrisc": {
-      "scaling.crop.right": -3,
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": -1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": -1,
+      "output.crop_240p.right": -3
     },
     "athena": null,
     "atlantis2": null,
@@ -737,21 +754,25 @@
     "backfirt": null,
     "baddudes": null,
     "bagman": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -11
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
     },
     "bakubaku": null,
     "bakutotu": null,
     "ballbomb": null,
     "baluba": {
-      "scaling.crop.right": 12,
-      "scaling.crop.left": -12
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
     },
     "bankp": null,
     "batcir": null,
     "batmanfr": null,
     "batriderj": null,
-    "battroad": null,
+    "battroad": {
+      "output.rotation": "Right 90"
+    },
     "bayroute": null,
     "bbakraidj": null,
     "bbmanw": null,
@@ -760,14 +781,17 @@
     "berzerk": null,
     "bgaregga": null,
     "bigfghtr": {
-      "scaling.crop.right": -10,
-      "scaling.crop.left": -25,
-      "scaling.crop.top": -5,
-      "scaling.crop.bottom": -4
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -5,
+      "output.crop_240p.bottom": -4,
+      "output.crop_240p.left": -25,
+      "output.crop_240p.right": -10,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "bigkong": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -11
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
     },
     "bilyard": null,
     "bioatack": null,
@@ -775,8 +799,9 @@
     "birdiy": null,
     "blasto": null,
     "blastoff": {
-      "scaling.crop.right": 12,
-      "scaling.crop.left": -12
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
     },
     "blazer": null,
     "blkbustr": null,
@@ -784,44 +809,54 @@
     "blktiger": null,
     "block": null,
     "blockade": null,
-    "blockgal": null,
-    "bloodbro": null,
+    "blockgal": {
+      "output.rotation": "Right 90"
+    },
+    "bloodbro": {
+      "output.auto_crop": "On"
+    },
     "bloxeed": {
-      "scaling.crop.left": -3
+      "output.crop_240p.left": -3
     },
     "blueprnt": null,
     "blueshrk": {
-      "scaling.crop.right": -11,
-      "scaling.crop.left": -5
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -11
     },
     "bmaster": null,
     "bodyslam": null,
     "bombjack": null,
     "boothill": {
-      "scaling.crop.right": -11,
-      "scaling.crop.left": -5
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -11
     },
     "bosco": {
-      "scaling.crop.left": -4
+      "output.crop_240p.left": -4
     },
     "boscomd": {
-      "scaling.crop.left": -4
+      "output.crop_240p.left": -4
     },
     "botanic": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -11
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
     },
     "bouldash": null,
     "boxyboy": null,
     "bradley": null,
     "brain": {
-      "scaling.crop.left": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
-    "breakout": null,
-    "bronx": null,
+    "breakout": {
+      "output.rotation": "Right 90"
+    },
+    "bronx": {
+      "output.rotation": "Right 90"
+    },
     "brubber": {
-      "scaling.crop.right": -1
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -1
     },
     "btime": null,
     "bubbles": null,
@@ -834,24 +869,26 @@
     "calipso": null,
     "cameltry": null,
     "canyon": {
-      "scaling.crop.left": -4
+      "output.crop_240p.left": -4
     },
     "captcomm": null,
     "carnival": null,
     "catacomb": null,
     "cavelon": {
-      "scaling.crop.right": 12,
-      "scaling.crop.left": -12
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
     },
     "cavenger": null,
     "cawing": null,
     "ccastles": null,
     "cclimber": null,
     "cclimbr2": {
-      "scaling.crop.right": -24,
-      "scaling.crop.left": -163,
-      "scaling.crop.top": -28,
-      "scaling.crop.bottom": -1
+      "output.crop_240p.top": -28,
+      "output.crop_240p.bottom": -1,
+      "output.crop_240p.left": -163,
+      "output.crop_240p.right": -24,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "cd-i": {
       "advanced.effects.mask.strength": -2,
@@ -865,55 +902,62 @@
     "chinagat": null,
     "choko": null,
     "chopliftu": {
-      "scaling.crop.left": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
     "circusc": null,
     "citycon": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "ckong": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -11
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
     },
     "ckongdks": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -11
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
     },
     "ckongo": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -11
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
     },
     "ckongpt2": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -11
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
     },
     "ckongpt2b": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -11
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
     },
     "cleansweept": null,
     "clowns": {
-      "scaling.crop.right": -5
+      "output.crop_240p.right": -5
     },
     "cltchitr": {
-      "scaling.crop.left": -3
+      "output.crop_240p.left": -3
     },
     "clubpacm": null,
-    "cninja": null,
+    "cninja": {
+      "output.auto_crop": "On"
+    },
     "colmns97": null,
     "colony7": {
-      "scaling.crop.right": -1
+      "output.crop_240p.right": -1
     },
     "combatsc": {
-      "scaling.crop.left": -8
+      "output.crop_240p.left": -8
     },
     "combh": {
-      "scaling.crop.right": -13,
-      "scaling.crop.left": -14,
-      "scaling.crop.top": -4,
-      "scaling.crop.bottom": -72
+      "output.crop_240p.top": -4,
+      "output.crop_240p.bottom": -72,
+      "output.crop_240p.left": -14,
+      "output.crop_240p.right": -13
     },
     "commando": null,
     "comotion": null,
@@ -922,35 +966,40 @@
     "contra": null,
     "cosmica": null,
     "cosmicg": {
-      "scaling.crop.right": -1
+      "output.crop_240p.right": -1
     },
     "cosmo": {
-      "scaling.crop.right": -7,
-      "scaling.crop.left": -6,
-      "scaling.crop.top": -37,
-      "scaling.crop.bottom": -16
+      "output.crop_240p.top": -37,
+      "output.crop_240p.bottom": -16,
+      "output.crop_240p.left": -6,
+      "output.crop_240p.right": -7,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "cotton": null,
     "cotton2": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -8,
-      "scaling.crop.top": -8,
-      "scaling.crop.bottom": -8
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -8,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
     },
     "cottonbm": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -8,
-      "scaling.crop.top": -8,
-      "scaling.crop.bottom": -7
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -7,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8,
+      "output.crop_480i.top": -5,
+      "output.crop_480i.bottom": -2,
+      "output.crop_480i.left": -16,
+      "output.crop_480i.right": -16
     },
     "countryc": null,
     "crater": null,
     "crazyblk": null,
     "crbaloon": {
-      "scaling.crop.right": -2,
-      "scaling.crop.left": -2,
-      "scaling.crop.top": -10,
-      "scaling.crop.bottom": -10
+      "output.crop_240p.top": -10,
+      "output.crop_240p.bottom": -10,
+      "output.crop_240p.left": -2,
+      "output.crop_240p.right": -2
     },
     "crimfght": null,
     "crush2": null,
@@ -960,28 +1009,32 @@
     "cworld2j": null,
     "cybots": null,
     "dakkochn": {
-      "scaling.crop.left": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
     "danchih": null,
     "danchiq": null,
     "dangar": {
-      "scaling.crop.top": -17
+      "output.crop_240p.top": -17
     },
     "dangseed": null,
     "darius": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.scaling_mode": "Free Form",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "darius2": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.scaling_mode": "Free Form",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "darkplnt": null,
     "dbreedjm72": null,
-    "dcon": null,
+    "dcon": {
+      "output.auto_crop": "On"
+    },
     "ddcrew": {
-      "scaling.crop.left": -3
+      "output.crop_240p.left": -3
     },
     "ddonpach": null,
     "ddonpacha": null,
@@ -994,10 +1047,12 @@
     "ddtod": null,
     "ddux": null,
     "deadconx": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
-    "decathlt": null,
+    "decathlt": {
+      "output.crop_480i.top": -1
+    },
     "defender": null,
     "demoderm": null,
     "demonwld2": null,
@@ -1022,13 +1077,13 @@
     "dokaben2": null,
     "domino": null,
     "dominos": {
-      "scaling.crop.left": -8
+      "output.crop_240p.left": -8
     },
     "dondokod": null,
     "donpachi": null,
     "donpachij": null,
     "dorodon": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "dotrikun": null,
     "dotrikun2": null,
@@ -1037,12 +1092,12 @@
     "dremshpr": null,
     "driftout": null,
     "drtoppel": {
-      "scaling.crop.left": -2
+      "output.crop_240p.left": -2
     },
     "dsoccr94": {
-      "scaling.crop.right": -34,
-      "scaling.crop.left": -26,
-      "scaling.crop.top": -8
+      "output.crop_240p.top": -8,
+      "output.crop_240p.left": -26,
+      "output.crop_240p.right": -34
     },
     "dsoccr94j": null,
     "dspirit": null,
@@ -1059,35 +1114,40 @@
       "advanced.system.osd_firmware.banner_image.load_banner": "KH - JVC D-Series D200.bmp"
     },
     "eggor": null,
-    "ejihon": null,
+    "ejihon": {
+      "output.crop_480i.top": -1
+    },
     "elandore": null,
     "elevator": {
-      "scaling.crop.left": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
     "elevatorb": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "esprade": null,
     "espradej": null,
     "eswat": null,
     "euroch92": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "exctleag": null,
     "exedexes": null,
-    "exeriont": null,
+    "exeriont": {
+      "output.rotation": "Right 90"
+    },
     "exprraid": null,
     "extrmatn": null,
     "eyes": null,
     "f1dream": null,
     "faceoff": null,
     "fantasyu": {
-      "scaling.crop.right": -12,
-      "scaling.crop.left": -5,
-      "scaling.crop.top": -27,
-      "scaling.crop.bottom": -40
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -27,
+      "output.crop_240p.bottom": -40,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -12
     },
     "fantzn2": null,
     "fantzn2x": null,
@@ -1108,8 +1168,8 @@
     "flstory": null,
     "foodf": null,
     "footchmp": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "forgottn": null,
     "fpoint": null,
@@ -1122,8 +1182,9 @@
     "futspy": null,
     "gaia": null,
     "galaga3": {
-      "scaling.crop.right": 10,
-      "scaling.crop.left": -10
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -10,
+      "output.crop_240p.right": 10
     },
     "galaga88": null,
     "galagamw": null,
@@ -1132,14 +1193,16 @@
     "gallopm72": null,
     "galxwars": null,
     "gangwars": {
-      "scaling.crop.right": -41,
-      "scaling.crop.left": -51,
-      "scaling.crop.top": -16,
-      "scaling.crop.bottom": -10
+      "output.crop_240p.top": -16,
+      "output.crop_240p.bottom": -10,
+      "output.crop_240p.left": -51,
+      "output.crop_240p.right": -41,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "gaplus": {
-      "scaling.crop.right": 10,
-      "scaling.crop.left": -10
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -10,
+      "output.crop_240p.right": 10
     },
     "gardia": null,
     "gaunt2": null,
@@ -1147,20 +1210,20 @@
     "gaxeduel": null,
     "gberet": null,
     "gbusters": {
-      "scaling.crop.top": -16,
-      "scaling.crop.bottom": -16
+      "output.crop_240p.top": -16,
+      "output.crop_240p.bottom": -16
     },
     "gemini": {
-      "scaling.crop.right": -13,
-      "scaling.crop.left": -14,
-      "scaling.crop.top": -40,
-      "scaling.crop.bottom": -52
+      "output.crop_240p.top": -40,
+      "output.crop_240p.bottom": -52,
+      "output.crop_240p.left": -14,
+      "output.crop_240p.right": -13
     },
     "genpeitd": null,
     "ghouls": null,
     "gigawing": null,
     "glfgreat": {
-      "scaling.crop.right": -1
+      "output.crop_240p.right": -1
     },
     "gng": null,
     "goldnaxe": null,
@@ -1168,7 +1231,9 @@
     "gorkans": null,
     "gorodki": null,
     "gradius": null,
-    "gradius3": null,
+    "gradius3": {
+      "output.auto_crop": "On"
+    },
     "grasspin": null,
     "gravitar": null,
     "grdforce": null,
@@ -1181,29 +1246,31 @@
     "gunforc2": null,
     "gunforce": null,
     "gunfront": {
-      "scaling.crop.right": 1,
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1,
+      "output.crop_240p.right": 1
     },
     "gunsmoke": null,
     "guwange": null,
     "guwanges": null,
     "gwarrior": null,
     "gyruss": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "hachoo": null,
     "hamaway": {
-      "scaling.crop.right": 12,
-      "scaling.crop.left": -12,
-      "scaling.crop.top": -3
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -3,
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
     },
     "hanagumi": null,
     "hangonjr": null,
     "hardhat": null,
     "hbarrel": null,
     "hcastle": {
-      "scaling.crop.left": -8
+      "output.crop_240p.left": -8
     },
     "hellfire": null,
     "hharryu": null,
@@ -1213,33 +1280,36 @@
     "hook": null,
     "hopmappy": null,
     "horekid": {
-      "scaling.crop.right": -9,
-      "scaling.crop.left": -17,
-      "scaling.crop.top": -49,
-      "scaling.crop.bottom": -52
+      "output.crop_240p.top": -49,
+      "output.crop_240p.bottom": -52,
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": -9
     },
     "horizon": null,
     "hotdogst": null,
     "hsf2": null,
     "hustle": null,
     "hvymetal": {
-      "scaling.crop.left": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
     "hwrace": {
-      "scaling.crop.bottom": -7
+      "output.crop_240p.bottom": -7
     },
     "hyperspt": null,
     "iganinju": null,
     "ikari": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "ikari3": {
-      "scaling.crop.right": -161,
-      "scaling.crop.left": -207,
-      "scaling.crop.top": -12,
-      "scaling.crop.bottom": -14
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -12,
+      "output.crop_240p.bottom": -14,
+      "output.crop_240p.left": -207,
+      "output.crop_240p.right": -161,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "imgfight": null,
     "imgfightj": null,
@@ -1247,13 +1317,13 @@
     "indytemp4": null,
     "inferno": null,
     "insectx": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "inthunt": null,
     "introdon": null,
     "invaders": {
-      "scaling.crop.top": -11,
-      "scaling.crop.bottom": -4
+      "output.crop_240p.top": -11,
+      "output.crop_240p.bottom": -4
     },
     "invadpt2": null,
     "inyourfa": null,
@@ -1264,41 +1334,47 @@
     "jackalj": null,
     "jackalr": null,
     "jailbrek": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -8
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
     },
-    "jin": null,
+    "jin": {
+      "output.rotation": "Right 90"
+    },
     "jitsupro": null,
     "journey": {
-      "scaling.crop.right": -2
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -2
     },
     "joust": null,
     "joust2": {
-      "scaling.crop.right": -4
+      "output.crop_240p.right": -4
     },
     "jumpshot": null,
     "jungleh": {
-      "scaling.crop.left": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
     "junglek": {
-      "scaling.crop.left": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
     "junofrst": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "jyangoku": null,
     "kageki": null,
     "karnov": null,
     "kchamp": null,
     "kick": {
-      "scaling.crop.right": -4
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -4
     },
     "kicker": null,
     "kickman": {
-      "scaling.crop.right": -4
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -4
     },
     "kicknrun": null,
     "kidniki": null,
@@ -1310,22 +1386,23 @@
     "konek": null,
     "koroleva": null,
     "koshien": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "kot": null,
     "kozure": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -23,
-      "scaling.crop.top": -5,
-      "scaling.crop.bottom": -13
+      "output.crop_240p.top": -5,
+      "output.crop_240p.bottom": -13,
+      "output.crop_240p.left": -23,
+      "output.crop_240p.right": -8,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "kram": null,
     "kroozr": null,
     "ktiger": null,
     "kungfum": null,
     "ladybug": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "lagunar": null,
     "ldrun": null,
@@ -1333,18 +1410,19 @@
     "ldrun3": null,
     "ldrun4": null,
     "legionj2": {
-      "scaling.crop.right": -2,
-      "scaling.crop.left": -28,
-      "scaling.crop.top": -9,
-      "scaling.crop.bottom": -57
+      "output.crop_240p.top": -9,
+      "output.crop_240p.bottom": -57,
+      "output.crop_240p.left": -28,
+      "output.crop_240p.right": -2,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "lethalth": null,
     "lghost": null,
     "lgtnfght": null,
     "lifefrcej": null,
     "liquidk": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "lizwiz": null,
     "llander": null,
@@ -1360,14 +1438,14 @@
     "mahoudai": null,
     "majtitl2": null,
     "manhatan": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -8
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
     },
     "maniach": null,
     "mappy": null,
     "marble5": {
-      "scaling.crop.right": -24,
-      "scaling.crop.left": -24
+      "output.crop_240p.left": -24,
+      "output.crop_240p.right": -24
     },
     "mario": null,
     "mars": null,
@@ -1377,16 +1455,20 @@
     "maxrpm": null,
     "mayday": null,
     "maze": null,
-    "mazinger": null,
+    "mazinger": {
+      "output.rotation": "Right 90",
+      "output.auto_crop": "On"
+    },
     "mazingerj": null,
     "mbombrd": null,
     "megablst": null,
     "megaman": null,
     "megaman2": null,
     "megrescu": {
-      "scaling.crop.right": 27,
-      "scaling.crop.left": -27,
-      "scaling.crop.top": -8
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -8,
+      "output.crop_240p.left": -27,
+      "output.crop_240p.right": 27
     },
     "memtest": {
       "advanced.effects.mask.strength": -2,
@@ -1395,10 +1477,12 @@
     },
     "mercs": null,
     "metalb": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
-    "metmqstr": null,
+    "metmqstr": {
+      "output.auto_crop": "On"
+    },
     "metrocrs": null,
     "mia": null,
     "midres": null,
@@ -1427,7 +1511,7 @@
     "mrjong": null,
     "mrtnt": null,
     "mrviking": {
-      "scaling.crop.right": -1
+      "output.crop_240p.right": -1
     },
     "msh": null,
     "mshvsf": null,
@@ -1439,48 +1523,55 @@
     "mvsc": null,
     "mwalk": null,
     "mx5000": null,
-    "myfairld": null,
+    "myfairld": {
+      "output.crop_480i.top": -1,
+      "output.crop_480i.right": -23
+    },
     "myhero": null,
     "mysticm": null,
     "mysticri": null,
     "naughtyb": {
-      "scaling.crop.right": -12,
-      "scaling.crop.left": -115
+      "output.scaling_mode": "Proportional",
+      "output.auto_crop": "On",
+      "output.crop_240p.left": -115,
+      "output.crop_240p.right": -12
     },
     "nbbatman": null,
     "nemo": null,
     "ngp": null,
     "nibbler": {
-      "scaling.crop.right": -12,
-      "scaling.crop.left": -5,
-      "scaling.crop.top": -27,
-      "scaling.crop.bottom": -39
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -27,
+      "output.crop_240p.bottom": -39,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -12
     },
     "ninjak": {
-      "scaling.crop.left": -1,
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
     "ninjakun": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "ninjaw": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.scaling_mode": "Free Form",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "nobb": {
-      "scaling.crop.top": -7,
-      "scaling.crop.bottom": -9
+      "output.crop_240p.top": -7,
+      "output.crop_240p.bottom": -9
     },
     "nomnlnd": null,
     "nova2001": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "nova2001h": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "nrallyx": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "nspiritj": null,
     "numcrash": null,
@@ -1489,10 +1580,10 @@
     "omegab": null,
     "onna34ro": null,
     "opaopa": {
-      "scaling.crop.left": -8
+      "output.crop_240p.left": -8
     },
     "opaopan": {
-      "scaling.crop.left": -8
+      "output.crop_240p.left": -8
     },
     "orbitron": null,
     "oscar": null,
@@ -1504,71 +1595,79 @@
     "pacman": null,
     "pacmania": null,
     "pacnchmp": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "pacnpal": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "pacplus": null,
     "paddlema": {
-      "scaling.crop.right": -18,
-      "scaling.crop.left": -9,
-      "scaling.crop.top": -122,
-      "scaling.crop.bottom": -98
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -122,
+      "output.crop_240p.bottom": -98,
+      "output.crop_240p.left": -9,
+      "output.crop_240p.right": -18,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "pang": null,
     "pang3": null,
     "panic": {
-      "scaling.crop.right": -1
+      "output.crop_240p.right": -1
     },
     "parodius": null,
     "passsht": null,
     "pballoon": {
-      "scaling.crop.right": -4,
-      "scaling.crop.left": -13,
-      "scaling.crop.top": -27,
-      "scaling.crop.bottom": -39
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -27,
+      "output.crop_240p.bottom": -39,
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": -4
     },
     "pblbeach": null,
     "pengo": null,
     "pepper2": null,
-    "perfrman": null,
+    "perfrman": {
+      "output.rotation": "Right 90"
+    },
     "pestplce": {
-      "scaling.crop.right": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -1
     },
     "peterpak": null,
     "phoenix": null,
     "pickin": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -11,
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
     },
     "pingpong": {
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1
     },
     "pipibibs": {
-      "scaling.crop.right": -52,
-      "scaling.crop.left": -71,
-      "scaling.crop.top": -11,
-      "scaling.crop.bottom": -1
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -11,
+      "output.crop_240p.bottom": -1,
+      "output.crop_240p.left": -71,
+      "output.crop_240p.right": -52,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "piratpet": {
-      "scaling.crop.left": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
     "pisces": null,
     "pistoldm": null,
     "pitfall2": null,
     "pkunwar": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "pkunwarj": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "playball": {
-      "scaling.crop.right": -2
+      "output.crop_240p.right": -2
     },
     "pleiadce": null,
     "pleiads": null,
@@ -1576,33 +1675,38 @@
     "pnickj": null,
     "pokonyan": null,
     "polaris": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "polyplay": null,
     "polyplay2": null,
     "pong": null,
     "ponpoko": {
-      "scaling.crop.right": -16,
-      "scaling.crop.left": -16
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -16
     },
     "pooyan": {
-      "scaling.crop.right": 8,
-      "scaling.crop.left": -8
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": 8
     },
     "popeye": null,
     "popflamn": null,
     "porter": null,
     "pow": {
-      "scaling.crop.right": -40,
-      "scaling.crop.left": -53,
-      "scaling.crop.top": -12,
-      "scaling.crop.bottom": -15
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -12,
+      "output.crop_240p.bottom": -15,
+      "output.crop_240p.left": -53,
+      "output.crop_240p.right": -40,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "powerdrv": null,
     "pprobe": {
-      "scaling.crop.right": 4,
-      "scaling.crop.left": -4,
-      "scaling.crop.bottom": -8
+      "output.rotation": "Right 90",
+      "output.auto_rotate": "Off",
+      "output.crop_240p.bottom": -8,
+      "output.crop_240p.left": -4,
+      "output.crop_240p.right": 4
     },
     "prehisle": null,
     "prikura": null,
@@ -1612,12 +1716,12 @@
     "psychic5j": null,
     "puckman": null,
     "pulirula": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "pulsar": null,
     "punisher": null,
     "punkshot": {
-      "scaling.crop.left": -2
+      "output.crop_240p.left": -2
     },
     "puyosun": null,
     "pzloop2": null,
@@ -1625,95 +1729,100 @@
     "qbert": null,
     "qbertqub": null,
     "qcrayon": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "qcrayon2": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "qix": null,
     "qix2": null,
     "qjinsei": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "qndream": null,
     "qtono2j": null,
     "qtorimon": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "quartet": null,
     "quartet2a": null,
     "quester": null,
     "quizhq": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "qzchikyu": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "qzquest": {
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1
     },
     "radarscp": null,
     "raflesia": null,
     "raiders5": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "rallybik": null,
     "rallyx": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "rampage": {
-      "scaling.crop.bottom": -2
+      "output.crop_240p.bottom": -2
     },
     "rastan": null,
     "reactor": null,
     "redbaron": null,
     "redbarona": null,
     "redearthn": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "regulus": {
-      "scaling.crop.right": -1
+      "output.crop_240p.right": -1
     },
     "renegade": null,
     "rescue": null,
     "ridleofp": {
-      "scaling.crop.right": 27,
-      "scaling.crop.left": -27,
-      "scaling.crop.top": -8
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -8,
+      "output.crop_240p.left": -27,
+      "output.crop_240p.right": 27
     },
     "ringdest": {
-      "scaling.crop.top": -8,
-      "scaling.crop.bottom": -7
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -7
     },
     "riotcity": {
-      "scaling.crop.right": -16,
-      "scaling.crop.left": -16
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -16
     },
     "riskchal": null,
     "roadblst": null,
     "roadf": null,
     "roadrunn": null,
     "robby": {
-      "scaling.crop.left": -5
+      "output.crop_240p.left": -5
     },
     "robocop": null,
     "robotron": null,
     "rocnrope": {
-      "scaling.crop.right": 17,
-      "scaling.crop.left": -17
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": 17
     },
     "rodland": null,
     "roishtar": null,
     "rompers": null,
     "rpatroln": null,
-    "rsgun": null,
+    "rsgun": {
+      "output.crop_480i.top": -1
+    },
     "rthunder": null,
     "rtype": null,
     "rtype2": null,
@@ -1722,25 +1831,29 @@
     "rtypeleo": null,
     "rumba": null,
     "rungun": {
-      "scaling.crop.right": -2,
-      "scaling.crop.left": -30,
-      "scaling.crop.top": -1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.left": -30,
+      "output.crop_240p.right": -2
     },
     "rushatck": null,
     "rygar": {
-      "scaling.crop.right": -40,
-      "scaling.crop.left": -52,
-      "scaling.crop.top": -14,
-      "scaling.crop.bottom": -12
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -14,
+      "output.crop_240p.bottom": -12,
+      "output.crop_240p.left": -52,
+      "output.crop_240p.right": -40
     },
     "rygarj": {
-      "scaling.crop.right": -40,
-      "scaling.crop.left": -53,
-      "scaling.crop.top": -14,
-      "scaling.crop.bottom": -13
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -14,
+      "output.crop_240p.bottom": -13,
+      "output.crop_240p.left": -53,
+      "output.crop_240p.right": -40
     },
     "ryukyu": null,
-    "sailormn": null,
+    "sailormn": {
+      "output.auto_crop": "On"
+    },
     "sailormnj": null,
     "salamandj": null,
     "samesame2": null,
@@ -1750,17 +1863,19 @@
     "sasissu": null,
     "saturnzi": null,
     "sbagman": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -11
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": 11
     },
     "sbasketb": {
-      "scaling.crop.right": 17,
-      "scaling.crop.left": -17
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": 17
     },
     "sbrkout": {
-      "scaling.crop.left": -2,
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -2
     },
     "schaser": null,
     "scobra": null,
@@ -1768,21 +1883,22 @@
     "scotrsht": null,
     "scramble": null,
     "sdgnmps": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "sdi": null,
     "sdungeon": null,
     "seabass": null,
     "searchar": {
-      "scaling.crop.right": -14,
-      "scaling.crop.left": -10,
-      "scaling.crop.top": -40,
-      "scaling.crop.bottom": -52
+      "output.crop_240p.top": -40,
+      "output.crop_240p.bottom": -52,
+      "output.crop_240p.left": -10,
+      "output.crop_240p.right": -14,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "seawolf": null,
     "seawolf2": {
-      "scaling.crop.left": -14,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -14
     },
     "secretag": null,
     "sectionz": null,
@@ -1795,12 +1911,13 @@
     "sfa2": null,
     "sfa3": null,
     "sfiiin": {
-      "scaling.crop.left": -1,
-      "scaling.crop.bottom": 1
+      "output.auto_crop": "On",
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
     "sfposeid": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -8
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
     },
     "sfz2al": null,
     "sfzch": null,
@@ -1810,85 +1927,99 @@
     "shangon": null,
     "shanhigw": null,
     "shdancer": {
-      "scaling.crop.left": -3
+      "output.crop_240p.left": -3
     },
     "shienryu": null,
     "shinobi": null,
     "shippumd": null,
     "shollow": {
-      "scaling.crop.right": -3
+      "output.rotation": "Right 90",
+      "output.crop_240p.right": -3
     },
     "shtrider": null,
     "shuffle": null,
     "sidearms": null,
     "silkworm": {
-      "scaling.crop.right": -40,
-      "scaling.crop.left": -52,
-      "scaling.crop.top": -14,
-      "scaling.crop.bottom": -11
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -14,
+      "output.crop_240p.bottom": -11,
+      "output.crop_240p.left": -52,
+      "output.crop_240p.right": -40
     },
     "silvland": null,
     "simpsons": null,
     "sinistar": {
-      "scaling.crop.right": -2
+      "output.crop_240p.right": -2
     },
     "sjryuko": null,
     "skyadvnt": {
-      "scaling.crop.right": -11,
-      "scaling.crop.left": -16,
-      "scaling.crop.top": -41,
-      "scaling.crop.bottom": -51
+      "output.crop_240p.top": -41,
+      "output.crop_240p.bottom": -51,
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -11,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "skykiddx": null,
     "skyskipr": null,
-    "skysmash": null,
+    "skysmash": {
+      "output.auto_rotate": "Off",
+      "output.auto_crop": "On"
+    },
     "skysoldr": {
-      "scaling.crop.right": -11,
-      "scaling.crop.left": -16,
-      "scaling.crop.top": -41,
-      "scaling.crop.bottom": -51
+      "output.crop_240p.top": -41,
+      "output.crop_240p.bottom": -51,
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -11,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "slammast": null,
-    "slapfighb1": null,
+    "slapfighb1": {
+      "output.rotation": "Right 90"
+    },
     "slapshtr": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -8
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
     },
     "smleague": null,
     "snapjack": null,
     "snowbro2": {
-      "scaling.crop.right": -38,
-      "scaling.crop.left": -51,
-      "scaling.crop.top": -11,
-      "scaling.crop.bottom": -1
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -11,
+      "output.crop_240p.bottom": -1,
+      "output.crop_240p.left": -51,
+      "output.crop_240p.right": -38,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "snowbrosj": null,
     "sokyugrt": null,
     "solarfox": {
-      "scaling.crop.right": -4,
-      "scaling.crop.bottom": 1
+      "output.rotation": "Right 90",
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -4
     },
     "soldam": null,
     "solfigtr": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "solomon": null,
     "solomonj": null,
     "sonicbom": null,
     "sonson": {
-      "scaling.crop.left": -2
+      "output.crop_240p.left": -2
     },
     "sosterm": null,
     "spacecr": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "spacerace": null,
     "spaceskr": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "spacezap": {
-      "scaling.crop.left": -4
+      "output.crop_240p.left": -4
     },
     "spang": null,
     "spatter": null,
@@ -1902,12 +2033,14 @@
     "splatter": null,
     "sprglbpg": null,
     "sprint1": {
-      "scaling.crop.left": -8
+      "output.crop_240p.left": -8
     },
     "sprint2": {
-      "scaling.crop.left": -8
+      "output.crop_240p.left": -8
     },
-    "spyhunt": null,
+    "spyhunt": {
+      "output.rotation": "Right 90"
+    },
     "sqbert": null,
     "squaitsa": null,
     "srumbler": null,
@@ -1916,41 +2049,44 @@
     "ssi": null,
     "ssoldier": null,
     "ssriders": {
-      "scaling.crop.right": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -1
     },
     "sss": null,
     "starforc": {
-      "scaling.crop.right": 12,
-      "scaling.crop.left": -12
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 12
     },
     "stargate": null,
     "stargrds": {
-      "scaling.crop.bottom": -2
+      "output.crop_240p.bottom": -2
     },
     "starjack": {
-      "scaling.crop.right": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -1
     },
     "starjacks": {
-      "scaling.crop.right": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -1
     },
     "stdragon": null,
     "stratgyx": null,
     "stratof": null,
     "streetsm": {
-      "scaling.crop.right": -121,
-      "scaling.crop.left": -155,
-      "scaling.crop.top": -12,
-      "scaling.crop.bottom": -13
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -12,
+      "output.crop_240p.bottom": -13,
+      "output.crop_240p.left": -155,
+      "output.crop_240p.right": -121,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "strider": null,
     "subs": null,
     "sucasino": null,
     "suikoenb": null,
     "superpac": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "suprleag": null,
     "suprloco": null,
@@ -1960,12 +2096,13 @@
     "sxevious": null,
     "szaxxon": null,
     "tankbatt": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "tankfrce": null,
     "tapper": {
-      "scaling.crop.bottom": -2
+      "output.crop_240p.bottom": -2
     },
     "targ": null,
     "tazmania": null,
@@ -1973,16 +2110,18 @@
     "tehkanwc": null,
     "tekipaki": null,
     "terracre": {
-      "scaling.crop.right": -9,
-      "scaling.crop.left": -17,
-      "scaling.crop.top": -43,
-      "scaling.crop.bottom": -53
+      "output.auto_crop": "On",
+      "output.crop_240p.top": -43,
+      "output.crop_240p.bottom": -53,
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": -9
     },
     "terrafj": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -23,
-      "scaling.crop.top": -5,
-      "scaling.crop.bottom": -5
+      "output.crop_240p.top": -5,
+      "output.crop_240p.bottom": -5,
+      "output.crop_240p.left": -23,
+      "output.crop_240p.right": -8,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "tetris": null,
     "tetrisse": null,
@@ -1990,56 +2129,61 @@
     "theglobp": null,
     "theroes": null,
     "thunderx": {
-      "scaling.crop.right": -16,
-      "scaling.crop.left": -16,
-      "scaling.crop.bottom": 1
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -16
     },
     "thundfox": {
-      "scaling.crop.left": -1,
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 2
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 2,
+      "output.crop_240p.left": -1
     },
     "thunt": null,
     "thuntk": null,
-    "tigerhb1": null,
+    "tigerhb1": {
+      "output.rotation": "Right 90"
+    },
     "tigeroad": null,
     "timber": {
-      "scaling.crop.bottom": -2
+      "output.crop_240p.bottom": -2
     },
     "timeplt": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "timescan": null,
     "timesold": {
-      "scaling.crop.right": -11,
-      "scaling.crop.left": -16,
-      "scaling.crop.top": -41,
-      "scaling.crop.bottom": -51
+      "output.crop_240p.top": -41,
+      "output.crop_240p.bottom": -51,
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -11,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "timetunl": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -8,
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
     },
     "tinstar": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "tiptop": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "tmnt": null,
     "tmnt2": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -8,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
     },
     "tnextspcj": {
-      "scaling.crop.right": -10,
-      "scaling.crop.left": -17,
-      "scaling.crop.top": -41,
-      "scaling.crop.bottom": -52
+      "output.crop_240p.top": -41,
+      "output.crop_240p.bottom": -52,
+      "output.crop_240p.left": -17,
+      "output.crop_240p.right": -10
     },
     "tnk3": null,
     "tnzs": null,
@@ -2051,91 +2195,103 @@
     "toryumon": null,
     "toutrun": null,
     "tp84": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "tp84a": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "tp84b": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "trackfld": {
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1
     },
     "transfrm": {
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1
     },
     "travrusa": null,
     "tricktrp": {
-      "scaling.crop.top": -8,
-      "scaling.crop.bottom": -1
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -1
     },
     "tripool": null,
     "troangel": null,
     "trojan": null,
     "tron": {
-      "scaling.crop.right": -3,
-      "scaling.crop.bottom": 1
+      "output.rotation": "Right 90",
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -3
     },
     "truxton": null,
     "truxton2": {
-      "scaling.crop.right": -2,
-      "scaling.crop.left": -11,
-      "scaling.crop.top": -38,
-      "scaling.crop.bottom": -50
+      "output.crop_240p.top": -38,
+      "output.crop_240p.bottom": -50,
+      "output.crop_240p.left": -11,
+      "output.crop_240p.right": -2,
+      "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
     "tshoot": {
-      "scaling.crop.right": -3,
-      "scaling.crop.left": -7,
-      "scaling.crop.top": -8,
-      "scaling.crop.bottom": -3
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -3,
+      "output.crop_240p.left": -7,
+      "output.crop_240p.right": -3
     },
     "tturfu": {
-      "scaling.crop.right": -8,
-      "scaling.crop.left": -8,
-      "scaling.crop.top": -8,
-      "scaling.crop.bottom": -7
+      "output.crop_240p.top": -8,
+      "output.crop_240p.bottom": -7,
+      "output.crop_240p.left": -8,
+      "output.crop_240p.right": -8
     },
     "tumblep": null,
     "turbotag": {
-      "scaling.crop.bottom": -17
+      "output.rotation": "Right 90",
+      "output.crop_240p.bottom": -17
     },
     "turtles": {
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1
     },
     "tutankhm": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
-    "twcup98": null,
+    "twcup98": {
+      "output.crop_480i.top": -1
+    },
     "twinbee": {
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1
     },
     "twinbeeb": null,
     "twotigerc": null,
-    "twsoc98": null,
+    "twsoc98": {
+      "output.crop_480i.top": -1
+    },
     "uccops": null,
     "ultratnk": {
-      "scaling.crop.left": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -1
     },
     "uniwars": null,
     "unsquad": null,
     "uopoko": null,
     "uopokoj": null,
     "upndown": {
-      "scaling.crop.right": -1,
-      "scaling.crop.top": -1,
-      "scaling.crop.bottom": 1
+      "output.crop_240p.top": -1,
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.right": -1
     },
     "vanguard": {
-      "scaling.crop.right": -12,
-      "scaling.crop.left": -5,
-      "scaling.crop.top": -27,
-      "scaling.crop.bottom": -40
+      "output.rotation": "Right 90",
+      "output.crop_240p.top": -27,
+      "output.crop_240p.bottom": -40,
+      "output.crop_240p.left": -5,
+      "output.crop_240p.right": -12
     },
     "vanvan": null,
     "varth": null,
@@ -2144,14 +2300,17 @@
     "vballb": null,
     "vendetta": null,
     "venture": null,
-    "vfkids": null,
+    "vfkids": {
+      "output.crop_480i.top": -1
+    },
     "vfremix": null,
     "vhunt2": null,
     "victnine": null,
     "victorycb": null,
     "victroad": {
-      "scaling.crop.right": 13,
-      "scaling.crop.left": -13
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -13,
+      "output.crop_240p.right": 13
     },
     "vigilant": null,
     "vimanaj": null,
@@ -2162,32 +2321,34 @@
     "vulcan": null,
     "vulgus": null,
     "wacko": {
-      "scaling.crop.bottom": -2
+      "output.crop_240p.bottom": -2
     },
     "warofbug": null,
     "waterski": {
-      "scaling.crop.bottom": -9
+      "output.crop_240p.bottom": -9
     },
     "wb3": {
-      "scaling.crop.right": -16,
-      "scaling.crop.left": -16
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -16
     },
     "wbmlvcd": {
-      "scaling.crop.left": -1
+      "output.crop_240p.left": -1
     },
     "wboy": {
-      "scaling.crop.right": -16,
-      "scaling.crop.left": -16
+      "output.crop_240p.left": -16,
+      "output.crop_240p.right": -16
     },
     "wexpress": null,
     "wildfang": null,
     "willow": null,
-    "winterht": null,
+    "winterht": {
+      "output.crop_480i.top": -1
+    },
     "wldcourt": {
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1
     },
     "wmatch": {
-      "scaling.crop.right": -1
+      "output.crop_240p.right": -1
     },
     "wndrmomo": null,
     "wndrplnt": null,
@@ -2195,17 +2356,18 @@
     "wofch": null,
     "woodpeck": null,
     "wow": {
-      "scaling.crop.right": -30,
-      "scaling.crop.left": -26,
-      "scaling.crop.top": -2,
-      "scaling.crop.bottom": 1
+      "output.scaling_mode": "Proportional",
+      "output.crop_240p.top": -2,
+      "output.crop_240p.bottom": 1,
+      "output.crop_240p.left": -26,
+      "output.crop_240p.right": -30
     },
     "wrestwar": null,
     "ws": {
-      "scaling.crop.bottom": 1
+      "output.crop_240p.bottom": 1
     },
     "wwallyj": {
-      "scaling.crop.left": -4
+      "output.crop_240p.left": -4
     },
     "wwestern": null,
     "wwfsstar": null,
@@ -2213,8 +2375,8 @@
     "xevious": null,
     "xmcota": null,
     "xmen": {
-      "scaling.crop.right": -6,
-      "scaling.crop.left": -10
+      "output.crop_240p.left": -10,
+      "output.crop_240p.right": -6
     },
     "xmultiplm72": null,
     "xmvsf": null,
@@ -2225,10 +2387,13 @@
     "zaxxon": null,
     "zerowing": null,
     "zigzagb": {
-      "scaling.crop.right": 11,
-      "scaling.crop.left": -12
+      "output.rotation": "Right 90",
+      "output.crop_240p.left": -12,
+      "output.crop_240p.right": 11
     },
-    "znpwfv": null,
+    "znpwfv": {
+      "output.crop_480i.top": -1
+    },
     "zx48": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp",

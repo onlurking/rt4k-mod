@@ -26,12 +26,14 @@ Based on the full feature set documented at https://consolemods.org/wiki/AV:Retr
 
 | Status | Setting | Values | Region |
 |--------|---------|--------|--------|
-| ✅ | Input Crop (Top/Bottom/Left/Right) | `signed 16-bit pixels` | 0x0494, 0x0594, 0x0694, 0x0794 |
+| ✅ | 240p Crop (Top/Bottom/Left/Right) | `signed 16-bit pixels` | 0x0494, 0x0594, 0x0694, 0x0794 |
+| ✅ | 480i Crop (Top/Bottom/Left/Right) | `signed 16-bit pixels` | 0x0496, 0x0596, 0x0696, 0x0796 |
+| ✅ | Scaling Mode | `Auto Fill`, `Proportional`, `Free Form`, `Auto Fill Integer` | 0x091c |
+| ✅ | Rotation | `None`, `Right 90`, `Left 90` | 0x1868 |
+| ✅ | Auto Rotate | `On`, `Off` | 0x1f64 |
+| ✅ | Auto Crop | `Off`, `On` | 0x1888 |
 | ⬜ | Vertical Pre-Scale | `1/2` to `1/31` | |
-| ⬜ | RoTATE | `Off`, `90° CW`, `90° CCW` (Pro only) | |
-| ⬜ | Auto Crop | `Vertical Only`, `Full Crop to 4:3`, `Full Crop to 16:9` | |
 | ⬜ | Scaler → Aspect Correction | `4:3 (PAR)`, `16:9 (PAR)`, `1:1 (Sq. Pixel)` | |
-| ⬜ | Scaler → Scaling Mode | `Auto Fill`, `Proportional`, `Free-Form`, `Auto Fill Integer` | |
 | ⬜ | Scaler → Vert. Factor | `scaling factor` | |
 | ⬜ | Scaler → Hori. Factor | `scaling factor` | |
 | ⬜ | Scaler → Buffer Length | `Min. Lag`, `1/2 Frame`, `1 Frame` | |
@@ -270,10 +272,15 @@ Based on the full feature set documented at https://consolemods.org/wiki/AV:Retr
 | 0x03a6–0x03af | 10B | Scaling control bytes (0x00/0xFF) | ⬜ Unknown |
 | 0x03b0–0x03c7 | 24B | Scaling parameters | ⬜ Unknown |
 | 0x03c8–0x03cf | 8B | Scaling control | ⬜ Unknown |
-| 0x0494 | 2B | Scaling crop → Right (signed 16-bit) | ✅ Mapped |
-| 0x0594 | 2B | Scaling crop → Left (signed 16-bit) | ✅ Mapped |
-| 0x0694 | 2B | Scaling crop → Top (signed 16-bit) | ✅ Mapped |
-| 0x0794 | 2B | Scaling crop → Bottom (signed 16-bit) | ✅ Mapped |
+| 0x0494 | 2B | 240p crop → Right (signed 16-bit) | ✅ Mapped |
+| 0x0496 | 2B | 480i crop → Right (signed 16-bit) | ✅ Mapped |
+| 0x0594 | 2B | 240p crop → Left (signed 16-bit) | ✅ Mapped |
+| 0x0596 | 2B | 480i crop → Left (signed 16-bit) | ✅ Mapped |
+| 0x0694 | 2B | 240p crop → Top (signed 16-bit) | ✅ Mapped |
+| 0x0696 | 2B | 480i crop → Top (signed 16-bit) | ✅ Mapped |
+| 0x0794 | 2B | 240p crop → Bottom (signed 16-bit) | ✅ Mapped |
+| 0x0796 | 2B | 480i crop → Bottom (signed 16-bit) | ✅ Mapped |
+| 0x091c | 1B | Scaling mode (ENUM: Auto Fill/Proportional/Free Form/Auto Fill Integer) | ✅ Mapped |
 | 0x0800–0x086f | 112B | Input detection (mode/flags, 2-4 values) | ⬜ Unknown |
 | 0x0880–0x08ef | 112B | Input detection (mode/flags, 1-4 values) | ⬜ Unknown |
 | 0x08a5 | 1B | Input detection enum (0-2) | ⬜ Unknown |
@@ -303,8 +310,9 @@ Based on the full feature set documented at https://consolemods.org/wiki/AV:Retr
 | 0x1848 | 1B | OSD auto-off timeout (ENUM) | ✅ Mapped |
 | 0x184c | 1B | OSD position (ENUM: Left/Center/Right) | ✅ Mapped |
 | 0x1854 | 1B | Debug OSD page (ENUM) | ✅ Mapped |
-| 0x1868 | 1B | System enum (0-2) | ⬜ Unknown |
+| 0x1868 | 1B | Rotation (ENUM: None/Right 90/Left 90) | ✅ Mapped |
 | 0x186c | 1B | System boolean (0/1) | ⬜ Unknown |
+| 0x1888 | 1B | Auto crop (ENUM: Off/On) | ✅ Mapped |
 | 0x1889–0x188c | 4B | System boolean flags (0/1) | ⬜ Unknown |
 | 0x18e0–0x193f | 96B | System settings (mostly 0/1) | ⬜ Unknown |
 | 0x1c2c–0x1c32 | 7B | Sample Rate Detection progressive enables (BIT each) | ✅ Mapped |
@@ -339,6 +347,7 @@ Based on the full feature set documented at https://consolemods.org/wiki/AV:Retr
 | 0x1f0c | 1B | MiSTer DV1 auto-crop (BIT) | ✅ Mapped |
 | 0x1f10 | 1B | MiSTer DV1 auto-decimate (BIT) | ✅ Mapped |
 | 0x1f14–0x1f5f | 76B | Processing/DV1 flags | ⬜ Unknown |
+| 0x1f64 | 1B | Auto rotate (ENUM: On/Off) | ✅ Mapped |
 | 0x20d0 | 1B | MiSTer DV1 enabled (BIT) | ✅ Mapped |
 | 0x20d4–0x20df | 12B | DV1 parameters | ⬜ Unknown |
 | 0x5869 | 1B | Input mode (ENUM) | ✅ Mapped |
