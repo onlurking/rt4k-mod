@@ -32,7 +32,7 @@ const DEFAULT_PROFILE_PATH = 'CRT TV and PVM Emulation by Kuro Houou/JVC D-Serie
 
 async function loadAvailableProfiles(): Promise<void> {
   try {
-    const res = await fetch('/profiles/manifest.json')
+    const res = await fetch('/rt4k-profiles/manifest.json')
     if (!res.ok) return
     const profiles = await res.json() as ProfileEntry[]
     availableProfiles.value = profiles
@@ -92,7 +92,7 @@ export function useProfile() {
 
     try {
       const baseUrl = selectedProfile.value 
-        ? `/profiles/${selectedProfile.value.path}`
+        ? `/rt4k-profiles/${selectedProfile.value.path}`
         : '/base-profile.rt4'
       const baseProfile = await fetchBaseProfile(baseUrl)
       const { defaults, cores } = config.value

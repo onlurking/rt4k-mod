@@ -1,0 +1,230 @@
+[
+  {
+    "name": "Basic HDR CRT/SNES SGB Mono LCD",
+    "path": "Basic HDR CRT/SNES SGB Mono LCD.rt4"
+  },
+  {
+    "name": "Basic HDR CRT/BVM 1000 TVL",
+    "path": "Basic HDR CRT/BVM 1000 TVL.rt4"
+  },
+  {
+    "name": "Basic HDR CRT/Consumer Slot Mask",
+    "path": "Basic HDR CRT/Consumer Slot Mask.rt4"
+  },
+  {
+    "name": "Basic HDR CRT/Consumer Trinitron",
+    "path": "Basic HDR CRT/Consumer Trinitron.rt4"
+  },
+  {
+    "name": "Basic HDR CRT/PVM 600 TVL",
+    "path": "Basic HDR CRT/PVM 600 TVL.rt4"
+  },
+  {
+    "name": "Basic HDR CRT/GBI 360p RGB LCD",
+    "path": "Basic HDR CRT/GBI 360p RGB LCD.rt4"
+  },
+  {
+    "name": "Basic HDR CRT/Hi-Res Dot Mask",
+    "path": "Basic HDR CRT/Hi-Res Dot Mask.rt4"
+  },
+  {
+    "name": "Basic HDR CRT/SNES SGB RGB LCD",
+    "path": "Basic HDR CRT/SNES SGB RGB LCD.rt4"
+  },
+  {
+    "name": "ii_edub_ii CRT Profiles/_S-Video",
+    "path": "ii_edub_ii CRT Profiles/_S-Video.rt4"
+  },
+  {
+    "name": "ii_edub_ii CRT Profiles/_Component",
+    "path": "ii_edub_ii CRT Profiles/_Component.rt4"
+  },
+  {
+    "name": "ii_edub_ii CRT Profiles/_VGA",
+    "path": "ii_edub_ii CRT Profiles/_VGA.rt4"
+  },
+  {
+    "name": "ii_edub_ii CRT Profiles/_Composite",
+    "path": "ii_edub_ii CRT Profiles/_Composite.rt4"
+  },
+  {
+    "name": "ii_edub_ii CRT Profiles/_RGB",
+    "path": "ii_edub_ii CRT Profiles/_RGB.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/JVC TM-H1950CG - 4K HDR BFI",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/JVC TM-H1950CG - 4K HDR BFI.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/Sony PVM 20L5 - 4K HDR BFI",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/Sony PVM 20L5 - 4K HDR BFI.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/Sony KV-FV310 - 4K HDR BFI",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/Sony KV-FV310 - 4K HDR BFI.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/Sony KV-FV310 - 4K HDR",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/Sony KV-FV310 - 4K HDR.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/Toshiba AF44 - 4K SDR",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/Toshiba AF44 - 4K SDR.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K SDR",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K SDR.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K HDR",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K HDR.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/JVC TM-H150CG - 4K HDR BFI",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/JVC TM-H150CG - 4K HDR BFI.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/JVC TM-H150CG - 4K HDR",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/JVC TM-H150CG - 4K HDR.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/Toshiba AF44 - 4K HDR",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/Toshiba AF44 - 4K HDR.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/Sony PVM 20L5 - 4K HDR",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/Sony PVM 20L5 - 4K HDR.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K HDR BFI",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K HDR BFI.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/Toshiba AF44 - 4K HDR BFI",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/Toshiba AF44 - 4K HDR BFI.rt4"
+  },
+  {
+    "name": "CRT TV and PVM Emulation by Kuro Houou/JVC TM-H1950CG - 4K HDR",
+    "path": "CRT TV and PVM Emulation by Kuro Houou/JVC TM-H1950CG - 4K HDR.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/RGB 240p (PAL to NTSC)",
+    "path": "Rog's CRT Emulation 50Hz/RGB 240p (PAL to NTSC).rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/YPbPr 480p",
+    "path": "Rog's CRT Emulation 50Hz/YPbPr 480p.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/Mega Drive RGB 240p CRT Beam",
+    "path": "Rog's CRT Emulation 50Hz/Mega Drive RGB 240p CRT Beam.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/Composite 240p CRT Beam (PAL to NTSC)",
+    "path": "Rog's CRT Emulation 50Hz/Composite 240p CRT Beam (PAL to NTSC).rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/Enh SVideo 240p (PAL to NTSC)",
+    "path": "Rog's CRT Emulation 50Hz/Enh SVideo 240p (PAL to NTSC).rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/YPbPr 480p CRT Beam (PAL to NTSC)",
+    "path": "Rog's CRT Emulation 50Hz/YPbPr 480p CRT Beam (PAL to NTSC).rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/Composite 240p CRT Beam",
+    "path": "Rog's CRT Emulation 50Hz/Composite 240p CRT Beam.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/Enh SVideo 240p CRT Beam",
+    "path": "Rog's CRT Emulation 50Hz/Enh SVideo 240p CRT Beam.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/YPbPr 480p CRT Beam",
+    "path": "Rog's CRT Emulation 50Hz/YPbPr 480p CRT Beam.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/Mega Drive RGB 240p CRT Beam (PAL to NTSC)",
+    "path": "Rog's CRT Emulation 50Hz/Mega Drive RGB 240p CRT Beam (PAL to NTSC).rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/HDMI 480p CRT Beam (PAL to NTSC)",
+    "path": "Rog's CRT Emulation 50Hz/HDMI 480p CRT Beam (PAL to NTSC).rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/Composite 240p (PAL to NTSC)",
+    "path": "Rog's CRT Emulation 50Hz/Composite 240p (PAL to NTSC).rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/Enh SVideo 240p",
+    "path": "Rog's CRT Emulation 50Hz/Enh SVideo 240p.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/HDMI 480p",
+    "path": "Rog's CRT Emulation 50Hz/HDMI 480p.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/RGB 240p CRT Beam (PAL to NTSC)",
+    "path": "Rog's CRT Emulation 50Hz/RGB 240p CRT Beam (PAL to NTSC).rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/RGB 240p CRT Beam",
+    "path": "Rog's CRT Emulation 50Hz/RGB 240p CRT Beam.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 50Hz/HDMI 480p CRT Beam",
+    "path": "Rog's CRT Emulation 50Hz/HDMI 480p CRT Beam.rt4"
+  },
+  {
+    "name": "tellytron3000 - 4K SDR",
+    "path": "tellytron3000 - 4K SDR.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 60Hz/HDMI 480p CX BFI ",
+    "path": "Rog's CRT Emulation 60Hz/HDMI 480p CX BFI .rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 60Hz/YPbPr 480p",
+    "path": "Rog's CRT Emulation 60Hz/YPbPr 480p.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 60Hz/YPbPr 480p CX BFI",
+    "path": "Rog's CRT Emulation 60Hz/YPbPr 480p CX BFI.rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 60Hz/HDMI 720-1080 Smooth (No BFI)",
+    "path": "Rog's CRT Emulation 60Hz/HDMI 720-1080 Smooth (No BFI).rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 60Hz/HDMI 720-1080 Smooth (CX BFI)",
+    "path": "Rog's CRT Emulation 60Hz/HDMI 720-1080 Smooth (CX BFI).rt4"
+  },
+  {
+    "name": "Rog's CRT Emulation 60Hz/HDMI 480p",
+    "path": "Rog's CRT Emulation 60Hz/HDMI 480p.rt4"
+  },
+  {
+    "name": "Chinakat CRT HDR + BFI/HD CRT",
+    "path": "Chinakat CRT HDR + BFI/HD CRT.rt4"
+  },
+  {
+    "name": "Chinakat CRT HDR + BFI/Plasma EDTV",
+    "path": "Chinakat CRT HDR + BFI/Plasma EDTV.rt4"
+  },
+  {
+    "name": "Chinakat CRT HDR + BFI/VGA Monitor",
+    "path": "Chinakat CRT HDR + BFI/VGA Monitor.rt4"
+  },
+  {
+    "name": "Billgonzo's General Use CRT Profiles/S-Video-Consumer",
+    "path": "Billgonzo's General Use CRT Profiles/S-Video-Consumer.rt4"
+  },
+  {
+    "name": "Billgonzo's General Use CRT Profiles/Composite - Consumer",
+    "path": "Billgonzo's General Use CRT Profiles/Composite - Consumer.rt4"
+  },
+  {
+    "name": "Splash - Sony KD-34XBR970 - 4K HDR v2",
+    "path": "Splash - Sony KD-34XBR970 - 4K HDR v2.rt4"
+  }
+]

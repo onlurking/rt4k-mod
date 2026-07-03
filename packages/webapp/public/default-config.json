@@ -89,6 +89,7 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "ActFancer": null,
     "AdventureVision": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -97,19 +98,25 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Alpha68k": null,
     "Altair8800": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Amiga": null,
+    "Amiga 500": null,
+    "Amiga 500HD": null,
+    "Amiga 600HD": null,
+    "Amiga CD32": null,
     "AmigaCD32": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
-    "Amstrad-PCW": {
+    "Amstrad": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
-    "Amstrad": {
+    "Amstrad-PCW": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
@@ -137,10 +144,14 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Arkanoid": null,
+    "Asteroids": null,
+    "AsteroidsDeluxe": null,
     "Astrocade": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Atari 2600": null,
     "Atari2600": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -165,6 +176,8 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "AtariTetris": null,
+    "Athena": null,
     "BBCBridgeCompanion": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -177,6 +190,24 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Bagman": null,
+    "Bakraid": null,
+    "BankPanic": null,
+    "Batrider": null,
+    "BattleZone": null,
+    "Battletoads": null,
+    "Berzerk": null,
+    "BlackWidow": null,
+    "Blockade": null,
+    "BloodBros": null,
+    "BluePrint": null,
+    "BombJack": null,
+    "Bosconian": null,
+    "Breakout": null,
+    "BubSys": null,
+    "BubSysROM": null,
+    "BurgerTime": null,
+    "BurningRubber": null,
     "C128": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -189,14 +220,22 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "CDi": null,
+    "CanyonBomber": null,
     "Casio": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Cave": null,
+    "CaveBanpresto": null,
+    "Centipede": null,
+    "Chameleon": null,
     "ChannelF": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "ChinaGate": null,
+    "CityConnection": null,
     "CoCo2": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -213,14 +252,44 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "ComputerSpace": null,
+    "CongoBongo": null,
+    "Cosmic": null,
+    "CosmicGuerilla": null,
+    "CrazyBalloon": null,
+    "CrazyClimber": null,
+    "CrazyKong": null,
     "CreatiVision": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "CrystalCastles": null,
+    "DCon": null,
+    "DECOCassette": null,
+    "Darius": null,
+    "Darius2NinjaWarriors": null,
+    "Darius2WarriorBlade": null,
+    "Deco16": null,
+    "Defender": null,
+    "DigDug": null,
+    "Dominos": null,
+    "DonkeyKong": null,
+    "DonkeyKong3": null,
+    "DonkeyKongJunior": null,
+    "DottoriKun": null,
+    "Druaga": null,
     "EDSAC": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Enterprise": null,
+    "Exerion": null,
+    "Exidy2": null,
+    "ExpressRaider": null,
+    "Finalizer": null,
+    "FoodFight": null,
+    "Freeze": null,
+    "Frenzy": null,
     "GBA": {
       "advanced.effects.mask.strength": 0,
       "advanced.effects.mask.path": "GBA/GBA_Real_13.bmpmp",
@@ -243,14 +312,18 @@
       "hdmi_receiver.mister_dv1.auto_decimate": false,
       "hdmi_receiver.mister_dv1.enabled": false
     },
+    "Galaga": null,
     "Galaksija": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Galaxian": null,
+    "Galivan": null,
     "Gamate": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Game Gear": null,
     "Game and Watch": {
       "advanced.effects.mask.enabled": false,
       "advanced.effects.mask.strength": 0,
@@ -265,6 +338,7 @@
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
     "GameGear": null,
+    "GameGear2P": null,
     "Gameboy": {
       "advanced.effects.mask.enabled": false,
       "advanced.effects.mask.strength": 0,
@@ -278,6 +352,10 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "GameboyColor": null,
+    "Gaplus": null,
+    "Garegga": null,
+    "Gauntlet": null,
     "Genesis": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -286,10 +364,15 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Gyruss": null,
     "Homelab": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "IGSPGM": null,
+    "IQ151": null,
+    "IkariWarriors": null,
+    "Inferno": null,
     "InputTest": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -302,22 +385,43 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "IremM107": null,
+    "IremM62": null,
+    "IremM72": null,
+    "IremM90": null,
+    "IremM92": null,
+    "IronHorse": null,
+    "Jackal": null,
     "Jaguar": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Jailbreak": null,
+    "Joust2": null,
+    "JunoFirst": null,
     "Jupiter": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Kangaroo": null,
+    "KickAndRun": null,
+    "LM80C": null,
+    "LadyBug": null,
     "Laser310": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Laser500": null,
+    "LunarLander": null,
     "Lynx48": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "MCR1": null,
+    "MCR2": null,
+    "MCR3": null,
+    "MCR3Mono": null,
+    "MCR3Scroll": null,
     "MSX": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -326,10 +430,13 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "MacLC": null,
     "MacPlus": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "MarioBros": null,
+    "Mega Duck": null,
     "MegaCD": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -342,6 +449,7 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "MegaSys1": null,
     "Menu": {
       "output.scaling_mode": "Proportional",
       "output.crop_240p.top": -12,
@@ -358,6 +466,10 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "MissileCommand": null,
+    "MoonPatrol": null,
+    "MrDo": null,
+    "MrJong": null,
     "MultiComp": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -366,6 +478,7 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "MysticMarathon": null,
     "N64": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -374,14 +487,18 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "NaughtyBoy": null,
     "NeoGeo": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "NeoGeoPocket": null,
     "NeoGeoPocket.rbf": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "NextSpace": null,
+    "NinjaKun": null,
     "ORAO": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -406,6 +523,7 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "PCjr": null,
     "PDP1": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -414,6 +532,8 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "PGM": null,
+    "PGM-KOVGSYX": null,
     "PMD85": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -422,6 +542,13 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Pacman": null,
+    "Pengo": null,
+    "PenguinKunWars": null,
+    "Performan": null,
+    "Phoenix": null,
+    "Pleiads": null,
+    "Pocket Challenge V2": null,
     "PocketChalleng": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -430,17 +557,30 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "PolyPlay": null,
+    "Pong": null,
+    "Pooyan": null,
+    "Popeye": null,
     "Portman": {
       "output.rotation": "Left 90"
     },
+    "PsikyoSH2": null,
+    "Psychic5": null,
+    "QBert": null,
     "QL": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Qix": null,
+    "RCAStudioII": null,
     "RX78": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "RallyX": null,
+    "RiverPatrol": null,
+    "Robotron": null,
+    "RshnAtk": null,
     "S32X": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -453,6 +593,8 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "SDGundamPS": null,
+    "SEGASYS1": null,
     "SGB": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -465,30 +607,55 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "SNK": null,
+    "SNK6502": null,
+    "SNK68": null,
+    "ST-V": null,
+    "Salamander": null,
     "Saturn": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "ScooterShooter": null,
+    "Scramble": null,
+    "SegaVICZ80": null,
     "SharpMZ": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "SilverLand": null,
+    "SkySmasher": null,
+    "SlapFight": null,
+    "SolomonsKey": null,
+    "Sonson": null,
+    "Sorcerer": null,
     "SordM5": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "SpaceDemon": null,
+    "SpaceFirebird": null,
+    "SpaceInvaders": null,
+    "SpaceRace": null,
     "Specialist": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Sprint1": null,
+    "Sprint2": null,
+    "StarWars": null,
+    "Starforce": null,
+    "Subs": null,
     "Super": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "SuperBreakout": null,
     "SuperVision": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "SuprLoco": null,
     "Svi328": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -497,6 +664,9 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "TIAMC1": null,
+    "TK2000": null,
+    "TNKIII": null,
     "TRS-80": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -505,22 +675,36 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "TaitoF2": null,
+    "TaitoSJ": null,
+    "Tandy1000": null,
+    "TankBattalion": null,
     "TatungEinstein": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Tecmo": null,
     "Ti994a": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "TimePilot": null,
+    "TimePilot84": null,
     "TomyTutor": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "TraverseUSA": null,
+    "TropicalAngel": null,
+    "TurboGrafx16": null,
+    "TurkeyShoot": null,
+    "Tutankham": null,
     "UK101": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Ultratank": null,
+    "VBall": null,
     "VC4000": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -533,6 +717,7 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Vastar": null,
     "Vector-06C": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -545,6 +730,7 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "WonderSwan Color": null,
     "WonderSwanColo": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -553,6 +739,9 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "XSleena": null,
+    "XSleenaCore": null,
+    "Xevious": null,
     "ZX-Spectrum": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -565,6 +754,8 @@
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
     },
+    "Zaxxon": null,
+    "ZigZag": null,
     "aceattaca": {
       "output.rotation": "Left 90"
     },
@@ -668,6 +859,7 @@
       "output.crop_480i.bottom": 1
     },
     "astrofl": null,
+    "atarisys1": null,
     "atetris": {
       "output.crop_240p.top": -3,
       "output.crop_240p.bottom": -2,
@@ -712,6 +904,7 @@
     "bankp": null,
     "batcir": null,
     "batmanfr": null,
+    "batrider": null,
     "batriderj": {
       "output.rotation": "Left 90"
     },
@@ -719,6 +912,7 @@
       "output.rotation": "Right 90"
     },
     "bayroute": null,
+    "bbakraid": null,
     "bbakraidj": {
       "output.rotation": "Left 90"
     },
@@ -792,6 +986,8 @@
     "bombjack": {
       "output.rotation": "Left 90"
     },
+    "boogwing": null,
+    "boogwingu": null,
     "boothill": {
       "output.crop_240p.bottom": 1,
       "output.crop_240p.left": -5,
@@ -838,11 +1034,14 @@
       "output.auto_rotate": "Off",
       "output.auto_crop": "On"
     },
+    "calibr50": null,
     "calipso": {
       "output.rotation": "Left 90"
     },
     "cameltry": null,
     "canyon": null,
+    "captaven": null,
+    "captavenu": null,
     "captcomm": null,
     "carnival": {
       "output.rotation": "Left 90"
@@ -1116,6 +1315,7 @@
       "output.auto_rotate": "Off",
       "output.auto_crop": "On"
     },
+    "cps1mult": null,
     "cpsoccer": {
       "output.rotation": "Left 90",
       "output.auto_rotate": "Off",
@@ -1215,7 +1415,9 @@
       "output.scaling_mode": "Free Form",
       "output.crop_240p.top": -1
     },
+    "darius2d": null,
     "darkplnt": null,
+    "darkseal": null,
     "dbreedjm72": null,
     "dcon": {
       "output.auto_crop": "On"
@@ -1261,6 +1463,7 @@
     },
     "defender": null,
     "demoderm": null,
+    "demonwld": null,
     "demonwld2": null,
     "desertbr": {
       "output.rotation": "Left 90"
@@ -1356,6 +1559,7 @@
     "dynwar": null,
     "ebases": null,
     "ecofghtr": null,
+    "edrandy": null,
     "eeekkp": {
       "output.rotation": "Left 90"
     },
@@ -1371,11 +1575,13 @@
       "output.crop_480i.bottom": 1
     },
     "elandore": null,
+    "elecyoyo": null,
     "elevator": {
       "output.crop_240p.bottom": 1,
       "output.crop_240p.left": -1
     },
     "elevatorb": null,
+    "esb": null,
     "espgal": {
       "output.rotation": "Left 90",
       "output.auto_crop": "On"
@@ -1472,6 +1678,7 @@
       "output.rotation": "Left 90"
     },
     "fround": null,
+    "fshark": null,
     "futspy": {
       "output.rotation": "Left 90"
     },
@@ -1531,6 +1738,7 @@
       "output.crop_240p.right": -13
     },
     "genpeitd": null,
+    "ghostb": null,
     "ghouls": null,
     "gigawing": null,
     "glfgreat": {
@@ -1693,6 +1901,83 @@
       "output.rotation": "Left 90",
       "output.crop_240p.right": -3
     },
+    "jrpacman": null,
+    "jrpacmanf": null,
+    "jt1942": null,
+    "jt1943": null,
+    "jtajax": null,
+    "jtaliens": null,
+    "jtbiocom": null,
+    "jtbtiger": null,
+    "jtbubl": null,
+    "jtcal50": null,
+    "jtcastle": null,
+    "jtcircus": null,
+    "jtcommnd": null,
+    "jtcomsc": null,
+    "jtcontra": null,
+    "jtcop": null,
+    "jtcps1": null,
+    "jtcps15": null,
+    "jtcps2": null,
+    "jtcps3": null,
+    "jtdd": null,
+    "jtdd2": null,
+    "jtexed": null,
+    "jtflane": null,
+    "jtflstory": null,
+    "jtfround": null,
+    "jtgaiden": null,
+    "jtgng": null,
+    "jtgrad3": null,
+    "jtgunsmk": null,
+    "jtkarnov": null,
+    "jtkchamp": null,
+    "jtkicker": null,
+    "jtkiwi": null,
+    "jtkunio": null,
+    "jtlabrun": null,
+    "jtmidres": null,
+    "jtmikie": null,
+    "jtmx5k": null,
+    "jtngp": null,
+    "jtngpc": null,
+    "jtninja": null,
+    "jtoutrun": null,
+    "jtpaclan": null,
+    "jtpang": null,
+    "jtparoda": null,
+    "jtpinpon": null,
+    "jtprmr": null,
+    "jtrastan": null,
+    "jtriders": null,
+    "jtroadf": null,
+    "jtroc": null,
+    "jtrumble": null,
+    "jtrungun": null,
+    "jts16": null,
+    "jts16b": null,
+    "jts18": null,
+    "jtsarms": null,
+    "jtsbaskt": null,
+    "jtsectnz": null,
+    "jtsf": null,
+    "jtshanon": null,
+    "jtshouse": null,
+    "jtsimson": null,
+    "jtslyspy": null,
+    "jtthundr": null,
+    "jttmnt": null,
+    "jttoki": null,
+    "jttora": null,
+    "jttrack": null,
+    "jttrojan": null,
+    "jttwin16": null,
+    "jtvigil": null,
+    "jtwc": null,
+    "jtwwfss": null,
+    "jtxmen": null,
+    "jtyiear": null,
     "jumpshot": {
       "output.rotation": "Left 90"
     },
@@ -1719,10 +2004,13 @@
       "output.crop_240p.left": -5,
       "output.crop_240p.right": -2
     },
+    "kangarooa": null,
+    "kangaroob": null,
     "karnov": null,
     "kchamp": {
       "output.rotation": "Left 90"
     },
+    "kchampvs": null,
     "ket": {
       "output.rotation": "Left 90",
       "output.auto_crop": "On"
@@ -1752,6 +2040,7 @@
     "kingballj": {
       "output.rotation": "Left 90"
     },
+    "kingdmgp": null,
     "kiwames": null,
     "knights": null,
     "kod": null,
@@ -1839,6 +2128,7 @@
     "lwings": {
       "output.rotation": "Left 90"
     },
+    "macross": null,
     "magspot": {
       "output.rotation": "Left 90",
       "output.crop_240p.right": -1
@@ -1893,6 +2183,7 @@
       "output.crop_240p.left": -27,
       "output.crop_240p.right": 27
     },
+    "meikyuh": null,
     "memtest": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"
@@ -1926,6 +2217,7 @@
     "mjleague": {
       "output.rotation": "Left 90"
     },
+    "mk": null,
     "mmatrix": null,
     "mmaze": null,
     "mooncrgx": {
@@ -1975,6 +2267,7 @@
     "msword": null,
     "mtrap": null,
     "mtwins": null,
+    "mustang": null,
     "mvp": null,
     "mvsc": null,
     "mwalk": null,
@@ -1993,6 +2286,7 @@
     "nbbatman": null,
     "nemesis": null,
     "nemo": null,
+    "neogeopocket": null,
     "ngp": null,
     "nibbler": {
       "output.rotation": "Right 90",
@@ -2118,6 +2412,7 @@
       "output.crop_240p.right": -1
     },
     "peterpak": null,
+    "pgm": null,
     "phoenix": {
       "output.rotation": "Left 90"
     },
@@ -2295,6 +2590,7 @@
       "output.crop_240p.left": -1
     },
     "rallybik": null,
+    "rallybike": null,
     "rallyx": {
       "output.crop_240p.left": -1
     },
@@ -2340,6 +2636,8 @@
       "output.crop_240p.left": -5
     },
     "robocop": null,
+    "robocop2": null,
+    "robocop2u": null,
     "robotron": null,
     "rocnrope": {
       "output.rotation": "Right 90",
@@ -2379,6 +2677,7 @@
     },
     "rygarj": null,
     "ryukyu": null,
+    "sagaia": null,
     "sailormn": {
       "output.auto_crop": "On"
     },
@@ -2389,6 +2688,8 @@
     "sanjeon": null,
     "sarge": null,
     "sasissu": null,
+    "sasuke": null,
+    "satansat": null,
     "saturnzi": {
       "output.rotation": "Left 90"
     },
@@ -2422,6 +2723,7 @@
     "scramble": {
       "output.rotation": "Left 90"
     },
+    "sdgndmps": null,
     "sdgnmps": {
       "output.crop_240p.left": -1
     },
@@ -2538,6 +2840,8 @@
       "output.crop_240p.left": -8,
       "output.crop_240p.right": -8
     },
+    "slither": null,
+    "smashtv": null,
     "smleague": null,
     "snapjack": null,
     "snowbro2": {
@@ -2547,6 +2851,7 @@
       "output.crop_240p.right": -38,
       "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
     },
+    "snowbros": null,
     "snowbrosj": null,
     "sokyugrt": null,
     "solarfox": {
@@ -2576,6 +2881,7 @@
       "output.rotation": "Left 90",
       "output.auto_crop": "On"
     },
+    "spacefb": null,
     "spacerace": null,
     "spacers": {
       "output.rotation": "Left 90",
@@ -2624,6 +2930,7 @@
       "output.crop_240p.right": -1
     },
     "sss": null,
+    "sstriker": null,
     "starforc": {
       "output.rotation": "Right 90",
       "output.crop_240p.left": -12,
@@ -2641,6 +2948,7 @@
       "output.rotation": "Left 90",
       "output.crop_240p.right": -1
     },
+    "starwars": null,
     "stdragon": null,
     "stratgyx": null,
     "stratof": null,
@@ -2701,6 +3009,7 @@
       "output.crop_240p.left": -17,
       "output.crop_240p.right": -9
     },
+    "terracresta": null,
     "terrafj": {
       "output.crop_240p.top": -5,
       "output.crop_240p.bottom": -4,
@@ -2861,6 +3170,7 @@
       "output.crop_240p.right": -8
     },
     "tumblep": null,
+    "tunit": null,
     "turbotag": {
       "output.rotation": "Right 90",
       "advanced.system.osd_firmware.on_screen_display.hide_input_res": true
@@ -2880,6 +3190,7 @@
     "twinbeeb": {
       "output.rotation": "Left 90"
     },
+    "twincobr": null,
     "twotigerc": null,
     "twsoc98": null,
     "uccops": null,
@@ -2907,6 +3218,7 @@
     "vanvan": {
       "output.rotation": "Left 90"
     },
+    "vaportra": null,
     "varth": {
       "output.rotation": "Left 90"
     },
@@ -2930,6 +3242,7 @@
       "output.crop_240p.right": 13
     },
     "vigilant": null,
+    "vimana": null,
     "vimanaj": null,
     "vindctr2": null,
     "vortex": {
@@ -3033,6 +3346,7 @@
     "zookeep": {
       "output.auto_crop": "On"
     },
+    "zunit": null,
     "zx48": {
       "advanced.effects.mask.strength": -2,
       "advanced.effects.mask.path": "RGB Masks/Slot Mask Medium RGB.bmp"

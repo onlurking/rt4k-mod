@@ -3,7 +3,7 @@ import { readdir, readFile, mkdir, writeFile, cp } from 'node:fs/promises'
 import { join, extname, dirname } from 'node:path'
 
 const PROFILES_DIR = join(import.meta.dir, '../../../profiles/SD/profile/_CRT Emulation')
-const OUTPUT_DIR = join(import.meta.dir, '../public/profiles')
+const OUTPUT_DIR = join(import.meta.dir, '../public/rt4k-profiles')
 
 interface ProfileEntry {
   name: string
