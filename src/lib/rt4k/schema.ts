@@ -280,6 +280,38 @@ export const SCHEMA: SettingDef[] = [
     flagName: "dv1-enabled",
     cliDesc: "DV1 mode enabled",
   },
+  {
+    name: "scaling.crop.top",
+    desc: "Scaling -> Crop -> Top",
+    byteRanges: [{ address: 0x0694, length: 2 }],
+    type: DataType.SIGNED_INT,
+    flagName: "crop-top",
+    cliDesc: "Top crop (signed, pixels)",
+  },
+  {
+    name: "scaling.crop.bottom",
+    desc: "Scaling -> Crop -> Bottom",
+    byteRanges: [{ address: 0x0794, length: 2 }],
+    type: DataType.SIGNED_INT,
+    flagName: "crop-bottom",
+    cliDesc: "Bottom crop (signed, pixels)",
+  },
+  {
+    name: "scaling.crop.left",
+    desc: "Scaling -> Crop -> Left",
+    byteRanges: [{ address: 0x0594, length: 2 }],
+    type: DataType.SIGNED_INT,
+    flagName: "crop-left",
+    cliDesc: "Left crop (signed, pixels)",
+  },
+  {
+    name: "scaling.crop.right",
+    desc: "Scaling -> Crop -> Right",
+    byteRanges: [{ address: 0x0494, length: 2 }],
+    type: DataType.SIGNED_INT,
+    flagName: "crop-right",
+    cliDesc: "Right crop (signed, pixels)",
+  },
 ];
 
 export function getSettingDef(name: string): SettingDef {

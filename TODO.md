@@ -26,7 +26,7 @@ Based on the full feature set documented at https://consolemods.org/wiki/AV:Retr
 
 | Status | Setting | Values | Region |
 |--------|---------|--------|--------|
-| ⬜ | Input Crop (Top/Bottom/Left/Right) | `integer trims` | 0x0370-0x0380 |
+| ✅ | Input Crop (Top/Bottom/Left/Right) | `signed 16-bit pixels` | 0x0494, 0x0594, 0x0694, 0x0794 |
 | ⬜ | Vertical Pre-Scale | `1/2` to `1/31` | |
 | ⬜ | RoTATE | `Off`, `90° CW`, `90° CCW` (Pro only) | |
 | ⬜ | Auto Crop | `Vertical Only`, `Full Crop to 4:3`, `Full Crop to 16:9` | |
@@ -270,10 +270,10 @@ Based on the full feature set documented at https://consolemods.org/wiki/AV:Retr
 | 0x03a6–0x03af | 10B | Scaling control bytes (0x00/0xFF) | ⬜ Unknown |
 | 0x03b0–0x03c7 | 24B | Scaling parameters | ⬜ Unknown |
 | 0x03c8–0x03cf | 8B | Scaling control | ⬜ Unknown |
-| 0x0460–0x04cf | 112B | Per-profile scaling data (mostly zero) | ⬜ Unknown |
-| 0x0560–0x05cf | 112B | Per-profile scaling data (mostly zero) | ⬜ Unknown |
-| 0x0660–0x06cf | 112B | Per-profile scaling data (mostly zero) | ⬜ Unknown |
-| 0x0760–0x07af | 80B | Per-profile scaling data (mostly zero) | ⬜ Unknown |
+| 0x0494 | 2B | Scaling crop → Right (signed 16-bit) | ✅ Mapped |
+| 0x0594 | 2B | Scaling crop → Left (signed 16-bit) | ✅ Mapped |
+| 0x0694 | 2B | Scaling crop → Top (signed 16-bit) | ✅ Mapped |
+| 0x0794 | 2B | Scaling crop → Bottom (signed 16-bit) | ✅ Mapped |
 | 0x0800–0x086f | 112B | Input detection (mode/flags, 2-4 values) | ⬜ Unknown |
 | 0x0880–0x08ef | 112B | Input detection (mode/flags, 1-4 values) | ⬜ Unknown |
 | 0x08a5 | 1B | Input detection enum (0-2) | ⬜ Unknown |

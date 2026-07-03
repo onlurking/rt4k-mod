@@ -153,6 +153,15 @@ Output includes:
 | `--dv1-auto-decimate` | `true`, `false` | DV1 auto-decimate |
 | `--dv1-enabled` | `true`, `false` | DV1 mode enabled |
 
+### Scaling / Crop
+
+| Flag | Values | Description |
+|------|--------|-------------|
+| `--crop-top` | signed integer | Top crop (pixels) |
+| `--crop-bottom` | signed integer | Bottom crop (pixels) |
+| `--crop-left` | signed integer | Left crop (pixels) |
+| `--crop-right` | signed integer | Right crop (pixels) |
+
 ### Infrastructure flags
 
 | Flag | Description |

@@ -102,15 +102,20 @@ export class RetroTinkSettingValue {
 
   asInt(): number {
     const length = this.length();
-    if (length !== 1) {
-      throw new SettingTypeError(this.name, this.type, this.value, 'Not Implemented');
+    if (length === 1) {
+      if (this.def.type === DataType.SIGNED_INT) {
+        return this.value[0] > 127 ? this.value[0] - 256 : this.value[0];
+      }
+      return this.value[0];
     }
-
-    if (this.def.type === DataType.SIGNED_INT) {
-      return this.value[0] > 127 ? this.value[0] - 256 : this.value[0];
+    if (length === 2) {
+      const val = this.value[0] | (this.value[1] << 8);
+      if (this.def.type === DataType.SIGNED_INT) {
+        return val > 32767 ? val - 65536 : val;
+      }
+      return val;
     }
-
-    return this.value[0];
+    throw new SettingTypeError(this.name, this.type, this.value, 'Not Implemented');
   }
 
   set(val: string | number | boolean): void {
@@ -177,10 +182,18 @@ export class RetroTinkSettingValue {
     }
 
     const length = this.length();
+    if (length === 2 && this.def.type === DataType.SIGNED_INT) {
+      if (num < -32768 || num > 32767) {
+        throw new SettingValidationError(this.name, num, 'Value out of range for signed 16-bit integer');
+      }
+      const val = num < 0 ? 65536 + num : num;
+      this.value[0] = val & 0xff;
+      this.value[1] = (val >> 8) & 0xff;
+      return;
+    }
     if (length !== 1) {
       throw new SettingTypeError(this.name, this.type, num, 'Not Implemented');
     }
-
     if (this.def.type === DataType.SIGNED_INT) {
       if (num < -128 || num > 127) {
         throw new SettingValidationError(this.name, num, 'Value out of range for signed 8-bit integer');
