@@ -78,9 +78,23 @@ export class BrowserProfile {
       }
       case 'STRING': {
         const str = String(value)
-        const bytes = new Uint8Array(def.byteRanges.reduce((sum, r) => sum + r.length, 0))
+        const fieldLength = def.byteRanges.reduce((sum, r) => sum + r.length, 0)
+        const bytes = new Uint8Array(fieldLength)
+        // Preserve existing bytes from the profile (including garbled tails)
+        let offset = 0
+        for (const range of def.byteRanges) {
+          for (let i = 0; i < range.length; i++) {
+            bytes[offset] = this.bytes[range.address + i]
+            offset++
+          }
+        }
+        // Overwrite with new string value
         for (let i = 0; i < str.length && i < bytes.length - 1; i++) {
           bytes[i] = str.charCodeAt(i)
+        }
+        // Null terminate after string
+        if (str.length < bytes.length) {
+          bytes[str.length] = 0
         }
         return bytes
       }

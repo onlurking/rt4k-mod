@@ -167,10 +167,14 @@ export class RetroTinkSettingValue {
 
     if (this.def.type === DataType.STR) {
       const length = this.length();
-      this.value = new Uint8Array(length);
+      // Preserve existing bytes (including garbled tails)
+      const existing = new Uint8Array(this.value);
+      this.value = existing;
+      // Overwrite with new string
       for (let i = 0; i < str.length && i < length; i += 1) {
         this.value[i] = str.charCodeAt(i);
       }
+      // Null terminate after string
       if (str.length < length) {
         this.value[str.length] = 0;
       }
